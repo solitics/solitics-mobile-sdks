@@ -1,0 +1,39 @@
+# ######################################################################################################################
+# Podfile content
+# ######################################################################################################################
+source 'https://github.com/CocoaPods/Specs.git'
+plugin 'cocoapods-art', :sources => [
+    'ios.solitics.mobile.releases'
+]
+
+workspace 'SoliticsIntegration.xcworkspace'
+
+project 'SoliticsIntegrationApp/SoliticsIntegrationApp.xcodeproj'
+
+# ######################################################################################################################
+# Global Settings content
+# ######################################################################################################################
+
+platform :ios, '10.0'
+
+# ######################################################################################################################
+# SoliticsIntegrationApp content
+# ######################################################################################################################
+
+target 'SoliticsIntegrationApp' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  pod 'SoliticsSDK'
+  # Pods for SoliticsIntegrationApp
+
+  target 'SoliticsIntegrationAppTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'SoliticsIntegrationAppUITests' do
+    # Pods for testing
+  end
+
+end

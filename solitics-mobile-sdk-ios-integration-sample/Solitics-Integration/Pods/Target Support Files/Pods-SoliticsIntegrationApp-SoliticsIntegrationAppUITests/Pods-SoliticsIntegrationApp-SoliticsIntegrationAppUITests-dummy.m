@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests : NSObject
+@end
+@implementation PodsDummy_Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests
+@end

@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "227A0F8E-CBF4-419A-A75B-728AB01C2F32",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:SoliticsIntegrationApp.xcodeproj",
+      "identifier" : "5D5626EC26A6FC8900805583",
+      "name" : "SoliticsIntegrationApp"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:SoliticsIntegrationApp.xcodeproj",
+        "identifier" : "5D56270226A6FC8C00805583",
+        "name" : "SoliticsIntegrationAppTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:SoliticsIntegrationApp.xcodeproj",
+        "identifier" : "5D56270D26A6FC8C00805583",
+        "name" : "SoliticsIntegrationAppUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
