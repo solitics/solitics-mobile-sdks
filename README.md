@@ -1,1 +1,1 @@
-# solitics-mobile-sdk-ios
+# solitics-mobile-sdks
