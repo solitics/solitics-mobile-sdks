@@ -4,10 +4,11 @@
 //  Created by Serg Liamtsev on 6/6/19.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
-
 import SafariServices
 import UIKit
-
+///
+///
+///
 protocol ExternalURLOpenable
 {
     func openURL(_ urlString: String)

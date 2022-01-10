@@ -4,11 +4,14 @@
 //  Created by Serg Liamtsev on 21.11.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
-
 import UIKit
-
+///
+///
+///
 protocol StatusBarResizable {}
-
+///
+///
+///
 extension StatusBarResizable where Self: UIResponder
 {
     static func calculateStatusBarHeight() -> CGFloat

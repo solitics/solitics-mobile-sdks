@@ -5,11 +5,12 @@
 //  Created by Serg Liamtsev on 18.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
-
 import MessageUI
 import SafariServices
 import UIKit
-
+///
+///
+///
 class BaseViewController : UIViewController
 {
     var identifier : UUID

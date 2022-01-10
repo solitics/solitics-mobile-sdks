@@ -215,12 +215,82 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK18SOLEmitEventResult")
+@interface SOLEmitEventResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK14SOLLoginResult")
+@interface SOLLoginResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK15SOLPopupContent")
+@interface SOLPopupContent : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@class NSString;
+
+@interface SOLPopupContent (SWIFT_EXTENSION(SoliticsSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
 ///
 SWIFT_CLASS_NAMED("Solitics")
 @interface Solitics : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+///
+SWIFT_PROTOCOL_NAMED("SoliticsLogListener")
+@protocol SoliticsLogListener <NSObject>
+@optional
+- (void)onLogMessage:(NSString * _Nonnull)message;
+@end
+
+@class NSNumber;
+
+///
+SWIFT_PROTOCOL_NAMED("SoliticsPopupDelegate")
+@protocol SoliticsPopupDelegate <NSObject>
+@optional
+/// Decide if a popup message should be open or not, return true if yes and false if not
+/// default implementation returns true
+- (BOOL)soliticsShouldOpenMessageWith:(SOLPopupContent * _Nonnull)content SWIFT_WARN_UNUSED_RESULT;
+/// Called when the solitics popup message is displayed.
+- (void)soliticsMessageDidDisplayPopup;
+/// Called when the solitics popup message is closed.
+- (void)soliticsMessageDidDismissPopup;
+/// Called when the an item inside the solitics popup message is clicked.
+- (void)soliticsMessageDidTrigerAction;
+@end
+
+
+
+
+
 
 
 
@@ -451,12 +521,82 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 
 
+
+
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK18SOLEmitEventResult")
+@interface SOLEmitEventResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK14SOLLoginResult")
+@interface SOLLoginResult : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+
+///
+SWIFT_CLASS("_TtC11SoliticsSDK15SOLPopupContent")
+@interface SOLPopupContent : NSObject
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@class NSString;
+
+@interface SOLPopupContent (SWIFT_EXTENSION(SoliticsSDK))
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+@end
+
+
 ///
 SWIFT_CLASS_NAMED("Solitics")
 @interface Solitics : NSObject
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
+
+
+///
+SWIFT_PROTOCOL_NAMED("SoliticsLogListener")
+@protocol SoliticsLogListener <NSObject>
+@optional
+- (void)onLogMessage:(NSString * _Nonnull)message;
+@end
+
+@class NSNumber;
+
+///
+SWIFT_PROTOCOL_NAMED("SoliticsPopupDelegate")
+@protocol SoliticsPopupDelegate <NSObject>
+@optional
+/// Decide if a popup message should be open or not, return true if yes and false if not
+/// default implementation returns true
+- (BOOL)soliticsShouldOpenMessageWith:(SOLPopupContent * _Nonnull)content SWIFT_WARN_UNUSED_RESULT;
+/// Called when the solitics popup message is displayed.
+- (void)soliticsMessageDidDisplayPopup;
+/// Called when the solitics popup message is closed.
+- (void)soliticsMessageDidDismissPopup;
+/// Called when the an item inside the solitics popup message is clicked.
+- (void)soliticsMessageDidTrigerAction;
+@end
+
+
+
+
+
 
 
 

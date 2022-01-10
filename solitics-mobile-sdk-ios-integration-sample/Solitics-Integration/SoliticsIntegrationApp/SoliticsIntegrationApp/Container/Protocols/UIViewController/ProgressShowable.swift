@@ -4,16 +4,16 @@
 //  Created by Serg Liamtsev on 5/20/19.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
-
 import UIKit
-
+///
+///
+///
 protocol ProgressShowable
 {
     
     func showProgress()
     func hideProgress()
 }
-
 extension ProgressShowable where Self: BaseViewController
 {
     func showProgress()
@@ -37,5 +37,5 @@ extension ProgressShowable where Self: BaseViewController
             self?.hudElement.view.removeFromSuperview()
             self?.hudElement.removeFromParent()
         }
-    }    
+    }
 }

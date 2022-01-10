@@ -5,9 +5,10 @@
 //  Created by Serg Liamtsev on 3/4/19.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
-
 import UIKit
-
+///
+///
+///
 extension UIViewController
 {
     func showToast(_ message: String)

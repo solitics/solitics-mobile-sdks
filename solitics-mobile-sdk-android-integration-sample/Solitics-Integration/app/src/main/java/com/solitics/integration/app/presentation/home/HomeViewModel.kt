@@ -35,11 +35,9 @@ class HomeViewModel(
     }
 
     fun onCustomFieldsEntered(text: String) {
-
         if (!text.isJson()) {
             throw IllegalArgumentException("It's not a json format")
         }
-
         val params = customEmitEventParamsRepo.load()
         params.customFields = text
         customEmitEventParamsRepo.save(params)
@@ -65,14 +63,11 @@ class HomeViewModel(
     }
 
     fun logOut() {
-
         viewModelScope.launch {
-
             withContext(Dispatchers.IO) {
                 SoliticsSDK.onLogout()
                 customEmitEventParamsRepo.clean()
             }
-
             withContext(Dispatchers.Main) {
                 resetToLoginScreen.invoke()
             }

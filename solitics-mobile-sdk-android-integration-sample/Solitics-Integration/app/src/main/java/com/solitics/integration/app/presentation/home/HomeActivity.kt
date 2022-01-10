@@ -2,21 +2,28 @@ package com.solitics.integration.app.presentation.home
 
 import android.os.Bundle
 import android.text.Editable
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
+import android.util.Log
+import android.view.View
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.solitics.integration.app.R
+import com.solitics.integration.app.domain.utils.TAG
 import com.solitics.integration.app.presentation.common.DelayedAfterTextChangedWatcher
 import com.solitics.integration.app.presentation.common.EmptyTextWatcher
+import com.solitics.sdk.SoliticsLogListener
 import com.solitics.sdk.SoliticsSDK
-import com.solitics.sdk.domain.SoliticsLogListener
+import com.solitics.sdk.SoliticsPopupDelegate
+import com.solitics.sdk.domain.PopupContent
 
-class HomeActivity : AppCompatActivity(), SoliticsLogListener {
+class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDelegate {
     private lateinit var viewModel: HomeViewModel
     private lateinit var tvLog: TextView
+    private lateinit var tvDelegateLog: TextView
+    private lateinit var cbShouldShowPopup: CheckBox
+    private lateinit var cbIsDelegateActive: CheckBox
+    private lateinit var svLogDelegate: ScrollView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +39,12 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener {
             viewModel.logOut()
         }
         tvLog = findViewById(R.id.tvLog)
-        tvLog.text = "Host app : subscribe on socket event..\n"
+        "Host app : subscribe on socket event..\n".also { tvLog.text = it }
+
+        tvDelegateLog = findViewById(R.id.tvLogDelagate)
+        cbShouldShowPopup = findViewById(R.id.cbShouldShowPopup)
+        cbIsDelegateActive = findViewById(R.id.cbActivateDelagate)
+        svLogDelegate = findViewById(R.id.svLogDelagate)
 
         setupCustomFields()
     }
@@ -83,6 +95,12 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener {
             )
         )
 
+        cbIsDelegateActive.setOnCheckedChangeListener { checkButton, isChecked ->
+            if(checkButton.isPressed) { // check state has changed by the user
+                setDelegateActivate(isChecked)
+            }
+        }
+
         viewModel.getCustomParams().observe(this, Observer {
             if (it === null) {
                 return@Observer
@@ -102,6 +120,8 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener {
     override fun onResume() {
         super.onResume()
         SoliticsSDK.registerSoliticsLogListener(this)
+        setDelegateActivate(cbIsDelegateActive.isChecked)
+
     }
 
     override fun onDestroy() {
@@ -112,7 +132,47 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener {
     override fun onMessage(message: String) {
         runOnUiThread {
             val oldLog = tvLog.text.toString()
-            tvLog.text = oldLog + message
+            (oldLog + message).also { tvLog.text = it }
+        }
+    }
+
+    override fun popupShouldOpen(message: PopupContent): Boolean {
+        Log.d(TAG, "popupShouldOpen: ")
+        return cbShouldShowPopup.isChecked
+    }
+
+    override fun onPopupOpened() {
+        Log.d(TAG, "onPopupOpened: ")
+        onDelegateMessage("onPopupOpened" )
+    }
+    override fun onPopupClicked() {
+        Log.d(TAG, "onPopupClicked: ")
+        onDelegateMessage("onPopupClicked" )
+    }
+    override fun onPopupClosed() {
+        Log.d(TAG, "onPopupClosed: ")
+        onDelegateMessage("onPopupClosed" )
+    }
+
+    private fun onDelegateMessage(message: String) {
+        runOnUiThread {
+            val oldLog = tvDelegateLog.text.toString()
+            (oldLog + "\n" + message).also { tvDelegateLog.text = it }
+            svLogDelegate.post {
+                svLogDelegate.fullScroll(View.FOCUS_DOWN)
+            }
+        }
+    }
+
+    private fun setDelegateActivate(isActive: Boolean) {
+        if (isActive) {
+            cbIsDelegateActive.isChecked = true
+            cbShouldShowPopup.isEnabled = true
+            SoliticsSDK.setSoliticsPopupDelegate(this)
+        } else {
+            cbIsDelegateActive.isChecked = false
+            cbShouldShowPopup.isEnabled = false
+            SoliticsSDK.setSoliticsPopupDelegate(null)
         }
     }
 }

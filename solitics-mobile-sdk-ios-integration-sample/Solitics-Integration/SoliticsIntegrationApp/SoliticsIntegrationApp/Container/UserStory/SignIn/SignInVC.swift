@@ -4,9 +4,10 @@
 //
 //  Created by Serg Liamthev on 02.11.2020.
 //
-
 import UIKit
-
+///
+///
+///
 final class SignInVC: BaseViewController
 {
     private lazy var contentView: SignInVCView = SignInVCView()
@@ -132,9 +133,7 @@ extension SignInVC
     private func setupKeyboardObserving()
     {
         let center = NotificationCenter.default
-        // NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardDidShow), name: UIResponder.keyboardDidShowNotification, object: nil)
-        
         center.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     

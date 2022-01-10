@@ -4,9 +4,10 @@
 //
 //  Created by Serg Liamthev on 05.11.2020.
 //
-
 import UIKit
-
+///
+///
+///
 final class SpinnerVC : UIViewController
 {
     var spinner = UIActivityIndicatorView(style: .whiteLarge)

@@ -13,7 +13,7 @@ import SoliticsSDK
 class AppDelegate : UIResponder
 {
     var window : UIWindow?
-    
+
     override init()
     {
         super.init()
@@ -41,6 +41,13 @@ class AppDelegate : UIResponder
         } else {
             rootVC = SignInVC()
         }
+        Solitics.activeGlobalLogs = false
+        Solitics.activeSocketLogs = false
+        Solitics.activeRestflLogs = false
+        
+        Solitics.delegate = self
+        Solitics.register(SoliticsLogListener: self)
+        
         let navVC = UINavigationController(rootViewController: rootVC)
         navVC.interactivePopGestureRecognizer?.isEnabled = false
         window?.rootViewController = navVC
@@ -79,5 +86,44 @@ extension AppDelegate : UIApplicationDelegate
         // Called when the user discards a scene session.
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    }
+}
+extension AppDelegate : SoliticsLogListener
+{
+    func onLogMessage(_ message: String)
+    {
+        print("\(#function)::\(message)")
+    }
+}
+extension AppDelegate : SoliticsPopupDelegate
+{
+    func soliticsShouldOpenMessage(with content: SOLPopupContent) -> Bool
+    {
+        print(#function)
+        print(content.messageID)
+        print(content.messageHTML)
+        print(content.webhookParams)
+        return true
+    }
+    /**
+     * Called when the solitics popup message is displayed.
+     */
+    func soliticsMessageDidDisplayPopup()
+    {
+        print(#function)
+    }
+    /**
+     * Called when the solitics popup message is closed.
+     */
+    func soliticsMessageDidDismissPopup()
+    {
+        print(#function)
+    }
+    /**
+     * Called when the an item inside the solitics popup message is clicked.
+     */
+    func soliticsMessageDidTrigerAction()
+    {
+        print(#function)
     }
 }

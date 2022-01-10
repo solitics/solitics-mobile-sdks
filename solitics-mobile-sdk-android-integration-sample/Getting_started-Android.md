@@ -1,8 +1,15 @@
-# solitics-mobile-sdk-android
+# solitics-sdk-android
  
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
-## Installation - Gradle
+- [**Installation**](#installation)
+    - [Gradle](#---Gradle)
+    - [Manual](#---Manual)
+- [**Code Integration - Sample**](#Code-Integration---Sample)
+- [**Migration guide**](#Migration-guide)
+
+## Installation
+### - Gradle
 1. Solitics SDK requires the following permissions to be granted:
     ```xml
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -76,7 +83,8 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
    5. Click "Sync project with Gradle files".
 
 
-## Installation - Manual
+#
+###  - Manual
 In order to use Solitics SDK , you will also need to add it to your project:
 
 1. Open your project in Android Studio.
@@ -177,3 +185,75 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
             "customFields"
         )
     ```
+    
+5. SoliticsPopupDelagate
+    This interface allows you to get popup events and delagate popup visibility.
+    
+ - popupShouldOpened - receiving PopupContent object before showing the popup, 
+  allow the user to decide if to show the popup or not.
+   - PopupContent:
+     - messageId - the message id
+     - messageHTML - the html message
+     - webooksParams - popup metadata
+ - onPopupOpened - called when the popup has opened
+ - onPopupClosed - called when the popup has closed
+ - onPopupClicked - called when item iniside the popup has been clicked ( links, buttons, images )
+            
+    You can register / unregister to the interface using
+`SoliticsSDK.setSoliticsPopupDelegate(soliticsPopupDelegate: SoliticsPopupDelegate?)`
+
+    ```kotlin
+        override fun onCreate() {
+            super.onResume()
+            // Register the popupDelegate
+            SoliticsSDK.setSoliticsPopupDelegate(this)
+        }
+        
+        override fun onDestroy() {
+            super.onDestroy()
+            // Unregister the popupDelegate
+            SoliticsSDK.setSoliticsPopupDelegate(null)
+        }
+    
+        /**
+         * Decide if a popup should be open or not, return true if yes and false if not
+         * default implementation returns true
+         */
+        override fun popupShouldOpen(message: PopupContent): Boolean {
+            Log.d(TAG, "popupShouldOpen: messageId: ${message.messageId}, messageHtml: ${message.messageHTML}, messageParams: ${message.webhookParams}")
+
+            // Use your own logic to decide if the message should be opened or not
+            // You can use the message PopupContent to decide
+            val shouldOpenMessage = true
+
+            return shouldOpenMessage
+        }
+    
+        /**
+         * Called when the popup is opened.
+         */
+        override fun onPopupOpened() {
+            Log.d(TAG, "onPopupOpened")
+        }
+        
+        /**
+         * Called when the item inside the popup is clicked.
+         */
+        override fun onPopupClicked() {
+            Log.d(TAG, "onPopupClicked")
+        }
+        
+        /**
+         * Called when the popup is closed.
+         */
+        override fun onPopupClosed() {
+            Log.d(TAG, "onPopupClosed")
+        }
+    ```
+
+## Migration guide
+### Solitics SDK 2.0.0
+
+Latest changes in the Soitics SDK internal implementation coused some package name changes to the public API classes, therefore an upgrading developer will need to make sure they re-import related classes as this is breaking change.
+
+Please note version 2.0.0 provieds you better control options via the SoliticsPopupDelagate API

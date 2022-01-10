@@ -4,24 +4,27 @@
 //
 //  Created by Serg Liamthev on 04.11.2020.
 //
-
 import UIKit
-
+///
+///
+///
 protocol SignInVCViewDelegate : AnyObject
 {
     func didTapSignInButton()
 }
-
+///
+///
+///
 final class SignInVCView : UIView
 {
     private let containerView : UIStackView = UIStackView()
     
     private let emailField            : BorderedTopHintTextField = BorderedTopHintTextField()
     private let keyTypeField          : BorderedTopHintTextField = BorderedTopHintTextField()
-    private let keyValueField	      : BorderedTopHintTextField = BorderedTopHintTextField()
-    private let popupTokenField	      : BorderedTopHintTextField = BorderedTopHintTextField()
-    private let memberIdField	      : BorderedTopHintTextField = BorderedTopHintTextField()
-    private let brandField	          : BorderedTopHintTextField = BorderedTopHintTextField()
+    private let keyValueField          : BorderedTopHintTextField = BorderedTopHintTextField()
+    private let popupTokenField          : BorderedTopHintTextField = BorderedTopHintTextField()
+    private let memberIdField          : BorderedTopHintTextField = BorderedTopHintTextField()
+    private let brandField              : BorderedTopHintTextField = BorderedTopHintTextField()
     private let branchField           : BorderedTopHintTextField = BorderedTopHintTextField()
     private let transactionAmountField: BorderedTopHintTextField = BorderedTopHintTextField()
     private let customJSONField       : BorderedTopHintTextField = BorderedTopHintTextField()
@@ -55,13 +58,13 @@ final class SignInVCView : UIView
     }
     
     func getUserInput() -> SignInUserInput
-    {    
+    {
         return SignInUserInput(
             email            : emailField.getText(),
             keyType          : keyTypeField.getText(),
-            keyValue	     : keyValueField.getText(),
+            keyValue         : keyValueField.getText(),
             popupToken       : popupTokenField.getText(),
-            memberId	     : memberIdField.getText(),
+            memberId         : memberIdField.getText(),
             brand            : brandField.getText(),
             branch           : branchField.getText(),
             transactionAmount: transactionAmountField.getText(),

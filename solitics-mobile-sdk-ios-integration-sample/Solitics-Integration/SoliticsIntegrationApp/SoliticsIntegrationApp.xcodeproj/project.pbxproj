@@ -41,9 +41,9 @@
 		5D56277526A70AEA00805583 /* sample_web_view_content.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277426A70AEA00805583 /* sample_web_view_content.html */; };
 		5D56277826A70AF600805583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277626A70AF600805583 /* Assets.xcassets */; };
 		5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277C26A70B3300805583 /* LaunchScreen.storyboard */; };
-		E3E27CA9CCAD66B9278575F5 /* Pods_SoliticsIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3093A9B6BE9777056B62F97 /* Pods_SoliticsIntegrationApp.framework */; };
-		E957DD1E7710EB4E5951BCB3 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6594E2C619FC992A22D690 /* Pods_SoliticsIntegrationAppTests.framework */; };
-		F162D95140FF05A2CF123224 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A35DC4E6A0ADEA1CD46A348D /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */; };
+		832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */; };
+		9D69AA043B9AF2D7B9DAB3B7 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F0282000984ABC5E3BBC21 /* Pods_SoliticsIntegrationAppTests.framework */; };
+		B6D3B0183F01FD26E9F2096C /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,8 +64,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0FBCC3C31513A43960B514E1 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
-		506C1D4C4C6D1ADC18A919C3 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		05D7F313C03AA3C29370A57E /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D5626ED26A6FC8900805583 /* SoliticsIntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoliticsIntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5626F026A6FC8900805583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5626F226A6FC8900805583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,13 +108,14 @@
 		5D56277426A70AEA00805583 /* sample_web_view_content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_web_view_content.html; sourceTree = "<group>"; };
 		5D56277626A70AF600805583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D56277B26A70B3300805583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		7C9905A553C80C1FAED7D63E /* Pods-SoliticsIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
-		88CEB42BF28945B7F0B3A89C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		9618599023CF5E28FAC302DD /* Pods-SoliticsIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
-		9B9FB5DF60C6E5013B5EF743 /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A3093A9B6BE9777056B62F97 /* Pods_SoliticsIntegrationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A35DC4E6A0ADEA1CD46A348D /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF6594E2C619FC992A22D690 /* Pods_SoliticsIntegrationAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C378838C349F0D7982FBCF31 /* Pods-SoliticsIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
+		D71D4AA60FCFD3135B272E1C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8F0282000984ABC5E3BBC21 /* Pods_SoliticsIntegrationAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3E27CA9CCAD66B9278575F5 /* Pods_SoliticsIntegrationApp.framework in Frameworks */,
+				832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E957DD1E7710EB4E5951BCB3 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */,
+				9D69AA043B9AF2D7B9DAB3B7 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,13 +139,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F162D95140FF05A2CF123224 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */,
+				B6D3B0183F01FD26E9F2096C /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F3B8546707A7EF2A1668425 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */,
+				C378838C349F0D7982FBCF31 /* Pods-SoliticsIntegrationApp.release.xcconfig */,
+				D71D4AA60FCFD3135B272E1C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */,
+				6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */,
+				05D7F313C03AA3C29370A57E /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */,
+				67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		5D5626E426A6FC8900805583 = {
 			isa = PBXGroup;
 			children = (
@@ -155,8 +169,8 @@
 				5D56270626A6FC8C00805583 /* SoliticsIntegrationAppTests */,
 				5D56271126A6FC8C00805583 /* SoliticsIntegrationAppUITests */,
 				5D5626EE26A6FC8900805583 /* Products */,
-				EED9B1D8B4C4FF2BC71278FF /* Pods */,
-				6E1F0AB587B4B4BE9757AADB /* Frameworks */,
+				3F3B8546707A7EF2A1668425 /* Pods */,
+				B86A5203F65CDB2D00F60385 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -224,8 +238,8 @@
 				5D56276626A707A100805583 /* Extensions */,
 				5D56275926A7072900805583 /* Protocols */,
 				5D56277126A70AB000805583 /* Resources */,
-				5D56274D26A706D900805583 /* ReusableViews */,
 				5D56274026A7069900805583 /* Services */,
+				5D56274D26A706D900805583 /* ReusableViews */,
 				5D56272C26A7064C00805583 /* UserStory */,
 			);
 			path = Container;
@@ -405,28 +419,14 @@
 			path = Documents;
 			sourceTree = "<group>";
 		};
-		6E1F0AB587B4B4BE9757AADB /* Frameworks */ = {
+		B86A5203F65CDB2D00F60385 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A3093A9B6BE9777056B62F97 /* Pods_SoliticsIntegrationApp.framework */,
-				A35DC4E6A0ADEA1CD46A348D /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */,
-				CF6594E2C619FC992A22D690 /* Pods_SoliticsIntegrationAppTests.framework */,
+				F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */,
+				9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */,
+				F8F0282000984ABC5E3BBC21 /* Pods_SoliticsIntegrationAppTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EED9B1D8B4C4FF2BC71278FF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7C9905A553C80C1FAED7D63E /* Pods-SoliticsIntegrationApp.debug.xcconfig */,
-				9618599023CF5E28FAC302DD /* Pods-SoliticsIntegrationApp.release.xcconfig */,
-				88CEB42BF28945B7F0B3A89C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */,
-				0FBCC3C31513A43960B514E1 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */,
-				9B9FB5DF60C6E5013B5EF743 /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */,
-				506C1D4C4C6D1ADC18A919C3 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */,
-			);
-			name = Pods;
-			path = ../Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,11 +436,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D56271726A6FC8C00805583 /* Build configuration list for PBXNativeTarget "SoliticsIntegrationApp" */;
 			buildPhases = (
-				2F4FDA48C0E798BDE89FEAC7 /* [CP] Check Pods Manifest.lock */,
+				A94F093E06177F2653B6EFCD /* [CP] Check Pods Manifest.lock */,
 				5D5626E926A6FC8900805583 /* Sources */,
 				5D5626EA26A6FC8900805583 /* Frameworks */,
 				5D5626EB26A6FC8900805583 /* Resources */,
-				3746F31046A6C9720D1A4AD5 /* [CP] Embed Pods Frameworks */,
+				E0C29DB8DBFCF162E2F8774A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -455,7 +455,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D56271A26A6FC8C00805583 /* Build configuration list for PBXNativeTarget "SoliticsIntegrationAppTests" */;
 			buildPhases = (
-				50A5800203CAFD0CE7D92D85 /* [CP] Check Pods Manifest.lock */,
+				5834B8AD33C36D1010073DCD /* [CP] Check Pods Manifest.lock */,
 				5D5626FF26A6FC8C00805583 /* Sources */,
 				5D56270026A6FC8C00805583 /* Frameworks */,
 				5D56270126A6FC8C00805583 /* Resources */,
@@ -474,11 +474,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D56271D26A6FC8C00805583 /* Build configuration list for PBXNativeTarget "SoliticsIntegrationAppUITests" */;
 			buildPhases = (
-				E368EF9DC524879A15820F85 /* [CP] Check Pods Manifest.lock */,
+				F42AAF3C703CDA5718FB0E8E /* [CP] Check Pods Manifest.lock */,
 				5D56270A26A6FC8C00805583 /* Sources */,
 				5D56270B26A6FC8C00805583 /* Frameworks */,
 				5D56270C26A6FC8C00805583 /* Resources */,
-				87ADC6DC9CD16388766345C4 /* [CP] Embed Pods Frameworks */,
+				3485B9C23819AB6CF0F03EC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -561,46 +561,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2F4FDA48C0E798BDE89FEAC7 /* [CP] Check Pods Manifest.lock */ = {
+		3485B9C23819AB6CF0F03EC4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SoliticsIntegrationApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3746F31046A6C9720D1A4AD5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		50A5800203CAFD0CE7D92D85 /* [CP] Check Pods Manifest.lock */ = {
+		5834B8AD33C36D1010073DCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -622,24 +600,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87ADC6DC9CD16388766345C4 /* [CP] Embed Pods Frameworks */ = {
+		A94F093E06177F2653B6EFCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SoliticsIntegrationApp-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E368EF9DC524879A15820F85 /* [CP] Check Pods Manifest.lock */ = {
+		E0C29DB8DBFCF162E2F8774A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F42AAF3C703CDA5718FB0E8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -854,7 +854,7 @@
 		};
 		5D56271826A6FC8C00805583 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9905A553C80C1FAED7D63E /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
+			baseConfigurationReference = 85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -872,7 +872,7 @@
 		};
 		5D56271926A6FC8C00805583 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9618599023CF5E28FAC302DD /* Pods-SoliticsIntegrationApp.release.xcconfig */;
+			baseConfigurationReference = C378838C349F0D7982FBCF31 /* Pods-SoliticsIntegrationApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -890,7 +890,7 @@
 		};
 		5D56271B26A6FC8C00805583 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B9FB5DF60C6E5013B5EF743 /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
+			baseConfigurationReference = 05D7F313C03AA3C29370A57E /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -910,7 +910,7 @@
 		};
 		5D56271C26A6FC8C00805583 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 506C1D4C4C6D1ADC18A919C3 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
+			baseConfigurationReference = 67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -930,7 +930,7 @@
 		};
 		5D56271E26A6FC8C00805583 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 88CEB42BF28945B7F0B3A89C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
+			baseConfigurationReference = D71D4AA60FCFD3135B272E1C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -949,7 +949,7 @@
 		};
 		5D56271F26A6FC8C00805583 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0FBCC3C31513A43960B514E1 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
+			baseConfigurationReference = 6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

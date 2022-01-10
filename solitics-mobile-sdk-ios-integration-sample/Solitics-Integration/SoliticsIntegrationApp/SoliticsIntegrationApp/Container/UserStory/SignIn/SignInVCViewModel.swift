@@ -4,21 +4,40 @@
 //
 //  Created by Serg Liamthev on 05.11.2020.
 //
-
 import Foundation
 import SoliticsSDK
-
+///
+///
+///
 typealias SignInUserInput = (
-    email	         : String?,
-    keyType	         : String?,
-    keyValue	     : String?,
-    popupToken	     : String?,
-    memberId	     : String?,
-    brand	         : String?,
-    branch	         : String?,
+    email             : String?,
+    keyType             : String?,
+    keyValue         : String?,
+    popupToken         : String?,
+    memberId         : String?,
+    brand             : String?,
+    branch             : String?,
     transactionAmount: String?,
     customFields     : String?
 )
+struct LoginRequest : ILoginMetadata
+{
+    public var brand        : String?
+    public var branch       : String?
+    
+    public var email        : String?
+    public var customFields : String?
+    
+    public var keyType      : String?
+    public var keyValue        : String?
+    
+    public var transactionID    : String?
+    public var transactionType  : String?
+    public var transactionAmount: Double?
+    
+    public var memberId         : Int?
+    public var token            : String?
+}
 
 protocol SignInVCViewModelDelegate : AnyObject
 {
@@ -41,28 +60,28 @@ final class SignInVCViewModel : NSObject
         let memberId         : Int?     = Int   (userInput.memberId          ?? String())
         let transactionAmount: Double?  = Double(userInput.transactionAmount ?? String())
         
-        let request : TransactionRequest = TransactionRequest(
+        let login = LoginRequest(
             brand            : userInput.brand,
             branch           : userInput.branch,
             email            : userInput.email,
             customFields     : userInput.customFields,
             keyType          : userInput.keyType,
             keyValue         : userInput.keyValue,
-            transactionID    : EventTransactionId.login.uuid,
-            transactionType  : EventType.login.rawValue,
             transactionAmount: transactionAmount,
             memberId         : memberId,
             token            : userInput.popupToken
         )
-        
-        Solitics.onLogin(loginMetadata: request) { [weak self] result in
-            
+
+        Solitics.onLogin(login) { [weak self] result in
+
             guard let strongSelf = self else { return }
-            
+
             switch result
             {
-            case .success           : strongSelf.delegate?.onSignInSuccess()
-            case .failure(let error): strongSelf.delegate?.onSignInError(error)
+            case .success           :
+                strongSelf.delegate?.onSignInSuccess()
+            case .failure(let error):
+                strongSelf.delegate?.onSignInError(error)
             }
         }
     }

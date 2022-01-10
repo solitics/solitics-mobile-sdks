@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.solitics.integration.app.presentation.home.HomeActivity">
+    tools:context=".presentation.home.HomeActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -55,4 +55,38 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Logout" />
+
+    <CheckBox
+        android:id="@+id/cbActivateDelagate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:checked="false"
+        android:text="activate solitics delagate" />
+
+    <CheckBox
+        android:id="@+id/cbShouldShowPopup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:checked="true"
+        android:enabled="false"
+        android:text="should show popup" />
+
+    <ScrollView
+        android:id="@+id/svLogDelagate"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fillViewport="true">
+
+        <TextView
+            android:id="@+id/tvLogDelagate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+        </TextView>
+
+    </ScrollView>
+
 </LinearLayout>

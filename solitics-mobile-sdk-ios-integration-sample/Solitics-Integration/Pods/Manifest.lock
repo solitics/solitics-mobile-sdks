@@ -1,16 +1,16 @@
 PODS:
-  - SoliticsSDK (1.0.0.3)
+  - SoliticsSDK (1.0.3.5)
 
 DEPENDENCIES:
   - SoliticsSDK
 
 SPEC REPOS:
-  https://soliticsmobilesdk.jfrog.io/artifactory/api/pods/ios.solitics.mobile.releases:
+  https://soliticsmobilesdk.jfrog.io/artifactory/api/pods/ios.solitics.mobile.snapshot:
     - SoliticsSDK
 
 SPEC CHECKSUMS:
-  SoliticsSDK: 3fd1ae73b07db55d125a516cc76a14a324e28247
+  SoliticsSDK: ab2a690480ccbc543af814c6e230321a93ef7618
 
-PODFILE CHECKSUM: 97ffa7ea719a9ce9733f996f63dbd048b9a732de
+PODFILE CHECKSUM: e86546df28c7ceef7849315e8b6d1394e37808b0
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.11.2

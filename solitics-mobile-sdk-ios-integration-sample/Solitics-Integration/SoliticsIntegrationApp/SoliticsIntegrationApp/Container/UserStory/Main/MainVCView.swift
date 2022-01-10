@@ -4,9 +4,10 @@
 //
 //  Created by Serg Liamthev on 04.11.2020.
 //
-
 import UIKit
-
+///
+///
+///
 protocol MainVCViewDelegate: AnyObject
 {
     func didTapSendEventButton()

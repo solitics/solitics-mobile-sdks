@@ -21,33 +21,33 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1F83CC1B4FA99DC85CD4F9FBA149DD70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		25514049EEE1C74F7BC678497251A4C4 /* Pods-SoliticsIntegrationApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF06FE843218F873B9DFB27BBBB22C62 /* Pods-SoliticsIntegrationApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4F83C173340CA9529100FCE5FD89E3BB /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC0791F46B1C5B1EEE7B9CB1D72B6D /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55012996C584157F3F1D962C76E8073F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C1288D344229A92F0F544857F5488552 /* Pods-SoliticsIntegrationAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E95BC9581B781A3BFA12BE4E63D547B9 /* Pods-SoliticsIntegrationAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D1F6CECAE3CA0B3F0BE948BF6C3BE1BE /* Pods-SoliticsIntegrationAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A758DE2E983724AC51B6D32A32CDBB5 /* Pods-SoliticsIntegrationAppTests-dummy.m */; };
-		E6668F3FA6A32200C79EDF813729BC5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E8EDCB8DFB3AD9C5A46FA72A52A907EF /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5CDE129C448163F71CD9B791D8B519 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m */; };
-		EAD9CD8E045DC220CA9B2A94AE2A8522 /* Pods-SoliticsIntegrationApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB2044CED2CC308292CCE17DECF270 /* Pods-SoliticsIntegrationApp-dummy.m */; };
+		03CB898B1813D9A29D64D69151A4703F /* Pods-SoliticsIntegrationApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BCB2044CED2CC308292CCE17DECF270 /* Pods-SoliticsIntegrationApp-dummy.m */; };
+		05BAD7A0588C9BB7BBCB4D30BE854366 /* Pods-SoliticsIntegrationAppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E95BC9581B781A3BFA12BE4E63D547B9 /* Pods-SoliticsIntegrationAppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		167C6C7A68F2526E9088F1FB0FBE7BB0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		176FEA7A1B0DC0B1F913446E175EC34C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A7EC0791F46B1C5B1EEE7B9CB1D72B6D /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		388F9C6182FB98EDF3F9350FA4F5DD7E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5C74396695650C1E2CA458D9186E1479 /* Pods-SoliticsIntegrationApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF06FE843218F873B9DFB27BBBB22C62 /* Pods-SoliticsIntegrationApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E757D9CB59BB80E0377DEFD9DBA2D43 /* Pods-SoliticsIntegrationAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A758DE2E983724AC51B6D32A32CDBB5 /* Pods-SoliticsIntegrationAppTests-dummy.m */; };
+		DB0E5A252E3E09974C0CC091235EDDB1 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B5CDE129C448163F71CD9B791D8B519 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m */; };
+		DCE3D17A0AC007E2C35A53F9D7A60A2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		086597FDE4D42A60C3487258AF32DF5F /* PBXContainerItemProxy */ = {
+		2BA9F8116F473C5DC505EB49F8EBE191 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 6742AE100A9017516948FF265DEFD978;
 			remoteInfo = SoliticsSDK;
 		};
-		A00C7C865005924DF3546FF57B19823C /* PBXContainerItemProxy */ = {
+		6E0660980AF60F4EC264C47AC274A9FB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4074EA9C6F6352AEF43EB08CB6A92B2E;
 			remoteInfo = "Pods-SoliticsIntegrationApp";
 		};
-		E0C1823D021D1CF13792FE8FA8B29A3A /* PBXContainerItemProxy */ = {
+		DC0E433748B93BA7146948F88E1C6457 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -95,27 +95,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3BB48A4009E11A699485A82CB10B56DE /* Frameworks */ = {
+		10A62C08A62D8E82942AD45CEDD55310 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55012996C584157F3F1D962C76E8073F /* Foundation.framework in Frameworks */,
+				167C6C7A68F2526E9088F1FB0FBE7BB0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87AD2A63982C7026C26DA36403DA90D6 /* Frameworks */ = {
+		D92F668AD3BE3BD77988F46E05B3115E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F83CC1B4FA99DC85CD4F9FBA149DD70 /* Foundation.framework in Frameworks */,
+				388F9C6182FB98EDF3F9350FA4F5DD7E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D58535203824F240C0D7086A9F6E40D1 /* Frameworks */ = {
+		E093E7F778E2FCF0D1A9472B8C3DFE78 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6668F3FA6A32200C79EDF813729BC5A /* Foundation.framework in Frameworks */,
+				DCE3D17A0AC007E2C35A53F9D7A60A2E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +153,16 @@
 			);
 			name = "Pods-SoliticsIntegrationAppTests";
 			path = "Target Support Files/Pods-SoliticsIntegrationAppTests";
+			sourceTree = "<group>";
+		};
+		4999B220A2D508F97DDABD3FE6376C7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9679B4600DF4DD227C9A9117BCDC8FA1 /* Pods_SoliticsIntegrationApp.framework */,
+				4BC1F03333CCF30BFA7D2336CDA6A019 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */,
+				4FC1833657FA5C61A9E0B0BA606B835C /* Pods_SoliticsIntegrationAppTests.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		536117F05395489271ED5ABE2766E96C /* Pods-SoliticsIntegrationApp */ = {
@@ -197,16 +207,6 @@
 			path = SoliticsSDK;
 			sourceTree = "<group>";
 		};
-		B9C9320A841FBCC367EF326199DC28CF /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9679B4600DF4DD227C9A9117BCDC8FA1 /* Pods_SoliticsIntegrationApp.framework */,
-				4BC1F03333CCF30BFA7D2336CDA6A019 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */,
-				4FC1833657FA5C61A9E0B0BA606B835C /* Pods_SoliticsIntegrationAppTests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		BBC794DC41CD23D40128B3B975CC285C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,7 +223,7 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				FC80719D67233ABCAC5C24116EEA0CBB /* Pods */,
-				B9C9320A841FBCC367EF326199DC28CF /* Products */,
+				4999B220A2D508F97DDABD3FE6376C7E /* Products */,
 				BBC794DC41CD23D40128B3B975CC285C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -258,27 +258,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2A0281040766C9790ED62AAA863A805A /* Headers */ = {
+		18732153A69F86E925CB811EFFE19931 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25514049EEE1C74F7BC678497251A4C4 /* Pods-SoliticsIntegrationApp-umbrella.h in Headers */,
+				5C74396695650C1E2CA458D9186E1479 /* Pods-SoliticsIntegrationApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78D000C6E35982D2718A49C7BD97EB90 /* Headers */ = {
+		25854A8B882CA04BD8397C3FDD920588 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1288D344229A92F0F544857F5488552 /* Pods-SoliticsIntegrationAppTests-umbrella.h in Headers */,
+				05BAD7A0588C9BB7BBCB4D30BE854366 /* Pods-SoliticsIntegrationAppTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88AD646C84DB439E5F38FA0B7AB70824 /* Headers */ = {
+		70CE454DF3F52E91C09034690DB41459 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F83C173340CA9529100FCE5FD89E3BB /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h in Headers */,
+				176FEA7A1B0DC0B1F913446E175EC34C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,58 +287,58 @@
 /* Begin PBXNativeTarget section */
 		164592ADF16B2F41E0D9E87EB04AFF1A /* Pods-SoliticsIntegrationAppTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 03004A21F9920F667F3B63DDEBB2841B /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationAppTests" */;
+			buildConfigurationList = EC89A53685B0F8C0EFE719B2E9D4D6CF /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationAppTests" */;
 			buildPhases = (
-				78D000C6E35982D2718A49C7BD97EB90 /* Headers */,
-				B190D75D52EB2E322DFF44C082C4C04E /* Sources */,
-				D58535203824F240C0D7086A9F6E40D1 /* Frameworks */,
-				01AC360DF3A25B329051ABBD917A56D3 /* Resources */,
+				25854A8B882CA04BD8397C3FDD920588 /* Headers */,
+				2C212A13B01081B85F4908593F28910E /* Sources */,
+				10A62C08A62D8E82942AD45CEDD55310 /* Frameworks */,
+				3F6C63CF33CBB03373A04359FDA14543 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				27DB8AF0DD57C25B9F71ACE07F4255E3 /* PBXTargetDependency */,
+				6B54E1C9CACAC4F23BB7062FDF9CF2F5 /* PBXTargetDependency */,
 			);
 			name = "Pods-SoliticsIntegrationAppTests";
-			productName = "Pods-SoliticsIntegrationAppTests";
+			productName = Pods_SoliticsIntegrationAppTests;
 			productReference = 4FC1833657FA5C61A9E0B0BA606B835C /* Pods_SoliticsIntegrationAppTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4074EA9C6F6352AEF43EB08CB6A92B2E /* Pods-SoliticsIntegrationApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 934FB7A2F1A71ED9F34189C755DD8D35 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp" */;
+			buildConfigurationList = CAED950AFA0555C989183AC0DB2DB00C /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp" */;
 			buildPhases = (
-				2A0281040766C9790ED62AAA863A805A /* Headers */,
-				8773C3DF30F1C21D02A56E97F7CA47CF /* Sources */,
-				87AD2A63982C7026C26DA36403DA90D6 /* Frameworks */,
-				D18156BEA35DC5D8A28EF8D6BEA794EA /* Resources */,
+				18732153A69F86E925CB811EFFE19931 /* Headers */,
+				A55959D394AC9270C4D133CEB59BCE4B /* Sources */,
+				E093E7F778E2FCF0D1A9472B8C3DFE78 /* Frameworks */,
+				0C0C1243D40B5BDE00C5C3BBFA3DDCB8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9BC8EB10DDAD1BBA7CF1203AB2FBCDBE /* PBXTargetDependency */,
+				E8046AA4FB240665F69753A6D14C0A22 /* PBXTargetDependency */,
 			);
 			name = "Pods-SoliticsIntegrationApp";
-			productName = "Pods-SoliticsIntegrationApp";
+			productName = Pods_SoliticsIntegrationApp;
 			productReference = 9679B4600DF4DD227C9A9117BCDC8FA1 /* Pods_SoliticsIntegrationApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		997AE18A8F6135343022FD46B84ADC88 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A061337F4B5AF6A2C080EA11BEC7E337 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests" */;
+			buildConfigurationList = 865FD1D3111607A8623DD781E1B33523 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests" */;
 			buildPhases = (
-				88AD646C84DB439E5F38FA0B7AB70824 /* Headers */,
-				40B3C064B12C3A0D330E4C6D9E1C066F /* Sources */,
-				3BB48A4009E11A699485A82CB10B56DE /* Frameworks */,
-				9DB1115BC0A2E46B9A8031AC27412A57 /* Resources */,
+				70CE454DF3F52E91C09034690DB41459 /* Headers */,
+				B76D61F7A84DED810CADA5D10FC8B064 /* Sources */,
+				D92F668AD3BE3BD77988F46E05B3115E /* Frameworks */,
+				F6DB1756A310FBAF762D96632201C543 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				452E830E26B631401E4CBE3F5427CCBA /* PBXTargetDependency */,
+				4BC9D92574DBF39B37BBCF112251AA5E /* PBXTargetDependency */,
 			);
 			name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests";
-			productName = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests";
+			productName = Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests;
 			productReference = 4BC1F03333CCF30BFA7D2336CDA6A019 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
@@ -348,19 +348,19 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = B9C9320A841FBCC367EF326199DC28CF /* Products */;
+			productRefGroup = 4999B220A2D508F97DDABD3FE6376C7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -373,21 +373,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		01AC360DF3A25B329051ABBD917A56D3 /* Resources */ = {
+		0C0C1243D40B5BDE00C5C3BBFA3DDCB8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DB1115BC0A2E46B9A8031AC27412A57 /* Resources */ = {
+		3F6C63CF33CBB03373A04359FDA14543 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D18156BEA35DC5D8A28EF8D6BEA794EA /* Resources */ = {
+		F6DB1756A310FBAF762D96632201C543 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -417,57 +417,57 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		40B3C064B12C3A0D330E4C6D9E1C066F /* Sources */ = {
+		2C212A13B01081B85F4908593F28910E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8EDCB8DFB3AD9C5A46FA72A52A907EF /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m in Sources */,
+				7E757D9CB59BB80E0377DEFD9DBA2D43 /* Pods-SoliticsIntegrationAppTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8773C3DF30F1C21D02A56E97F7CA47CF /* Sources */ = {
+		A55959D394AC9270C4D133CEB59BCE4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAD9CD8E045DC220CA9B2A94AE2A8522 /* Pods-SoliticsIntegrationApp-dummy.m in Sources */,
+				03CB898B1813D9A29D64D69151A4703F /* Pods-SoliticsIntegrationApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B190D75D52EB2E322DFF44C082C4C04E /* Sources */ = {
+		B76D61F7A84DED810CADA5D10FC8B064 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1F6CECAE3CA0B3F0BE948BF6C3BE1BE /* Pods-SoliticsIntegrationAppTests-dummy.m in Sources */,
+				DB0E5A252E3E09974C0CC091235EDDB1 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		27DB8AF0DD57C25B9F71ACE07F4255E3 /* PBXTargetDependency */ = {
+		4BC9D92574DBF39B37BBCF112251AA5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SoliticsSDK;
+			target = 6742AE100A9017516948FF265DEFD978 /* SoliticsSDK */;
+			targetProxy = DC0E433748B93BA7146948F88E1C6457 /* PBXContainerItemProxy */;
+		};
+		6B54E1C9CACAC4F23BB7062FDF9CF2F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-SoliticsIntegrationApp";
 			target = 4074EA9C6F6352AEF43EB08CB6A92B2E /* Pods-SoliticsIntegrationApp */;
-			targetProxy = A00C7C865005924DF3546FF57B19823C /* PBXContainerItemProxy */;
+			targetProxy = 6E0660980AF60F4EC264C47AC274A9FB /* PBXContainerItemProxy */;
 		};
-		452E830E26B631401E4CBE3F5427CCBA /* PBXTargetDependency */ = {
+		E8046AA4FB240665F69753A6D14C0A22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SoliticsSDK;
 			target = 6742AE100A9017516948FF265DEFD978 /* SoliticsSDK */;
-			targetProxy = E0C1823D021D1CF13792FE8FA8B29A3A /* PBXContainerItemProxy */;
-		};
-		9BC8EB10DDAD1BBA7CF1203AB2FBCDBE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SoliticsSDK;
-			target = 6742AE100A9017516948FF265DEFD978 /* SoliticsSDK */;
-			targetProxy = 086597FDE4D42A60C3487258AF32DF5F /* PBXContainerItemProxy */;
+			targetProxy = 2BA9F8116F473C5DC505EB49F8EBE191 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		3BE452E151C651CDDD2CF645D8D43892 /* Debug */ = {
+		0930FFD9204D327D5507DB4C4574E3A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BC97AF0F93C0780F31CC76A3C47C9EF /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
+			baseConfigurationReference = F9454789E12C905AB8072E765EBC7A15 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -479,7 +479,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -488,7 +488,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -496,15 +496,16 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		65B3E99260F6345E8635CE24062DC1C8 /* Release */ = {
+		60DF66504193B396D555190D8806F85B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B1AE1B7D13382DE2DD5B10628B7E61D /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
+			baseConfigurationReference = 968CE345B93432A8710B85F301E496B5 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -516,7 +517,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -525,7 +526,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -533,6 +534,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -556,44 +558,6 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
-		};
-		75334DD4344E5AAFA4A86A615A9F8EC4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE951F91A13E0CB03FD65182EDDDC4AD /* Pods-SoliticsIntegrationApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -675,9 +639,9 @@
 			};
 			name = Release;
 		};
-		B64A738EA7B60726CE626BF059F7A408 /* Release */ = {
+		92C07639966D0C9998CFE43F8F6A8E37 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 968CE345B93432A8710B85F301E496B5 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
+			baseConfigurationReference = 6BC97AF0F93C0780F31CC76A3C47C9EF /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -689,7 +653,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -698,7 +662,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -706,44 +670,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		BD4DF72A4C840B9F931F12A602875501 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393F754B18898F87D125214FC23CD1EE /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -815,9 +742,9 @@
 			};
 			name = Debug;
 		};
-		FE2C11246DBE3E06A395777023AC5C3A /* Debug */ = {
+		DDDF5EF64CABF4B6A39A5E78CD0E85FA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9454789E12C905AB8072E765EBC7A15 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
+			baseConfigurationReference = 393F754B18898F87D125214FC23CD1EE /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -829,7 +756,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -838,7 +765,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -846,24 +773,94 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
+		EB690BBFE72C3FB8A32F93BD4E265D47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B1AE1B7D13382DE2DD5B10628B7E61D /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F08E62B4E5A7B58193D50A75AC4349A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE951F91A13E0CB03FD65182EDDDC4AD /* Pods-SoliticsIntegrationApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		03004A21F9920F667F3B63DDEBB2841B /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationAppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD4DF72A4C840B9F931F12A602875501 /* Debug */,
-				65B3E99260F6345E8635CE24062DC1C8 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		279DF3011B863675AB2A9E3407D01A9C /* Build configuration list for PBXAggregateTarget "SoliticsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -882,20 +879,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		934FB7A2F1A71ED9F34189C755DD8D35 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp" */ = {
+		865FD1D3111607A8623DD781E1B33523 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BE452E151C651CDDD2CF645D8D43892 /* Debug */,
-				75334DD4344E5AAFA4A86A615A9F8EC4 /* Release */,
+				0930FFD9204D327D5507DB4C4574E3A2 /* Debug */,
+				60DF66504193B396D555190D8806F85B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A061337F4B5AF6A2C080EA11BEC7E337 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests" */ = {
+		CAED950AFA0555C989183AC0DB2DB00C /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FE2C11246DBE3E06A395777023AC5C3A /* Debug */,
-				B64A738EA7B60726CE626BF059F7A408 /* Release */,
+				92C07639966D0C9998CFE43F8F6A8E37 /* Debug */,
+				F08E62B4E5A7B58193D50A75AC4349A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC89A53685B0F8C0EFE719B2E9D4D6CF /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDDF5EF64CABF4B6A39A5E78CD0E85FA /* Debug */,
+				EB690BBFE72C3FB8A32F93BD4E265D47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

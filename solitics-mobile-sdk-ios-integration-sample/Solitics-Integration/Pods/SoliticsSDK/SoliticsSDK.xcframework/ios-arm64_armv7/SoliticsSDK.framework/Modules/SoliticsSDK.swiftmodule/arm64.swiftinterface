@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
 // swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SoliticsSDK
 import CommonCrypto
+import Dispatch
 import Foundation
 import MessageUI
 import Network
@@ -13,147 +14,65 @@ import UIKit
 import WebKit
 import os
 import zlib
+public typealias DataUpdateInfo = [Swift.String : [Swift.String : Any]]
 public protocol JSONAble {
   associatedtype ReturnType
   func toJSON() -> [Swift.String : Any]
   static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> Self.ReturnType?
 }
-extension JSONAble {
-  public static var objectName: Swift.String {
-    get
-  }
+public protocol ILoginResult {
+  var hashedSubscriberId: Swift.Int { get }
 }
-extension JSONAble {
-  public func toDataUpdate() -> SoliticsSDK.DataUpdateInfo
-  public static func fromDataUpdate(_ data: SoliticsSDK.DataUpdateInfo) -> Self.ReturnType?
+@objc public class SOLLoginResult : ObjectiveC.NSObject {
+  final public let hashedSubscriberId: Swift.Int
+  public init(_ subscriberId: Swift.Int)
+  convenience public init(result: SoliticsSDK.ILoginResult)
+  @objc override dynamic public init()
+  @objc deinit
 }
-extension JSONAble {
-  public static func fromNotification(_ notification: Foundation.NSNotification) -> Self.ReturnType?
+extension SOLLoginResult : SoliticsSDK.ILoginResult {
 }
-extension JSONAble where Self : Swift.Encodable {
-  public func toJSONString() -> Swift.String?
-  public func toData() -> Foundation.Data?
-}
-public struct SocketPopupJSONBorder : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case color
-    case radius
-    case width
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONBorder.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONBorder.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var color: Swift.String?
-  public var radius: Swift.Int?
-  public var width: Swift.Int?
-  public init(color: Swift.String?, radius: Swift.Int?, width: Swift.Int?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONBorder : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONBorder
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONBorder?
-}
-public protocol AppContentUpdateObserver : SoliticsSDK.UniqueIdentifiable {
-  func didReceiveResponse(for event: SoliticsSDK.DataUpdateNotification, data: SoliticsSDK.DataUpdateInfo)
-}
-public struct TransactionResponse : Swift.Decodable {
-  public let hashedSubscriberId: Swift.Int
-  public init(from decoder: Swift.Decoder) throws
-  public init(hashedSubscriberId: Swift.Int)
-}
-extension TransactionResponse : SoliticsSDK.ILoginResult {
-}
-extension TransactionResponse : Swift.Encodable {
-  public func encode(to encoder: Swift.Encoder) throws
-}
-extension TransactionResponse : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.TransactionResponse
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.TransactionResponse?
-}
-public struct SocketPopupJSONShadow : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case enabled
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONShadow.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONShadow.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var enabled: Swift.Bool?
-  public init(enabled: Swift.Bool?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONShadow : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONShadow
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONShadow?
-}
-public enum SocketPopupPosition : Swift.String, Swift.CaseIterable, Swift.Codable {
-  case center
-  case left
-  case right
-  case topRight
-  case topLeft
-  case bottomRight
-  case bottomLeft
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [SoliticsSDK.SocketPopupPosition]
-  public typealias RawValue = Swift.String
-  public static var allCases: [SoliticsSDK.SocketPopupPosition] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
+public protocol IAnalyticsEventResult {
 }
 public typealias VoidClosure = () -> Swift.Void
 public typealias TypeClosure<T> = (T) -> Swift.Void
-public typealias VoidResult = Swift.Result<Swift.Void, Swift.Error>
-public typealias TypeResult<T> = Swift.Result<T, Swift.Error>
 public typealias VoidResultClosure = (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void
 public typealias TypeResultClosure<T> = (Swift.Result<T, Swift.Error>) -> Swift.Void
-public typealias DataUpdateInfo = [Swift.String : [Swift.String : Any]]
+@objc(SoliticsLogListener) public protocol SoliticsLogListener : ObjectiveC.NSObjectProtocol {
+  @objc optional func onLogMessage(_ message: Swift.String)
+}
+@objc(SoliticsPopupDelegate) public protocol SoliticsPopupDelegate : ObjectiveC.NSObjectProtocol {
+  @objc optional func soliticsShouldOpenMessage(with content: SoliticsSDK.SOLPopupContent) -> Swift.Bool
+  @objc optional func soliticsMessageDidDisplayPopup()
+  @objc optional func soliticsMessageDidDismissPopup()
+  @objc optional func soliticsMessageDidTrigerAction()
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc(Solitics) open class Solitics : ObjectiveC.NSObject {
+  weak public class var delegate: SoliticsSDK.SoliticsPopupDelegate! {
+    get
+    set
+  }
   public class func activate()
-  public class func onLogin(loginMetadata: SoliticsSDK.ILoginMetadata, completion: @escaping SoliticsSDK.TypeResultClosure<SoliticsSDK.ILoginResult>)
+  public class var activeGlobalLogs: Swift.Bool {
+    get
+    set
+  }
+  public class var activeSocketLogs: Swift.Bool {
+    get
+    set
+  }
+  public class var activeRestflLogs: Swift.Bool {
+    get
+    set
+  }
+  public class func onLogin(_ loginMetadata: SoliticsSDK.ILoginMetadata, completion: @escaping SoliticsSDK.TypeResultClosure<SoliticsSDK.ILoginResult>)
   public class func onLogout()
-  public class func onEmitEvent(txType: Swift.String?, txAmount: Swift.Double?, customFields: Swift.String?, completion: @escaping SoliticsSDK.TypeResultClosure<SoliticsSDK.ILoginResult>)
+  public class func onEmitEvent(txType: Swift.String?, txAmount: Swift.Double?, customFields: Swift.String?, completion: @escaping SoliticsSDK.TypeResultClosure<SoliticsSDK.IEmitEventResult>)
   public class var currentLoginInfo: SoliticsSDK.ILoginMetadata? {
     get
   }
-  public class func addEventsObserver(events: [SoliticsSDK.DataUpdateNotification], observer: SoliticsSDK.AppContentUpdateObserver)
-  public class func removeObserver(observer: SoliticsSDK.AppContentUpdateObserver, for events: [SoliticsSDK.DataUpdateNotification])
-  public class func presentPopup(for data: SoliticsSDK.SocketPopupJSONMessage, at vc: UIKit.UIViewController)
+  public class func register(SoliticsLogListener logListener: SoliticsSDK.SoliticsLogListener)
+  public class func remove(SoliticsLogListener logListener: SoliticsSDK.SoliticsLogListener)
   @objc deinit
 }
 public struct SocketDataMessage : Swift.Decodable {
@@ -182,95 +101,10 @@ extension SocketStringMessage : SoliticsSDK.JSONAble {
   public func toJSON() -> [Swift.String : Any]
   public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketStringMessage?
 }
-public protocol ILoginResult {
+public protocol IEmitEventResult {
   var hashedSubscriberId: Swift.Int { get }
 }
-public struct SocketPopupJSONMessage : Swift.Decodable {
-  public var id: Swift.String?
-  public var html: Swift.String?
-  public var position: SoliticsSDK.SocketPopupPosition
-  public var theme: SoliticsSDK.SocketPopupJSONTheme?
-  public var webhookParams: SoliticsSDK.SocketPopupJSONWebhookParams?
-  public init(id: Swift.String?, html: Swift.String?, position: SoliticsSDK.SocketPopupPosition, theme: SoliticsSDK.SocketPopupJSONTheme?, webhookParams: SoliticsSDK.SocketPopupJSONWebhookParams?)
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONMessage : Swift.Encodable {
-  public func encode(to encoder: Swift.Encoder) throws
-}
-extension SocketPopupJSONMessage : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONMessage
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONMessage?
-}
-public struct SocketPopupJSONExitButton : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case enabled
-    case inside
-    case color
-    case border
-    case size
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONExitButton.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONExitButton.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var enabled: Swift.Bool?
-  public var inside: Swift.Bool?
-  public var color: Swift.String?
-  public var border: Swift.Bool?
-  public var size: Swift.Int?
-  public init(enabled: Swift.Bool?, inside: Swift.Bool?, color: Swift.String?, border: Swift.Bool?, size: Swift.Int?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONExitButton : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONExitButton
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONExitButton?
-}
-public struct SocketPopupJSONWebhookParams : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case contentId
-    case subscriberId
-    case promotionId
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var contentId: Swift.String?
-  public var subscriberId: Swift.String?
-  public var promotionId: Swift.String?
-  public init(contentId: Swift.String?, subscriberId: Swift.String?, promotionId: Swift.String?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONWebhookParams : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONWebhookParams
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONWebhookParams?
+public protocol IHeartbeatEventResult {
 }
 public enum DataUpdateNotification : Swift.String, Swift.CaseIterable {
   case didReceiveSocketString
@@ -290,170 +124,22 @@ public enum DataUpdateNotification : Swift.String, Swift.CaseIterable {
     get
   }
 }
-public struct SocketPopupJSONTheme : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case deviceToPopupTheme
-    case closeOnBackgroundClick
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONTheme.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONTheme.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var deviceToPopupTheme: SoliticsSDK.SocketPopupJSONDeviceToPopupTheme?
-  public var closeOnBackgroundClick: Swift.Bool?
-  public init(deviceToPopupTheme: SoliticsSDK.SocketPopupJSONDeviceToPopupTheme?, closeOnBackgroundClick: Swift.Bool?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+@objc public class SOLPopupContent : ObjectiveC.NSObject {
+  public var messageID: Swift.String
+  public var messageHTML: Swift.String
+  public var webhookParams: [Swift.String : Any]
+  public init(messageID: Swift.String, messageHTML: Swift.String, webhookParams: [Swift.String : Any])
+  @objc override dynamic public init()
+  @objc deinit
 }
-extension SocketPopupJSONTheme : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONTheme
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONTheme?
+extension SOLPopupContent : SoliticsSDK.IPopupContent {
 }
-public struct SocketPopupJSONBackground : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case enabled
-    case color
-    case shadow
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONBackground.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONBackground.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var enabled: Swift.Bool?
-  public var color: Swift.String?
-  public var shadow: SoliticsSDK.SocketPopupJSONShadow?
-  public init(enabled: Swift.Bool?, color: Swift.String?, shadow: SoliticsSDK.SocketPopupJSONShadow?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONBackground : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONBackground
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONBackground?
-}
-public protocol UniqueIdentifiable {
-  var identifier: Foundation.UUID { get set }
-}
-public struct SocketPopupJSONPlatformSize : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case backdrop
-    case border
-    case exitButton
-    case size
-    case isFixedSize
-    case background
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONPlatformSize.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONPlatformSize.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var backdrop: SoliticsSDK.SocketPopupJSONBackdrop?
-  public var border: SoliticsSDK.SocketPopupJSONBorder?
-  public var exitButton: SoliticsSDK.SocketPopupJSONExitButton?
-  public var size: Swift.Int?
-  public var isFixedSize: Swift.Bool?
-  public var background: SoliticsSDK.SocketPopupJSONBackground?
-  public init(backdrop: SoliticsSDK.SocketPopupJSONBackdrop?, border: SoliticsSDK.SocketPopupJSONBorder?, exitButton: SoliticsSDK.SocketPopupJSONExitButton?, size: Swift.Int?, isFixedSize: Swift.Bool?, background: SoliticsSDK.SocketPopupJSONBackground?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONPlatformSize : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONPlatformSize
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONPlatformSize?
-}
-public struct SocketPopupJSONDeviceToPopupTheme : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case mobile
-    case tablet
-    case desktop
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONDeviceToPopupTheme.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONDeviceToPopupTheme.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var mobile: SoliticsSDK.SocketPopupJSONPlatformSize?
-  public var tablet: SoliticsSDK.SocketPopupJSONPlatformSize?
-  public var desktop: SoliticsSDK.SocketPopupJSONPlatformSize?
-  public init(mobile: SoliticsSDK.SocketPopupJSONPlatformSize?, tablet: SoliticsSDK.SocketPopupJSONPlatformSize?, desktop: SoliticsSDK.SocketPopupJSONPlatformSize?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
-}
-extension SocketPopupJSONDeviceToPopupTheme : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONDeviceToPopupTheme
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONDeviceToPopupTheme?
-}
-public enum EventTransactionId : Swift.String, Swift.CaseIterable {
-  case login
-  case emitEvent
-  public var uuid: Swift.String {
-    get
-  }
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [SoliticsSDK.EventTransactionId]
-  public typealias RawValue = Swift.String
-  public static var allCases: [SoliticsSDK.EventTransactionId] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
+extension SOLPopupContent {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
   }
 }
-public struct TransactionRequest {
+public struct SOLRestRequestLogin {
   public var brand: Swift.String?
   public var branch: Swift.String?
   public var email: Swift.String?
@@ -465,18 +151,58 @@ public struct TransactionRequest {
   public var transactionAmount: Swift.Double?
   public var memberId: Swift.Int?
   public var token: Swift.String?
-  public init(brand: Swift.String? = nil, branch: Swift.String? = nil, email: Swift.String? = nil, customFields: Swift.String? = nil, keyType: Swift.String? = nil, keyValue: Swift.String? = nil, transactionID: Swift.String? = EventTransactionId.login.uuid, transactionType: Swift.String? = EventType.login.rawValue, transactionAmount: Swift.Double? = nil, memberId: Swift.Int? = nil, token: Swift.String? = nil)
+  public init(brand: Swift.String? = nil, branch: Swift.String? = nil, email: Swift.String? = nil, customFields: Swift.String? = nil, keyType: Swift.String? = nil, keyValue: Swift.String? = nil, transactionAmount: Swift.Double? = nil, memberId: Swift.Int? = nil, token: Swift.String? = nil)
 }
-extension TransactionRequest : SoliticsSDK.ILoginMetadata {
+extension SOLRestRequestLogin : SoliticsSDK.ILoginMetadata {
 }
-extension TransactionRequest : Swift.Codable {
+extension SOLRestRequestLogin : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
-extension TransactionRequest : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.TransactionRequest
+extension SOLRestRequestLogin : SoliticsSDK.JSONAble {
+  public typealias ReturnType = SoliticsSDK.SOLRestRequestLogin
   public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_: [Swift.AnyHashable : Any]) -> SoliticsSDK.TransactionRequest?
+  public static func fromJSON(_: [Swift.AnyHashable : Any]) -> SoliticsSDK.SOLRestRequestLogin.ReturnType?
+}
+public protocol UniqueIdentifiable {
+  var identifier: Foundation.UUID { get }
+}
+public struct SOLRestRequestTransaction {
+  public var brand: Swift.String?
+  public var branch: Swift.String?
+  public var email: Swift.String?
+  public var customFields: Swift.String?
+  public var keyType: Swift.String?
+  public var keyValue: Swift.String?
+  public var transactionID: Swift.String?
+  public var transactionType: Swift.String?
+  public var transactionAmount: Swift.Double?
+  public var memberId: Swift.Int?
+  public var token: Swift.String?
+  public init(brand: Swift.String? = nil, branch: Swift.String? = nil, email: Swift.String? = nil, customFields: Swift.String? = nil, keyType: Swift.String? = nil, keyValue: Swift.String? = nil, transactionID: Swift.String? = nil, transactionType: Swift.String? = nil, transactionAmount: Swift.Double? = nil, memberId: Swift.Int? = nil, token: Swift.String? = nil)
+}
+extension SOLRestRequestTransaction : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+extension SOLRestRequestTransaction : SoliticsSDK.JSONAble {
+  public typealias ReturnType = SoliticsSDK.SOLRestRequestTransaction
+  public func toJSON() -> [Swift.String : Any]
+  public static func fromJSON(_: [Swift.AnyHashable : Any]) -> SoliticsSDK.SOLRestRequestTransaction.ReturnType?
+}
+@objc public class SOLEmitEventResult : ObjectiveC.NSObject {
+  final public let hashedSubscriberId: Swift.Int
+  public init(_ subscriberId: Swift.Int)
+  convenience public init(result: SoliticsSDK.IEmitEventResult)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension SOLEmitEventResult : SoliticsSDK.IEmitEventResult {
+}
+extension SOLEmitEventResult : SoliticsSDK.JSONAble {
+  public typealias ReturnType = SoliticsSDK.SOLEmitEventResult
+  public func toJSON() -> [Swift.String : Any]
+  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SOLEmitEventResult.ReturnType?
 }
 public protocol ILoginMetadata {
   var brand: Swift.String? { get set }
@@ -491,88 +217,11 @@ public protocol ILoginMetadata {
   var memberId: Swift.Int? { get set }
   var token: Swift.String? { get set }
 }
-public struct SocketPopupJSONBackdrop : Swift.Codable {
-  public enum CodingKeys : Swift.String, Swift.CodingKey, Swift.CaseIterable {
-    case enabled
-    case value
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias AllCases = [SoliticsSDK.SocketPopupJSONBackdrop.CodingKeys]
-    public typealias RawValue = Swift.String
-    public static var allCases: [SoliticsSDK.SocketPopupJSONBackdrop.CodingKeys] {
-      get
-    }
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public var enabled: Swift.Bool?
-  public var value: Swift.Int?
-  public init(enabled: Swift.Bool?, value: Swift.Int?)
-  public func encode(to encoder: Swift.Encoder) throws
-  public init(from decoder: Swift.Decoder) throws
+public protocol IPopupContent {
+  var messageID: Swift.String { get }
+  var messageHTML: Swift.String { get }
+  var webhookParams: [Swift.String : Any] { get }
 }
-extension SocketPopupJSONBackdrop : SoliticsSDK.JSONAble {
-  public typealias ReturnType = SoliticsSDK.SocketPopupJSONBackdrop
-  public func toJSON() -> [Swift.String : Any]
-  public static func fromJSON(_ dictionary: [Swift.AnyHashable : Any]) -> SoliticsSDK.SocketPopupJSONBackdrop?
-}
-public enum EventType : Swift.String, Swift.CaseIterable {
-  case login
-  case emitEvent
-  public init?(rawValue: Swift.String)
-  public typealias AllCases = [SoliticsSDK.EventType]
-  public typealias RawValue = Swift.String
-  public static var allCases: [SoliticsSDK.EventType] {
-    get
-  }
-  public var rawValue: Swift.String {
-    get
-  }
-}
-extension SoliticsSDK.SocketPopupJSONBorder.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONBorder.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONBorder.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONShadow.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONShadow.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONShadow.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupPosition : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupPosition : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupPosition : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONExitButton.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONExitButton.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONExitButton.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONWebhookParams.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONWebhookParams.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONWebhookParams.CodingKeys : Swift.RawRepresentable {}
 extension SoliticsSDK.DataUpdateNotification : Swift.Equatable {}
 extension SoliticsSDK.DataUpdateNotification : Swift.Hashable {}
 extension SoliticsSDK.DataUpdateNotification : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONTheme.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONTheme.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONTheme.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONBackground.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONBackground.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONBackground.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONPlatformSize.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONPlatformSize.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONPlatformSize.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONDeviceToPopupTheme.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONDeviceToPopupTheme.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONDeviceToPopupTheme.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.EventTransactionId : Swift.Equatable {}
-extension SoliticsSDK.EventTransactionId : Swift.Hashable {}
-extension SoliticsSDK.EventTransactionId : Swift.RawRepresentable {}
-extension SoliticsSDK.SocketPopupJSONBackdrop.CodingKeys : Swift.Equatable {}
-extension SoliticsSDK.SocketPopupJSONBackdrop.CodingKeys : Swift.Hashable {}
-extension SoliticsSDK.SocketPopupJSONBackdrop.CodingKeys : Swift.RawRepresentable {}
-extension SoliticsSDK.EventType : Swift.Equatable {}
-extension SoliticsSDK.EventType : Swift.Hashable {}
-extension SoliticsSDK.EventType : Swift.RawRepresentable {}

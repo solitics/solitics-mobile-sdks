@@ -12,9 +12,9 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.2'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.30'
-        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.20.0'
+        classpath 'com.android.tools.build:gradle:7.0.4'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.24.23'
     }
 }
 ext {
@@ -29,6 +29,7 @@ allprojects {
 
     repositories {
         mavenLocal()
+        mavenCentral()
         google()
     }
     gradle.projectsEvaluated {

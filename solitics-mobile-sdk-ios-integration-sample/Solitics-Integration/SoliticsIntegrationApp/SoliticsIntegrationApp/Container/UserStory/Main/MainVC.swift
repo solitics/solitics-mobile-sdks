@@ -4,10 +4,10 @@
 //
 //  Created by Serg Liamthev on 04.11.2020.
 //
-
 import UIKit
-import SoliticsSDK
-
+///
+///
+///
 final class MainVC : BaseViewController
 {
     private lazy var contentView: MainVCView   = MainVCView()
@@ -205,20 +205,6 @@ extension MainVC: MainVCViewDelegate
 // MARK: - MainVCViewModelDelegate
 extension MainVC: MainVCViewModelDelegate
 {
-    func didReceiveSocketData(_ data: Data)
-    {
-        guard let string = String(data: data, encoding: .utf8) else {
-            return
-        }
-        
-        executeOnMain { [weak self] in
-            
-            guard let `self` = self else { return }
-            self.hideProgress()
-            self.showToast(string)
-        }
-    }
-    
     func didReceiveError(_ error: Error)
     {
         executeOnMain { [weak self] in
@@ -226,34 +212,17 @@ extension MainVC: MainVCViewModelDelegate
             guard let `self` = self else { return }
             self.hideProgress()
             self.showToast(error.localizedDescription)
-            
         }
     }
     
     func didReceiveEventResponse(response: String)
     {
+        
         executeOnMain { [weak self] in
             
             guard let `self` = self else { return }
             self.hideProgress()
             self.showToast(response)
-        }
-    }
-    
-    func didReceivePopupData(data: SocketPopupJSONMessage)
-    {    
-        // NOTE: - Client requirment - Multiple popup (latest poup should remain)
-        if let vc = presentedViewController
-        {
-            vc.dismiss(animated: false, completion: { [weak self] in
-                
-                guard let strongSelf = self else { return }
-                Solitics.presentPopup(for: data, at: strongSelf)
-            })
-        }
-        else
-        {
-            Solitics.presentPopup(for: data, at: self)
         }
     }
 }
