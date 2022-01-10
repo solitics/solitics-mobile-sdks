@@ -189,6 +189,6 @@ For more information see the demo application
 ## Migration guide
 ### Solitics SDK 2.0.0
 
-Latest changes in the Soitics SDK ontain breaking changes to some elements of the system, i.e. you are no longer able to manually control popup presentation and dismisal.
+Latest changes in the Soitics SDK contain breaking changes to some elements of the system, i.e. you are no longer able to manually control popup presentation and dismisal.
 
 To control popup presentation use SoliticsPopupDelagate API, see example above.
