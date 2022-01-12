@@ -3,8 +3,8 @@
 # ######################################################################################################################
 source 'https://github.com/CocoaPods/Specs.git'
 plugin 'cocoapods-art', :sources => [
-#   'ios.solitics.mobile.releases' ,
-    'ios.solitics.mobile.snapshot'
+    'ios.solitics.mobile.releases' ,
+#   'ios.solitics.mobile.snapshot'
 ]
 
 workspace 'SoliticsIntegration.xcworkspace'
@@ -22,19 +22,65 @@ platform :ios, '10.0'
 # ######################################################################################################################
 
 target 'SoliticsIntegrationApp' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you don't want to use dynamic frameworks
+    use_frameworks!
+    
+    pod 'SoliticsSDK'
+    # Pods for SoliticsIntegrationApp
+    
+    target 'SoliticsIntegrationAppTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
+    
+    target 'SoliticsIntegrationAppUITests' do
+        # Pods for testing
+    end
+    
+end
 
-  pod 'SoliticsSDK'
-  # Pods for SoliticsIntegrationApp
+post_install do |installer|
 
-  target 'SoliticsIntegrationAppTests' do
-    inherit! :search_paths
-    # Pods for testing
+  installer.pods_project.build_configurations.each do |config|
+    config.build_settings['ONLY_ACTIVE_ARCH'] = false
+    config.build_settings['DEBUG_INFORMATION_FORMAT'] = 'dwarf-with-dsym';
+    
+    if config.name == 'Debug'
+      cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+      cflags << '-fembed-bitcode-marker'
+      config.build_settings['OTHER_CFLAGS'] = cflags
+      
+      config.build_settings['BITCODE_GENERATION_MODE'] = 'marker'
+    end
+    if config.name == 'Release'
+      cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+      cflags << '-fembed-bitcode'
+      config.build_settings['OTHER_CFLAGS'] = cflags
+      
+      config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
+    end
   end
-
-  target 'SoliticsIntegrationAppUITests' do
-    # Pods for testing
+  
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ONLY_ACTIVE_ARCH'] = false
+      config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
+      config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
+      
+      if config.name == 'Debug'
+        cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+        cflags << '-fembed-bitcode-marker'
+        config.build_settings['OTHER_CFLAGS'] = cflags
+        
+        config.build_settings['BITCODE_GENERATION_MODE'] = 'marker'
+      end
+      if config.name == 'Release'
+        cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+        cflags << '-fembed-bitcode'
+        config.build_settings['OTHER_CFLAGS'] = cflags
+        
+        config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
+      end
+    end
   end
-
 end
