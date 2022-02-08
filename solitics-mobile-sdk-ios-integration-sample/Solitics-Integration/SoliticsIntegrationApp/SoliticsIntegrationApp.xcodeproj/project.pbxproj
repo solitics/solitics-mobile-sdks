@@ -41,6 +41,7 @@
 		5D56277526A70AEA00805583 /* sample_web_view_content.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277426A70AEA00805583 /* sample_web_view_content.html */; };
 		5D56277826A70AF600805583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277626A70AF600805583 /* Assets.xcassets */; };
 		5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277C26A70B3300805583 /* LaunchScreen.storyboard */; };
+		5DAD49D9278F5C7F0069F8E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */; };
 		832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */; };
 		9D69AA043B9AF2D7B9DAB3B7 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F0282000984ABC5E3BBC21 /* Pods_SoliticsIntegrationAppTests.framework */; };
 		B6D3B0183F01FD26E9F2096C /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */; };
@@ -108,6 +109,7 @@
 		5D56277426A70AEA00805583 /* sample_web_view_content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_web_view_content.html; sourceTree = "<group>"; };
 		5D56277626A70AF600805583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D56277B26A70B3300805583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				5D5626F226A6FC8900805583 /* SceneDelegate.swift */,
 				5D56272B26A7063300805583 /* Container */,
 				5D5626FE26A6FC8C00805583 /* Info.plist */,
+				5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */,
 			);
 			path = SoliticsIntegrationApp;
 			sourceTree = "<group>";
@@ -539,6 +542,7 @@
 			files = (
 				5D56272926A6FCF100805583 /* SoliticsDevelopmentApp.xctestplan in Resources */,
 				5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */,
+				5DAD49D9278F5C7F0069F8E4 /* GoogleService-Info.plist in Resources */,
 				5D56277526A70AEA00805583 /* sample_web_view_content.html in Resources */,
 				5D56277826A70AF600805583 /* Assets.xcassets in Resources */,
 			);
@@ -746,7 +750,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D56272226A6FCD400805583 /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -805,7 +808,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5D56272226A6FCD400805583 /* Release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -894,7 +896,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 05D7F313C03AA3C29370A57E /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoliticsIntegrationAppTests/Info.plist;
@@ -914,7 +915,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoliticsIntegrationAppTests/Info.plist;
@@ -934,7 +934,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D71D4AA60FCFD3135B272E1C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoliticsIntegrationAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -953,7 +952,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = SoliticsIntegrationAppUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

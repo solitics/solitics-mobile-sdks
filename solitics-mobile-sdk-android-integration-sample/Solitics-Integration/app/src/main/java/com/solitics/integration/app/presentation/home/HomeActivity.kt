@@ -1,5 +1,6 @@
 package com.solitics.integration.app.presentation.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
@@ -22,6 +23,7 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
     private lateinit var tvLog: TextView
     private lateinit var tvDelegateLog: TextView
     private lateinit var cbShouldShowPopup: CheckBox
+    private lateinit var cbShouldDismissForNavigationClick: CheckBox
     private lateinit var cbIsDelegateActive: CheckBox
     private lateinit var svLogDelegate: ScrollView
 
@@ -43,6 +45,7 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
 
         tvDelegateLog = findViewById(R.id.tvLogDelagate)
         cbShouldShowPopup = findViewById(R.id.cbShouldShowPopup)
+        cbShouldDismissForNavigationClick = findViewById(R.id.cbShouldDismissForNavigationClick)
         cbIsDelegateActive = findViewById(R.id.cbActivateDelagate)
         svLogDelegate = findViewById(R.id.svLogDelagate)
 
@@ -154,6 +157,20 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         onDelegateMessage("onPopupClosed" )
     }
 
+    override fun popupShouldDismissForNavigationOnClickTrigger(urlString: String): Boolean {
+        Log.d(TAG, "popupShouldDismissForNavigationOnClickTrigger: $urlString")
+        return cbShouldDismissForNavigationClick.isChecked
+    }
+
+    override fun onPopupClosedForNavigationOnClickTrigger(urlString: String) {
+        Log.d(TAG, "onPopupClosedForNavigationOnClickTrigger: $urlString")
+        onDelegateMessage("onPopupClosedForNavigationOnClickTrigger $urlString")
+
+        // add your navigation logic here
+        startFirstActivity()
+    }
+
+
     private fun onDelegateMessage(message: String) {
         runOnUiThread {
             val oldLog = tvDelegateLog.text.toString()
@@ -168,11 +185,17 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         if (isActive) {
             cbIsDelegateActive.isChecked = true
             cbShouldShowPopup.isEnabled = true
+            cbShouldDismissForNavigationClick.isEnabled = true
             SoliticsSDK.setSoliticsPopupDelegate(this)
         } else {
             cbIsDelegateActive.isChecked = false
             cbShouldShowPopup.isEnabled = false
+            cbShouldDismissForNavigationClick.isEnabled = false
             SoliticsSDK.setSoliticsPopupDelegate(null)
         }
+    }
+
+    private fun startFirstActivity(){
+        startActivity(Intent(this, FirstActivity::class.java))
     }
 }

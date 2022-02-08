@@ -6,6 +6,7 @@
 //
 import UIKit
 import SoliticsSDK
+import Firebase
 ///
 ///
 ///
@@ -13,7 +14,7 @@ import SoliticsSDK
 class AppDelegate : UIResponder
 {
     var window : UIWindow?
-
+    
     override init()
     {
         super.init()
@@ -62,6 +63,7 @@ extension AppDelegate : UIApplicationDelegate
         navigateToInitialScreen()
         setup()
         window?.makeKeyAndVisible()
+        FirebaseApp.configure()
         return true
     }
     
@@ -105,6 +107,7 @@ extension AppDelegate : SoliticsPopupDelegate
         print(content.webhookParams)
         return true
     }
+    
     /**
      * Called when the solitics popup message is displayed.
      */
@@ -112,6 +115,7 @@ extension AppDelegate : SoliticsPopupDelegate
     {
         print(#function)
     }
+    
     /**
      * Called when the solitics popup message is closed.
      */
@@ -119,11 +123,25 @@ extension AppDelegate : SoliticsPopupDelegate
     {
         print(#function)
     }
+    
     /**
      * Called when the an item inside the solitics popup message is clicked.
      */
     func soliticsMessageDidTrigerAction()
     {
         print(#function)
+    }
+    
+    func soliticsShouldDismissPopup(forNavigationTarget urlString: String) -> Bool
+    {
+        print(#function)
+        /// Custom logic to determin if we shold dismiss the popup or not
+        return true
+    }
+    
+    func soliticsMessageDidClosePopup(forNavigationTarget urlString: String)
+    {
+        print(#function)
+        /// Action to be taken after the popup was dismisses by the solitics system
     }
 }

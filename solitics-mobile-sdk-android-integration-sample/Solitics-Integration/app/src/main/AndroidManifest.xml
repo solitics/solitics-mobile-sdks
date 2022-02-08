@@ -16,6 +16,7 @@
         android:theme="@style/Theme.MyApplication">
 
         <activity android:name="com.solitics.integration.app.presentation.home.HomeActivity" />
+        <activity android:name=".presentation.home.FirstActivity" />
         <activity android:name="com.solitics.integration.app.presentation.login.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

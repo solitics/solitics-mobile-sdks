@@ -1,92 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".presentation.home.HomeActivity">
+    android:layout_height="match_parent">
 
-    <ScrollView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".presentation.home.HomeActivity">
 
-        <TextView
-            android:id="@+id/tvLog"
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tvLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+            </TextView>
+
+        </ScrollView>
+
+        <EditText
+            android:id="@+id/etTxType"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_margin="16dp"
+            android:hint="txType" />
 
-        </TextView>
-
-    </ScrollView>
-
-    <EditText
-        android:id="@+id/etTxType"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="txType" />
-
-    <EditText
-        android:id="@+id/etCustomFields"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="customFields" />
-
-    <EditText
-        android:id="@+id/etTxAmount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:hint="txAmount" />
-
-    <Button
-        android:id="@+id/btnSendEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Send event" />
-
-    <Button
-        android:id="@+id/btnLogOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Logout" />
-
-    <CheckBox
-        android:id="@+id/cbActivateDelagate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:checked="false"
-        android:text="activate solitics delagate" />
-
-    <CheckBox
-        android:id="@+id/cbShouldShowPopup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:checked="true"
-        android:enabled="false"
-        android:text="should show popup" />
-
-    <ScrollView
-        android:id="@+id/svLogDelagate"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:fillViewport="true">
-
-        <TextView
-            android:id="@+id/tvLogDelagate"
+        <EditText
+            android:id="@+id/etCustomFields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
+            android:layout_margin="16dp"
+            android:hint="customFields" />
 
-        </TextView>
+        <EditText
+            android:id="@+id/etTxAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:hint="txAmount" />
 
-    </ScrollView>
+        <Button
+            android:id="@+id/btnSendEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send event" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/btnLogOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
+        <CheckBox
+            android:id="@+id/cbActivateDelagate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:checked="false"
+            android:text="activate solitics delagate" />
+
+        <CheckBox
+            android:id="@+id/cbShouldShowPopup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:checked="true"
+            android:enabled="false"
+            android:text="should show popup" />
+
+        <CheckBox
+            android:id="@+id/cbShouldDismissForNavigationClick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:checked="true"
+            android:enabled="false"
+            android:text="Should dismiss for navigation click" />
+
+        <ScrollView
+            android:id="@+id/svLogDelagate"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:fillViewport="true">
+
+            <TextView
+                android:id="@+id/tvLogDelagate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+            </TextView>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</ScrollView>
