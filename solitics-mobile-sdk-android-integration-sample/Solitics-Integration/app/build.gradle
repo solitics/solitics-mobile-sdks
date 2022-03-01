@@ -80,7 +80,7 @@ android {
 
 dependencies {
 
-    implementation 'com.solitics:solitics.sdk:2.0.1.8'
+    implementation 'com.solitics:solitics.sdk:2.0.2.9'
 
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'

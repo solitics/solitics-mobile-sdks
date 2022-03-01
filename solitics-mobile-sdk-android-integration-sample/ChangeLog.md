@@ -4,6 +4,8 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
 
 ## ChangeLog
 
+- 2.0.2.9
+    - bug fix - solved issue with websocket reconection after losing network access
 - 2.0.1.8
     - change JS handling
     - support in-app navigation
