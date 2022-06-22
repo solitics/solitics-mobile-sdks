@@ -46,8 +46,7 @@ class LoginActivity : AppCompatActivity() {
         etTxAmount.setText("0")
         etMemberId.setText("9910410111064")
 
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory(this))
-            .get(LoginViewModel::class.java)
+        loginViewModel = ViewModelProvider(this, LoginViewModelFactory(this))[LoginViewModel::class.java]
 
         btnLogin.setOnClickListener {
             loading.visibility = View.VISIBLE
@@ -58,22 +57,22 @@ class LoginActivity : AppCompatActivity() {
                 popupToken = etTokenPupUp.text.toString()
             )
 
-            if (!etEmail.text.toString().isBlank()) {
+            if (etEmail.text.toString().isNotBlank()) {
                 loginInfo.email = etEmail.text.toString()
             }
-            if (!etCustomField.text.toString().isBlank()) {
+            if (etCustomField.text.toString().isNotBlank()) {
                 loginInfo.customFields = etCustomField.text.toString()
             }
-            if (!etKeyValue.text.toString().isBlank()) {
+            if (etKeyValue.text.toString().isNotBlank()) {
                 loginInfo.keyValue = etKeyValue.text.toString()
             }
-            if (!etKeyType.text.toString().isBlank()) {
+            if (etKeyType.text.toString().isNotBlank()) {
                 loginInfo.keyType = etKeyType.text.toString()
             }
-            if (!etBrand.text.toString().isBlank()) {
+            if (etBrand.text.toString().isNotBlank()) {
                 loginInfo.brand = etBrand.text.toString()
             }
-            if (!etBranch.text.toString().isBlank()) {
+            if (etBranch.text.toString().isNotBlank()) {
                 loginInfo.branch = etBranch.text.toString()
             }
 

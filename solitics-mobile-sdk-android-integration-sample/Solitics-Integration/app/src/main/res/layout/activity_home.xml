@@ -7,7 +7,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="vertical"
         tools:context=".presentation.home.HomeActivity">
@@ -32,41 +32,47 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="txType" />
+            android:hint="txType"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/etCustomFields"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="customFields" />
+            android:hint="customFields"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/etTxAmount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="txAmount" />
+            android:hint="txAmount"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnSendEvent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Send event" />
+            android:text="Send event"
+            tools:ignore="HardcodedText" />
 
         <Button
             android:id="@+id/btnLogOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Logout" />
+            android:text="Logout"
+            tools:ignore="HardcodedText" />
 
         <CheckBox
-            android:id="@+id/cbActivateDelagate"
+            android:id="@+id/cbActivateDelegate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:checked="false"
-            android:text="activate solitics delagate" />
+            android:text="activate solitics delegate"
+            tools:ignore="HardcodedText" />
 
         <CheckBox
             android:id="@+id/cbShouldShowPopup"
@@ -75,7 +81,8 @@
             android:layout_gravity="start"
             android:checked="true"
             android:enabled="false"
-            android:text="should show popup" />
+            android:text="should show popup"
+            tools:ignore="HardcodedText" />
 
         <CheckBox
             android:id="@+id/cbShouldDismissForNavigationClick"
@@ -84,16 +91,17 @@
             android:layout_gravity="start"
             android:checked="true"
             android:enabled="false"
-            android:text="Should dismiss for navigation click" />
+            android:text="Should dismiss for navigation click"
+            tools:ignore="HardcodedText" />
 
         <ScrollView
-            android:id="@+id/svLogDelagate"
+            android:id="@+id/svLogDelegate"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:fillViewport="true">
 
             <TextView
-                android:id="@+id/tvLogDelagate"
+                android:id="@+id/tvLogDelegate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="16dp">

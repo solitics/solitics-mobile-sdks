@@ -11,10 +11,10 @@ class SharedPrefCustomEmitEventParamsRepo(
     private val sharePref: SharedPreferences
 ) : ICustomEmitEventParamsRepo {
 
-    private val KEY = "custom_params"
+    private val aKey = "custom_params"
 
     override fun load(): ICustomEmitEventParams {
-        val dataString = sharePref.getString(KEY, "")
+        val dataString = sharePref.getString(aKey, "")
         if (dataString!!.isEmpty()) {
             return CustomEmitEventParams(EventType.EMIT_EVENT.type, null, null)
         }
@@ -26,7 +26,7 @@ class SharedPrefCustomEmitEventParamsRepo(
         sharePref
             .edit()
             .putString(
-                KEY,
+                aKey,
                 Gson().toJson(params)
             )
             .apply()
@@ -36,7 +36,7 @@ class SharedPrefCustomEmitEventParamsRepo(
         sharePref
             .edit()
             .putString(
-                KEY,
+                aKey,
                 ""
             )
             .apply()

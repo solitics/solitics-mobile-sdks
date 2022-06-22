@@ -31,8 +31,7 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        viewModel = ViewModelProvider(this, HomeViewModelFactory(this))
-            .get(HomeViewModel::class.java)
+        viewModel = ViewModelProvider(this, HomeViewModelFactory(this))[HomeViewModel::class.java]
 
         findViewById<Button>(R.id.btnSendEvent).setOnClickListener {
             viewModel.sendEvent()
@@ -43,11 +42,11 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         tvLog = findViewById(R.id.tvLog)
         "Host app : subscribe on socket event..\n".also { tvLog.text = it }
 
-        tvDelegateLog = findViewById(R.id.tvLogDelagate)
+        tvDelegateLog = findViewById(R.id.tvLogDelegate)
         cbShouldShowPopup = findViewById(R.id.cbShouldShowPopup)
         cbShouldDismissForNavigationClick = findViewById(R.id.cbShouldDismissForNavigationClick)
-        cbIsDelegateActive = findViewById(R.id.cbActivateDelagate)
-        svLogDelegate = findViewById(R.id.svLogDelagate)
+        cbIsDelegateActive = findViewById(R.id.cbActivateDelegate)
+        svLogDelegate = findViewById(R.id.svLogDelegate)
 
         setupCustomFields()
     }

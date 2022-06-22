@@ -12,8 +12,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.0"
+        classpath 'com.android.tools.build:gradle:7.2.1'
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0'
         classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.24.23'
     }
 }
@@ -25,7 +25,7 @@ ext {
 }
 
 allprojects {
-    apply plugin: "com.jfrog.artifactory"
+    apply plugin: 'com.jfrog.artifactory'
 
     repositories {
         mavenLocal()
