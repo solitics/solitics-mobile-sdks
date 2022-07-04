@@ -165,6 +165,15 @@ Note: Invoke this method once the user session ends when a user logs-out from yo
     }
 ```
 
+6. Dismiss Solitics Popup in code
+
+This method can be used to trigger a dismiss action in code. 
+Note: make sure that you call this method on the main application thread
+
+```Swift
+    Solitics.dismissSoliticsPopup()
+```
+
 ## Advanced usages
 ## SoliticsLogListener
 An optional element allowing the user to be notified of any meaningful socket communication, including popup message arrivals and related content
@@ -189,6 +198,6 @@ For more information see the demo application
 ## Migration guide
 ### Solitics SDK 2.0.0
 
-Latest changes in the Soitics SDK contain breaking changes to some elements of the system, i.e. you are no longer able to manually control popup presentation and dismisal.
+Latest changes in the Soitics SDK ontain breaking changes to some elements of the system, i.e. you are no longer able to manually control popup presentation and dismisal.
 
 To control popup presentation use SoliticsPopupDelagate API, see example above.

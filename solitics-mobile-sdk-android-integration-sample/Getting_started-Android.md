@@ -65,7 +65,7 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
        dependencies {
            ...
            // Remote dependencies
-           implementation 'com.solitics:solitics.sdk:1.0.2.+'
+           implementation 'com.solitics:solitics.sdk:2.1.0.+'
        }
        ```
    4. * Navigate to the global gradle.properties file.
@@ -153,7 +153,11 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
             memberId = "some member id",
             popupToken = "token"
         )
-        val response = SoliticsSDK.onLogin(loginMetadata)
+        try {
+            val response = SoliticsSDK.onLogin(loginMetadata)
+        } catch (e: LoginFailedException) {
+            Log.e("TAG", e.toString())
+        }
     ```
    Note: This is a synchronous method
    
@@ -179,11 +183,15 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
     This method allows you to report to Solitics any user event which takes place in the Mobile App: ‘Button Click’, ‘Page Change’, etc.
     
     ```kotlin
-        SoliticsSDK.onEmitEvent(
-            "txType",
-            1234 /* txAmount */ ,
-            "customFields"
-        )
+        try {
+            SoliticsSDK.onEmitEvent(
+                "txType",
+                1234 /* txAmount */ ,
+                "customFields"
+            )
+        } catch (e: EmitEventFailedException) {
+            Log.e("TAG", e.toString())
+        }
     ```
     
 5. SoliticsPopupDelagate
@@ -249,6 +257,15 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
         override fun onPopupClosed() {
             Log.d(TAG, "onPopupClosed")
         }
+    ```
+
+6. Dismiss Solitics Popup in code
+
+    This method can be used to trigger a dismiss action in code. 
+    Note: make sure that you call this method on the main application thread
+    
+    ```kotlin
+        SoliticsSDK.dismissSoliticsPopup()
     ```
 
 ## Migration guide
