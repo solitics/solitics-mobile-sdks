@@ -4,6 +4,8 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
 
 ## ChangeLog
 
+- 2.1.1.13
+    - bug fix - promotion HTML is not showing properly
 - 2.1.0.12
     - bug fix - changes to display mechanism 
     - bug fix - changes to websocket reconection handling
@@ -24,4 +26,3 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
     - fixed dismiss button border issue
 - 1.0.2.5
     - fix size of close button
-    

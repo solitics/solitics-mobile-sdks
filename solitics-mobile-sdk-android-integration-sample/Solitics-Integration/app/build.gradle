@@ -11,8 +11,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.gms:google-services:4.3.10'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.0'
+        classpath 'com.google.gms:google-services:4.3.13'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
     }
 }
 // =================================================================================================
@@ -33,13 +33,13 @@ android {
 
     namespace 'com.solitics.integration.app'
 
-    compileSdkVersion 31
+    compileSdkVersion 32
     buildToolsVersion '30.0.3'
 
     defaultConfig {
         applicationId "com.solitics.internal.integration.app"
         minSdkVersion 17
-        targetSdkVersion 31
+        targetSdkVersion 32
         versionCode 1
         versionName "2.0.1.8"
         multiDexEnabled true
@@ -82,19 +82,19 @@ android {
 
 dependencies {
 
-    implementation 'com.solitics:solitics.sdk:2.0.3.10'
+    implementation 'com.solitics:solitics.sdk:2.1.1.13'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.annotation:annotation:1.4.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.0'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0'
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
