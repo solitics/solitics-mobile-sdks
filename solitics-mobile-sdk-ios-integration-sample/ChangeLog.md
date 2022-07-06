@@ -1,4 +1,4 @@
-# solitics-sdk-android - ChangeLog
+# solitics-sdk-iOS - ChangeLog
  
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 

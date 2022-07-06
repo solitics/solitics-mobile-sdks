@@ -1,4 +1,4 @@
-# solitics-sdk-android
+# solitics-sdk-android - Getting started
  
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
