@@ -3,8 +3,8 @@
 # ######################################################################################################################
 source 'https://github.com/CocoaPods/Specs.git'
 plugin 'cocoapods-art', :sources => [
-  'ios.solitics.mobile.releases' ,
-# 'ios.solitics.mobile.snapshot'
+    'ios.solitics.mobile.releases' ,
+#   'ios.solitics.mobile.snapshot'
 ]
 
 workspace 'SoliticsIntegration.xcworkspace'
