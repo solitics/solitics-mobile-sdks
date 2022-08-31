@@ -82,7 +82,7 @@ android {
 
 dependencies {
 
-    implementation 'com.solitics:solitics.sdk:2.1.1.13'
+    implementation 'com.solitics:solitics.sdk:2.1.2.14'
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.annotation:annotation:1.4.0'
