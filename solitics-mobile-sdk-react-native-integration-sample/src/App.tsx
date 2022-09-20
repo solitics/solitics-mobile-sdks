@@ -1,6 +1,5 @@
 import * as React from 'react';
 import SoliticsSDK, { SoliticsSDKPopupDelegate } from '@solitics/react-native-solitics-sdk';
-import { LogBox } from 'react-native';
 
 import {
   SafeAreaView,
@@ -18,7 +17,6 @@ interface LogObject {
 }
 
 const App = () => {
-  LogBox.ignoreLogs(['new NativeEventEmitter']);
 
   SoliticsSDK.initSDK()
 
