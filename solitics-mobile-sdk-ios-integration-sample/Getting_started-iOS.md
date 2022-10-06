@@ -56,6 +56,11 @@ Solitics, a personalized marketing automation platform, enables you to react in 
     ```
 
 7. In the terminal run `pod install`
+### Note for Mac M1 users:
+    Mac M1 architecture is not directly compatible with Cocoapods. If you encounter issues when installing pods, you can solve it by running:
+    - sudo arch -x86_64 gem install ffi
+    - arch -x86_64 pod install
+    These commands install the ffi package, to load dynamically-linked libraries and let you run the pod install properly, and runs pod install with the proper architecture. 
 
 ## Usage - Sample
 ### Report Real-Time Events in Two Simple Steps
