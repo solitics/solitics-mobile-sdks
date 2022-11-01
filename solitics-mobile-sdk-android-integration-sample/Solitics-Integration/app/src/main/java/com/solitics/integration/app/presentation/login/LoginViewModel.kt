@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.solitics.integration.app.domain.IShowLoginErrorUseCase
 import com.solitics.sdk.SoliticsSDK
 import com.solitics.sdk.domain.ILoginMetadata
-import com.solitics.sdk.domain.LoginFailedException
+import com.solitics.sdk.domain.exception.LoginFailedException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

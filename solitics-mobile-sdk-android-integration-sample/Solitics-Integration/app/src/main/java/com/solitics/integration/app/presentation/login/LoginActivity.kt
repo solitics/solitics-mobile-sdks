@@ -10,8 +10,8 @@ import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.solitics.integration.app.R
-import com.solitics.sdk.domain.LoginFailedException
 import com.solitics.sdk.domain.LoginMetadata
+import com.solitics.sdk.domain.exception.LoginFailedException
 
 class LoginActivity : AppCompatActivity() {
 

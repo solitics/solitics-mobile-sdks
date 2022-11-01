@@ -3,6 +3,9 @@
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 2.1.3.15
+    - bug fix - fixed size of the popup to match device screen
+    - bug fix - fixed native close buttons colors
 - 2.1.2.14
     - feature - change deeplink navigation handling logic
 - 2.1.1.13
