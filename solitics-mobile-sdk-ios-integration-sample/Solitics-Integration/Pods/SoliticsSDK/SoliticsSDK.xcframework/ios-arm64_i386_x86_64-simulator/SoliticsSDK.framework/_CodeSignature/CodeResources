@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/SoliticsSDK-Swift.h</key>
 		<data>
-		CvEsVdS3Z0EErvuH7PR+/DIqTw0=
+		ctW6NU4zaU0l/kRBvn4n3EmOXHM=
 		</data>
 		<key>Headers/SoliticsSDK.h</key>
 		<data>
@@ -14,7 +14,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		gaHeEGgc/Wxin74bnc/k6yPmqoE=
+		MjJ5QtoBZH7I9MnP9JCTVSigPNg=
 		</data>
 		<key>JSCSSBlock.js</key>
 		<data>
@@ -34,75 +34,39 @@
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4gkNjoMbgQC0sySoM18BKtXZJ+E=
+		hmMJsNqon8pAenRgZ8IjNUUguIQ=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DSu4TP67xKkWEfuiWjFbwkkJczQ=
+		A++KMDgtSXDFk8yg83Dm3cA08FE=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		a5tac9DPsFANCeVGzFfy/ao/Jac=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftdoc</key>
-		<data>
-		4gkNjoMbgQC0sySoM18BKtXZJ+E=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftinterface</key>
-		<data>
-		DSu4TP67xKkWEfuiWjFbwkkJczQ=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftmodule</key>
-		<data>
-		a5tac9DPsFANCeVGzFfy/ao/Jac=
+		jwmLVkhitzgAkzjbRHR09OGb/gs=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<data>
-		07FsVmnE+ypPCbFYO6FmQUJPvEw=
+		MctE7/uV1dHZCni5JGBD9RyCQVI=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<data>
-		mltS/p4yeFPjbwPSa6Jseu/s0Zs=
+		Kh2mrzoyvgPNfI4seYph3+zjXDk=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<data>
-		cZPO8ranWJ/zi1HFw4Bwbgddx7k=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftdoc</key>
-		<data>
-		07FsVmnE+ypPCbFYO6FmQUJPvEw=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftinterface</key>
-		<data>
-		mltS/p4yeFPjbwPSa6Jseu/s0Zs=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftmodule</key>
-		<data>
-		cZPO8ranWJ/zi1HFw4Bwbgddx7k=
+		lh66nQUOr/ds7oSPOCQv/tTEPUU=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		DeB9AkIrdtWROWo7ySAIdQLhe3M=
+		roSm+02NupC5RMvQX1fQfybtZL4=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LTcnhkXmcnIHomMl1LZjo0W195M=
+		k6dpqNiC6V1J3pmbgxV7cxVcWAA=
 		</data>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		ZEQpLbAq2asj3JXcmaGOjLGNH+Q=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftdoc</key>
-		<data>
-		DeB9AkIrdtWROWo7ySAIdQLhe3M=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftinterface</key>
-		<data>
-		LTcnhkXmcnIHomMl1LZjo0W195M=
-		</data>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftmodule</key>
-		<data>
-		ZEQpLbAq2asj3JXcmaGOjLGNH+Q=
+		Cy1qOcTJKEfvj+1xsed5XXnyVxw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -115,11 +79,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CvEsVdS3Z0EErvuH7PR+/DIqTw0=
+			ctW6NU4zaU0l/kRBvn4n3EmOXHM=
 			</data>
 			<key>hash2</key>
 			<data>
-			DLpDm75vSWh2Iun6TXaJv7MtFAhxlgMrF61nkUq7FDs=
+			8pTKkFdBomC0+l6dgeaOkVkksf8zivJTYGTRShfgwaU=
 			</data>
 		</dict>
 		<key>Headers/SoliticsSDK.h</key>
@@ -181,198 +145,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4gkNjoMbgQC0sySoM18BKtXZJ+E=
+			hmMJsNqon8pAenRgZ8IjNUUguIQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			yaSPE9dWLRIcA1/NoYYea4zdT9UGdTeMESR90g//hdg=
+			0gMaOAnOu/0knbaU9VzvYmuIh6HKiVEcCLQuLtMQM/k=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DSu4TP67xKkWEfuiWjFbwkkJczQ=
+			A++KMDgtSXDFk8yg83Dm3cA08FE=
 			</data>
 			<key>hash2</key>
 			<data>
-			5WDVGt+EH5NJrJ0MNp8r/ihnfGgbyfz3MQMjbzH/4wA=
+			e3eHvRB4cBshTlHvcnDUyYn20DtSp+ELDALdIKWNpg0=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			a5tac9DPsFANCeVGzFfy/ao/Jac=
+			jwmLVkhitzgAkzjbRHR09OGb/gs=
 			</data>
 			<key>hash2</key>
 			<data>
-			58AlpJ71gxE+35jO8W1j66K+79uzh6YesZLUmMrRerg=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			4gkNjoMbgQC0sySoM18BKtXZJ+E=
-			</data>
-			<key>hash2</key>
-			<data>
-			yaSPE9dWLRIcA1/NoYYea4zdT9UGdTeMESR90g//hdg=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DSu4TP67xKkWEfuiWjFbwkkJczQ=
-			</data>
-			<key>hash2</key>
-			<data>
-			5WDVGt+EH5NJrJ0MNp8r/ihnfGgbyfz3MQMjbzH/4wA=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/arm64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			a5tac9DPsFANCeVGzFfy/ao/Jac=
-			</data>
-			<key>hash2</key>
-			<data>
-			58AlpJ71gxE+35jO8W1j66K+79uzh6YesZLUmMrRerg=
+			Ds4j0N3RT+rtBDZIGafGKllTOgStEfrPFQTj1mfowho=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			07FsVmnE+ypPCbFYO6FmQUJPvEw=
+			MctE7/uV1dHZCni5JGBD9RyCQVI=
 			</data>
 			<key>hash2</key>
 			<data>
-			c/NnRt1QCjFpEnoHiTwpCue3g8Wgp1Dyk2zHkci2bhM=
+			UyDrEc0lr6vhjZfP6xDlFLDBn1OIN02YWdokCMGTgpk=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mltS/p4yeFPjbwPSa6Jseu/s0Zs=
+			Kh2mrzoyvgPNfI4seYph3+zjXDk=
 			</data>
 			<key>hash2</key>
 			<data>
-			YQ4VDXYYfY2BN3k/p6CXGcYC/2sQ32OqyOVPuAdO57M=
+			2SzxXA/K9iHa1cw6qzKiFMqWv0NdDSQ/acs+Ch1LdtM=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/i386-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			cZPO8ranWJ/zi1HFw4Bwbgddx7k=
+			lh66nQUOr/ds7oSPOCQv/tTEPUU=
 			</data>
 			<key>hash2</key>
 			<data>
-			CtXTrMSAGzC2+Xuu4WxzayC/RGz63Lx4D2uytgDmyKc=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			07FsVmnE+ypPCbFYO6FmQUJPvEw=
-			</data>
-			<key>hash2</key>
-			<data>
-			c/NnRt1QCjFpEnoHiTwpCue3g8Wgp1Dyk2zHkci2bhM=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			mltS/p4yeFPjbwPSa6Jseu/s0Zs=
-			</data>
-			<key>hash2</key>
-			<data>
-			YQ4VDXYYfY2BN3k/p6CXGcYC/2sQ32OqyOVPuAdO57M=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/i386.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			cZPO8ranWJ/zi1HFw4Bwbgddx7k=
-			</data>
-			<key>hash2</key>
-			<data>
-			CtXTrMSAGzC2+Xuu4WxzayC/RGz63Lx4D2uytgDmyKc=
+			ZXm0NgNtHcNSwaA0wCf5z5gkewk2tbdNaWYbfj0Qfyw=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			DeB9AkIrdtWROWo7ySAIdQLhe3M=
+			roSm+02NupC5RMvQX1fQfybtZL4=
 			</data>
 			<key>hash2</key>
 			<data>
-			l2cQ4XxAnYm8cZUUfFSGVUn+7NhEk+FLnf1UC19+Bc8=
+			fLvrX254cycBJI5eyZ2H663/6qTN91r9UTnjIOJpTj0=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			LTcnhkXmcnIHomMl1LZjo0W195M=
+			k6dpqNiC6V1J3pmbgxV7cxVcWAA=
 			</data>
 			<key>hash2</key>
 			<data>
-			nY3i1f1o4JmZofMGT0yuc3fF388DihXA8CM48cX6kqA=
+			l9dT8aewwfQRHtS/GFUWMrNzg4ItKdl3QYDW4z+9SpE=
 			</data>
 		</dict>
 		<key>Modules/SoliticsSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ZEQpLbAq2asj3JXcmaGOjLGNH+Q=
+			Cy1qOcTJKEfvj+1xsed5XXnyVxw=
 			</data>
 			<key>hash2</key>
 			<data>
-			iqyE4/QMqk9Y3mfMLzkM+9pcuBr21EJSpq9qc9siMXU=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftdoc</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			DeB9AkIrdtWROWo7ySAIdQLhe3M=
-			</data>
-			<key>hash2</key>
-			<data>
-			l2cQ4XxAnYm8cZUUfFSGVUn+7NhEk+FLnf1UC19+Bc8=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftinterface</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			LTcnhkXmcnIHomMl1LZjo0W195M=
-			</data>
-			<key>hash2</key>
-			<data>
-			nY3i1f1o4JmZofMGT0yuc3fF388DihXA8CM48cX6kqA=
-			</data>
-		</dict>
-		<key>Modules/SoliticsSDK.swiftmodule/x86_64.swiftmodule</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			ZEQpLbAq2asj3JXcmaGOjLGNH+Q=
-			</data>
-			<key>hash2</key>
-			<data>
-			iqyE4/QMqk9Y3mfMLzkM+9pcuBr21EJSpq9qc9siMXU=
+			9KGzl1JJmTweH2pZ/g/z4YfAItK/4INdOIaRgO6VHfo=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
