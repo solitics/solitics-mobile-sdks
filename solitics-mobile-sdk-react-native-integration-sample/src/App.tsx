@@ -32,10 +32,15 @@ const App = () => {
 
   React.useEffect(() => {
     const delegate = new SoliticsSDKPopupDelegate(
+      (data: Object) => { return true },
       () => { console.log("popup opened callback") },
       () => { console.log("popup closed callback") },
       () => { console.log("popup clicked callback") },
-      () => { console.log("popup closed for navigation callback") }
+      (url: string) => { return true },
+      (url) => { 
+        console.log("popup closed for navigation callback")
+        console.log("popup closed for navigation callback: "+ url)
+      }
     )
     SoliticsSDK.setSoliticsPopupDelegate(delegate)
 
