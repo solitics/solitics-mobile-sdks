@@ -1,7 +1,11 @@
 # ######################################################################################################################
 # Podfile content
 # ######################################################################################################################
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org/'
+
+install! 'cocoapods' ,
+:warn_for_unused_master_specs_repo  => false;
+
 plugin 'cocoapods-art', :sources => [
     'ios.solitics.mobile.releases' ,
 #   'ios.solitics.mobile.snapshot'
