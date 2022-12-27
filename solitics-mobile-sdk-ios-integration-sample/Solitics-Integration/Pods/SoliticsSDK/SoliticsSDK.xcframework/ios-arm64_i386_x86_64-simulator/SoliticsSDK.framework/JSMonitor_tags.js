@@ -39,23 +39,25 @@ function extractLink(a_tag) {
     return null;
 }
 /* ================================================================================================================== */
-function onPopupEventTrigger(element,message,event) {
+function onPopupInformaticsReport(element,message,event) {
     if (event) { event.stopPropagation(); }
     let payload = { "type" : "action_trigger" , "message" : message };
     window.webkit.messageHandlers.handler_trigger.postMessage(payload);
 }
 function onPopupEventTriggerNavigation(element,message,event) {
-    if (event) { event.stopPropagation(); }
-    let link    = extractLink(element)
+    
+    if (event) { event.stopPropagation(); event.preventDefault(); };
+    
+    onPopupInformaticsReport(element, message, event);
+    
+    let link  = extractLink(element);
     if (link != null) {
         let payload = { "type" : "action_navigation" , "message" : message , "target": link };
         window.webkit.messageHandlers.handler_trigger.postMessage(payload);
-    } else {
-        onPopupEventTrigger(element,message,event)
     }
 }
 /* ================================================================================================================== */
-function onPopupEventDismiss(element,message,event) {
+function onPopupDismiss(element,message,event) {
     if (event) { event.stopPropagation(); }
     let payload = { "type" : "action_dismiss" };
     window.webkit.messageHandlers.handler_exit.postMessage(payload);
@@ -84,7 +86,7 @@ function main_load() {
     if (tags_button_container && tags_button_container.length > 0) {
         for (i = 0; i < tags_button_container.length; i++) {
             tags_button_container[i].addEventListener("click", function (event) {
-                onPopupEventTrigger(this, 'button click Detected!', event);
+                onPopupInformaticsReport(this, 'button click Detected!', event);
             }, false);
         }
     };
@@ -93,7 +95,7 @@ function main_load() {
     if (tags_image_container && tags_image_container.length > 0) {
         for (i = 0; i < tags_image_container.length; i++) {
             tags_image_container[i].addEventListener("click", function (event) {
-                onPopupEventTrigger(this, 'image click Detected!', event);
+                onPopupInformaticsReport(this, 'image click Detected!', event);
             }, false);
         }
     };
@@ -102,7 +104,7 @@ function main_load() {
     if (tags_background_image_container && tags_background_image_container.length > 0) {
         for (i = 0; i < tags_background_image_container.length; i++) {
             tags_background_image_container[i].addEventListener("click", function (event) {
-                onPopupEventTrigger(this, 'background image click Detected!', event);
+                onPopupInformaticsReport(this, 'background image click Detected!', event);
             }, false);
         }
     };
@@ -112,7 +114,7 @@ function main_load() {
     if (tags_dismiss_container && tags_dismiss_container.length > 0) {
         for (i = 0; i < tags_dismiss_container.length; i++) {
             tags_dismiss_container[i].addEventListener("click", function (event) {
-                onPopupEventDismiss(this, "dismiss click Detected!", event);
+                onPopupDismiss(this, "dismiss click Detected!", event);
             }, false);
         }
     };
