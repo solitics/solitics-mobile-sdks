@@ -6,7 +6,7 @@
 //
 import UIKit
 import SoliticsSDK
-import Firebase
+// import Firebase
 ///
 ///
 ///
@@ -63,7 +63,7 @@ extension AppDelegate : UIApplicationDelegate
         navigateToInitialScreen()
         setup()
         window?.makeKeyAndVisible()
-        FirebaseApp.configure()
+        // FirebaseApp.configure()
         return true
     }
     
