@@ -32,7 +32,6 @@ target 'SoliticsIntegrationApp' do
   
   # Pods for SoliticsIntegrationApp
   pod 'SoliticsSDK'
-  pod 'Firebase/Crashlytics'
   
   target 'SoliticsIntegrationAppTests' do
     inherit! :search_paths
