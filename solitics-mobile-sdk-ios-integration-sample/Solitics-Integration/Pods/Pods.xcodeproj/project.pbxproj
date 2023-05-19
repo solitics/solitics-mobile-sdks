@@ -465,7 +465,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0930FFD9204D327D5507DB4C4574E3A2 /* Debug */ = {
+		0F5808691DE74BF4F176926CD46A3930 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F9454789E12C905AB8072E765EBC7A15 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */;
 			buildSettings = {
@@ -482,7 +482,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -508,7 +508,7 @@
 			};
 			name = Debug;
 		};
-		60DF66504193B396D555190D8806F85B /* Release */ = {
+		173F199BD43F6D459BC50455F2284A32 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 968CE345B93432A8710B85F301E496B5 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */;
 			buildSettings = {
@@ -525,7 +525,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -552,15 +552,15 @@
 			};
 			name = Release;
 		};
-		720E9D6405FE1FC69682C7F45B4596AB /* Debug */ = {
+		71E2E3B2F0B681B1E8FF7F8AF77740BF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 060F4A6CC5AB22479FE8FAA5B9DDE004 /* SoliticsSDK.debug.xcconfig */;
+			baseConfigurationReference = CFA955ED5DDE4801753EB16559DD9F7E /* SoliticsSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BITCODE_GENERATION_MODE = marker;
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -568,14 +568,101 @@
 				ONLY_ACTIVE_ARCH = false;
 				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-fembed-bitcode-marker",
+					"-fembed-bitcode",
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		722C1CE9237328BE8C5CE0E87DB47818 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BC97AF0F93C0780F31CC76A3C47C9EF /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BITCODE_GENERATION_MODE = marker;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
+				ONLY_ACTIVE_ARCH = false;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fembed-bitcode-marker",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
+		7B186574B09DC1B64BE88CBDA3D872B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 393F754B18898F87D125214FC23CD1EE /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				BITCODE_GENERATION_MODE = marker;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
+				ONLY_ACTIVE_ARCH = false;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fembed-bitcode-marker",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		903A0004D3E6651EFD5D2E16214D101B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -626,7 +713,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = false;
@@ -643,36 +730,12 @@
 			};
 			name = Release;
 		};
-		85D2D1173725D92F03B61C7815A4F951 /* Release */ = {
+		B13EEAFE462DE75B3D64B9EF6CA893C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFA955ED5DDE4801753EB16559DD9F7E /* SoliticsSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				BITCODE_GENERATION_MODE = bitcode;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				ONLY_ACTIVE_ARCH = false;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fembed-bitcode",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		92C07639966D0C9998CFE43F8F6A8E37 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6BC97AF0F93C0780F31CC76A3C47C9EF /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
+			baseConfigurationReference = AE951F91A13E0CB03FD65182EDDDC4AD /* Pods-SoliticsIntegrationApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BITCODE_GENERATION_MODE = marker;
+				BITCODE_GENERATION_MODE = bitcode;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -684,7 +747,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -695,7 +758,7 @@
 				ONLY_ACTIVE_ARCH = false;
 				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-fembed-bitcode-marker",
+					"-fembed-bitcode",
 				);
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
@@ -705,12 +768,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
+		B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -764,7 +828,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = false;
@@ -781,50 +845,7 @@
 			};
 			name = Debug;
 		};
-		DDDF5EF64CABF4B6A39A5E78CD0E85FA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393F754B18898F87D125214FC23CD1EE /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BITCODE_GENERATION_MODE = marker;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.modulemap";
-				ONLY_ACTIVE_ARCH = false;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fembed-bitcode-marker",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		EB690BBFE72C3FB8A32F93BD4E265D47 /* Release */ = {
+		B923D29634342BB1C52A59B9CD49A434 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B1AE1B7D13382DE2DD5B10628B7E61D /* Pods-SoliticsIntegrationAppTests.release.xcconfig */;
 			buildSettings = {
@@ -841,7 +862,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -868,49 +889,28 @@
 			};
 			name = Release;
 		};
-		F08E62B4E5A7B58193D50A75AC4349A9 /* Release */ = {
+		C8779285121586B69B489881C8444C46 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AE951F91A13E0CB03FD65182EDDDC4AD /* Pods-SoliticsIntegrationApp.release.xcconfig */;
+			baseConfigurationReference = 060F4A6CC5AB22479FE8FAA5B9DDE004 /* SoliticsSDK.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				BITCODE_GENERATION_MODE = bitcode;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BITCODE_GENERATION_MODE = marker;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.modulemap";
 				ONLY_ACTIVE_ARCH = false;
 				OTHER_CFLAGS = (
 					"$(inherited)",
-					"-fembed-bitcode",
+					"-fembed-bitcode-marker",
 				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -918,8 +918,8 @@
 		279DF3011B863675AB2A9E3407D01A9C /* Build configuration list for PBXAggregateTarget "SoliticsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				720E9D6405FE1FC69682C7F45B4596AB /* Debug */,
-				85D2D1173725D92F03B61C7815A4F951 /* Release */,
+				C8779285121586B69B489881C8444C46 /* Debug */,
+				71E2E3B2F0B681B1E8FF7F8AF77740BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -927,8 +927,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
-				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+				B4EFE046ACF8F37157F6E322C7FCFC28 /* Debug */,
+				903A0004D3E6651EFD5D2E16214D101B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -936,8 +936,8 @@
 		865FD1D3111607A8623DD781E1B33523 /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0930FFD9204D327D5507DB4C4574E3A2 /* Debug */,
-				60DF66504193B396D555190D8806F85B /* Release */,
+				0F5808691DE74BF4F176926CD46A3930 /* Debug */,
+				173F199BD43F6D459BC50455F2284A32 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -945,8 +945,8 @@
 		CAED950AFA0555C989183AC0DB2DB00C /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				92C07639966D0C9998CFE43F8F6A8E37 /* Debug */,
-				F08E62B4E5A7B58193D50A75AC4349A9 /* Release */,
+				722C1CE9237328BE8C5CE0E87DB47818 /* Debug */,
+				B13EEAFE462DE75B3D64B9EF6CA893C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -954,8 +954,8 @@
 		EC89A53685B0F8C0EFE719B2E9D4D6CF /* Build configuration list for PBXNativeTarget "Pods-SoliticsIntegrationAppTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DDDF5EF64CABF4B6A39A5E78CD0E85FA /* Debug */,
-				EB690BBFE72C3FB8A32F93BD4E265D47 /* Release */,
+				7B186574B09DC1B64BE88CBDA3D872B6 /* Debug */,
+				B923D29634342BB1C52A59B9CD49A434 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
