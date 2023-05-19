@@ -3,15 +3,22 @@
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 2.1.4.17
+    - feature - Retry "login" & "emit event" calls automaticly, new retry policy is try every 15 seconds for 3 minutes from the initial call attempt
+    - bug fix - color parsing - fixed a bug in which the sdk didnt handle non Hex color values properly, now we no  longer crash
+    - bug fix - promotion HTML is not showing properly
 - 2.1.4.16
     - bug fix - analytics event handling for navigation triggers
 - 2.1.3.15
     - bug fix - fixed size of the popup to match device screen
     - bug fix - fixed native close buttons colors
+
 - 2.1.2.14
     - feature - change deeplink navigation handling logic
+
 - 2.1.1.13
     - bug fix - promotion HTML is not showing properly
+
 - 2.1.0.12
     - bug fix - changes to display mechanism 
     - bug fix - changes to websocket reconection handling
