@@ -71,7 +71,9 @@ const App = () => {
     memberId: String
   ) => {
     try {
-      const result = await SoliticsSDK.onLogin({
+      console.log('[' + Date.now() + '] ' + 'I am logged before');
+
+      SoliticsSDK.onLogin({
         email,
         customFields,
         keyType,
@@ -82,7 +84,27 @@ const App = () => {
         txAmount,
         memberId
       })
-      console.log(result)
+        .then((result) => {
+          console.log('[' + Date.now() + '] ' + 'SoliticsSDK onLogin');
+        })
+        .catch((e) => {
+          console.log('[' + Date.now() + '] ' + 'SoliticsSDK onLogin Error=>', e);
+        });
+
+      console.log('[' + Date.now() + '] ' + 'I am logged after');
+
+      // const result = await SoliticsSDK.onLogin({
+      //   email,
+      //   customFields,
+      //   keyType,
+      //   keyValue,
+      //   brand,
+      //   branch,
+      //   popupToken,
+      //   txAmount,
+      //   memberId
+      // })
+      // console.log(result)
       onScreenChanged(Screen.Home)
     } catch (e) {
       console.error(e)
