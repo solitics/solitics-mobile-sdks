@@ -3,6 +3,10 @@
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 2.1.5.19
+    - feature - dismiss software keybord if its open when presenting a Solitics popup
+- 2.1.5.18
+    - bug fix - fix webview handling - now we destroy the webview on the UI thread
 - 2.1.4.17
     - feature - Retry "login" & "emit event" calls automaticly, new retry policy is try every 15 seconds for 3 minutes from the initial call attempt
     - bug fix - color parsing - fixed a bug in which the sdk didnt handle non Hex color values properly, now we no  longer crash
