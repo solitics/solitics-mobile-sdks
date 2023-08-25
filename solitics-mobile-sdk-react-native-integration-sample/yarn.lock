@@ -1315,10 +1315,12 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@solitics/react-native-solitics-sdk@^1.0.8":
-  version "1.0.8"
-  resolved "https://soliticsmobilesdk.jfrog.io/artifactory/api/npm/react.native.solitics.mobile.releases-local/@solitics/react-native-solitics-sdk/-/@solitics/react-native-solitics-sdk-1.0.8.tgz#658fd636e723b4b392bf2640f95eb0a6464cc993"
-  integrity sha512-+bmwWrCIvD8HcFQcrxCixrPNFk4EDAqL1ECNHCBPmqYnhhHBDn8F6wSQ7n8Q0b+XNDbVfjO6A89ewjzQtbXkAw==
+"@solitics/react-native-solitics-sdk@^1.0.9":
+  version "1.0.9"
+  resolved "https://soliticsmobilesdk.jfrog.io/artifactory/api/npm/react.native.solitics.mobile.releases-local/@solitics/react-native-solitics-sdk/-/@solitics/react-native-solitics-sdk-1.0.9.tgz#95ef423d6404482ffebc28c77fed2768b606f7de"
+  integrity sha512-IaN8S8qs3Xs8ObZSpdkkTaDu8oOlTtG8dPQXGajMM+NUKpuSxHNfzl6samum0nPSwOXnSjQlIxHai9uNGRan2Q==
+  dependencies:
+    react-native-config "^1.5.1"
 
 "@tootallnate/once@1":
   version "1.1.2"
@@ -5541,6 +5543,11 @@ react-native-codegen@^0.70.6:
     flow-parser "^0.121.0"
     jscodeshift "^0.13.1"
     nullthrows "^1.1.1"
+
+react-native-config@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-1.5.1.tgz#73c94f511493e9b7ff9350cdf351d203a1b05acc"
+  integrity sha512-g1xNgt1tV95FCX+iWz6YJonxXkQX0GdD3fB8xQtR1GUBEqweB9zMROW77gi2TygmYmUkBI7LU4pES+zcTyK4HA==
 
 react-native-fast-image@^8.6.3:
   version "8.6.3"
