@@ -11,8 +11,8 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.gms:google-services:4.3.15'
-        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.6'
+        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
     }
 }
 // =================================================================================================
@@ -36,9 +36,9 @@ android {
     defaultConfig {
         applicationId "com.solitics.internal.integration.app"
 
-        compileSdk 33
+        compileSdk 34
         minSdkVersion 19
-        targetSdkVersion 33
+        targetSdkVersion 34
 
         versionName "2.1.5.18"
         versionCode 18
@@ -49,18 +49,21 @@ android {
 
     buildTypes {
         debug {
-            testCoverageEnabled = true
+            minifyEnabled = false
+            enableUnitTestCoverage = false
+            enableAndroidTestCoverage = false
             buildConfigField "Boolean", "LINK_WATCHDOG_TO_CRASHLYTICS", 'true'
         }
         release {
-            minifyEnabled false
-            testCoverageEnabled = false
+            minifyEnabled = false
+            enableUnitTestCoverage = false
+            enableAndroidTestCoverage = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             buildConfigField "Boolean", "LINK_WATCHDOG_TO_CRASHLYTICS", 'true'
         }
     }
     buildFeatures {
-
+        buildConfig = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -72,11 +75,6 @@ android {
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
-        unitTests.all {
-            reports {
-                html.enabled true
-            }
-        }
     }
     flavorDimensions = ['defualt']
 }
@@ -85,22 +83,22 @@ dependencies {
 
     implementation 'com.solitics:solitics.sdk:2.1.5.19'
 
-    implementation 'androidx.core:core-ktx:1.10.1'
-    implementation 'androidx.annotation:annotation:1.6.0'
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.annotation:annotation:1.7.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
     implementation 'com.google.code.gson:gson:2.10'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'com.google.android.material:material:1.11.0'
 
     // anr-watchdog
     implementation 'com.github.anrwatchdog:anrwatchdog:1.4.0'
