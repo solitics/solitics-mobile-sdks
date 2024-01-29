@@ -170,6 +170,45 @@ Note: Invoke this method once the user session ends when a user logs-out from yo
     }
 ```
 
+## didReceivePushNotification action
+Log a received push notification to Solitics platform.
+* You should first conform to 'UNUserNotificationCenterDelegate' to be notified by the system about this callback.
+
+### Handle notifications for foreground app state
+
+``` Swift
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) 
+    {
+	Solitics.didReceivePushNotification(for: notification.request.content.userInfo)
+    }
+```
+
+### Handle notifications for background or terminated app state
+* You should first add a new 'NotificationService' target (a.k.a Notification Center Extension)
+* After the target is created a new directory will be created with the name provided, a default file can be seen by the name 'NotificationService.swift'. 
+  Add the Solitics method invocation here.
+
+
+``` Swift
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void)
+    {
+	Solitics.didReceivePushNotification(for: request.content.userInfo)
+	...
+    }
+```
+
+## didClickPushNotification action
+Log a click push notification to Solitics platform.
+* You should first conform to 'UNUserNotificationCenterDelegate' to be notified by the system about this callback.
+* Called when the user click the notification
+
+``` Swift
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    {
+	Solitics.didClickPushNotification(for: response.notification.request.content.userInfo)
+    }
+```
+
 6. Dismiss Solitics Popup in code
 
 This method can be used to trigger a dismiss action in code. 
