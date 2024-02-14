@@ -1,5 +1,6 @@
 pluginManagement {
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
         gradlePluginPortal()
@@ -15,10 +16,11 @@ dependencyResolutionManagement {
 
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
+        mavenLocal()
         google()
         mavenCentral()
 
-        maven() {
+        maven("${root_url}") {
             url = uri("${root_url}/${repo_key}") // Replace with your Maven repository URL
             credentials {
                 username = artifactoryUsername

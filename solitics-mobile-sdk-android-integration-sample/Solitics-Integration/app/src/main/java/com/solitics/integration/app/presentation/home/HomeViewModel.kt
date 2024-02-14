@@ -1,5 +1,6 @@
 package com.solitics.integration.app.presentation.home
 
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,6 +8,7 @@ import com.solitics.integration.app.data.ICustomEmitEventParams
 import com.solitics.integration.app.domain.utils.isJson
 import com.solitics.integration.app.repo.ICustomEmitEventParamsRepo
 import com.solitics.sdk.SoliticsSDK
+import com.solitics.sdk.domain.exception.EmitEventFailedException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -51,11 +53,15 @@ class HomeViewModel(
 
                 customEmitEventParamsRepo.load().let {
 
-                    SoliticsSDK.onEmitEvent(
+                    try {
+                        SoliticsSDK.onEmitEvent(
                             it.txType.toString(),
                             it.txAmount,
                             it.customFields.toString()
-                    )
+                        )
+                    } catch (e: EmitEventFailedException) {
+                        Log.e("HomeViewModel", e.toString())
+                    }
                 }
             }
 

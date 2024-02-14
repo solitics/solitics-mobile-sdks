@@ -2,6 +2,7 @@
 // Build script
 // =================================================================================================
 buildscript {
+
     repositories {
         mavenLocal()
         google()
@@ -11,7 +12,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.google.gms:google-services:4.4.0'
+        classpath 'com.google.gms:google-services:4.4.1'
         classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.9'
     }
 }
@@ -40,8 +41,8 @@ android {
         minSdkVersion 19
         targetSdkVersion 34
 
-        versionName "2.1.5.18"
-        versionCode 18
+        versionCode 19
+        versionName "2.1.5.19"
 
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -50,12 +51,14 @@ android {
     buildTypes {
         debug {
             minifyEnabled = false
+            testCoverageEnabled = false
             enableUnitTestCoverage = false
             enableAndroidTestCoverage = false
             buildConfigField "Boolean", "LINK_WATCHDOG_TO_CRASHLYTICS", 'true'
         }
         release {
             minifyEnabled = false
+            testCoverageEnabled = false
             enableUnitTestCoverage = false
             enableAndroidTestCoverage = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
@@ -75,29 +78,34 @@ android {
     testOptions {
         unitTests.includeAndroidResources = true
         unitTests.returnDefaultValues = true
+        // unitTests.all {
+        //     reports {
+        //         html.enabled true
+        //     }
+        // }
     }
     flavorDimensions = ['defualt']
 }
 
 dependencies {
 
-    implementation 'com.solitics:solitics.sdk:2.1.5.19'
+    implementation 'com.solitics:solitics.sdk:3.0.0.33'
 
     implementation 'androidx.core:core-ktx:1.12.0'
     implementation 'androidx.annotation:annotation:1.7.1'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.6'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.7.6'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.7.7'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.7.7'
 
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.2'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.7.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0'
 
     implementation 'androidx.multidex:multidex:2.0.1'
 
-    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'com.google.android.material:material:1.11.0'
 
     // anr-watchdog
@@ -105,12 +113,15 @@ dependencies {
 
     // Firebase
     // Import the BoM for the Firebase platform
-    implementation platform('com.google.firebase:firebase-bom:31.0.2')
+    implementation platform('com.google.firebase:firebase-bom:32.7.0')
 
     // Declare the dependencies for the Crashlytics and Analytics libraries
     // When using the BoM, you don't specify versions in Firebase library dependencies
     implementation 'com.google.firebase:firebase-crashlytics-ktx'
     implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-messaging'
+
+    implementation 'com.onesignal:OneSignal:5.1.0'
 
     testImplementation 'junit:junit:4.13.2'
 

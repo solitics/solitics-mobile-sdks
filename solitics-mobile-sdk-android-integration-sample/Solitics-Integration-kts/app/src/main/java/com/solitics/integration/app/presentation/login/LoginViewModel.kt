@@ -20,7 +20,6 @@ class LoginViewModel(
             withContext(context = Dispatchers.IO) {
 
                 try {
-                    SoliticsSDK.dismissSoliticsPopup()
                     val response = SoliticsSDK.onLogin(loginMetadata)
                     withContext(Dispatchers.Main) {
                         if (response.hashedSubscriberId != 0.toLong()) {

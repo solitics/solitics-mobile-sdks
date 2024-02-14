@@ -5,6 +5,7 @@ import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
 
+
 class DelayedAfterTextChangedWatcher(
     private val origin: TextWatcher,
     private val delayInMills: Long = 500

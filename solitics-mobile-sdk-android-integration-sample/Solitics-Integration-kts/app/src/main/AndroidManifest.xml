@@ -46,5 +46,23 @@
                 <data android:scheme="avatrade" />
             </intent-filter>
         </activity>
+
+        <meta-data android:name="com.onesignal.NotificationServiceExtension"
+            android:value="com.solitics.internal.development.app.messaging.OneSignalNotificationService" />
+
+        <service android:name=".messaging.NotificationsService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".messaging.NotificationReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
     </application>
 </manifest>

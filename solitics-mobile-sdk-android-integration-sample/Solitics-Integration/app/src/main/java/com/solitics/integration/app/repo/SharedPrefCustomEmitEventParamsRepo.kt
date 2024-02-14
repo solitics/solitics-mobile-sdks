@@ -5,18 +5,17 @@ import com.google.gson.Gson
 
 import com.solitics.integration.app.data.CustomEmitEventParams
 import com.solitics.integration.app.data.ICustomEmitEventParams
-import com.solitics.sdk.domain.EventType
 
 class SharedPrefCustomEmitEventParamsRepo(
     private val sharePref: SharedPreferences
 ) : ICustomEmitEventParamsRepo {
 
-    private val aKey = "custom_params"
+    private val storageKey = "custom_params"
 
     override fun load(): ICustomEmitEventParams {
-        val dataString = sharePref.getString(aKey, "")
+        val dataString = sharePref.getString(storageKey, "")
         if (dataString!!.isEmpty()) {
-            return CustomEmitEventParams(EventType.EMIT_EVENT.type, null, null)
+            return CustomEmitEventParams("Gini", "{}", 10.0)
         }
 
         return Gson().fromJson(dataString, CustomEmitEventParams::class.java)
@@ -26,7 +25,7 @@ class SharedPrefCustomEmitEventParamsRepo(
         sharePref
             .edit()
             .putString(
-                aKey,
+                storageKey,
                 Gson().toJson(params)
             )
             .apply()
@@ -36,7 +35,7 @@ class SharedPrefCustomEmitEventParamsRepo(
         sharePref
             .edit()
             .putString(
-                aKey,
+                storageKey,
                 ""
             )
             .apply()

@@ -2,20 +2,6 @@
 ext {
     groupId = 'com.solitics'
 }
-ext {
-    base_key = "artifactory.solitics"
-    root_url = providers.gradleProperty("${base_key}.rootURL").orNull
-    repo_key = providers.gradleProperty("${base_key}.consumer.repoKey").orNull
-    artifactoryUrl = "${root_url}/${repo_key}"
-    artifactoryUsername = providers.gradleProperty("${base_key}.consumer.username").orNull
-    artifactoryPassword = providers.gradleProperty("${base_key}.consumer.password") .orNull
-
-//    artifactory_url      = 'https://soliticsmobilesdk.jfrog.io/artifactory'
-//    artifactory_repoKey  = 'android.solitics.mobile.releases'
-//    artifactory_username = System.getenv('artifactory.solitics.consumer.username') ?: findProperty('artifactory.solitics.consumer.username')
-//    artifactory_password = System.getenv('artifactory.solitics.consumer.password') ?: findProperty('artifactory.solitics.consumer.password')
-}
-
 buildscript {
 
     repositories {
@@ -26,43 +12,61 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.2.0'
+        classpath 'com.android.tools.build:gradle:8.2.2'
         classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.0'
-        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:5.1.13'
+        classpath 'org.jfrog.buildinfo:build-info-extractor-gradle:4.29.0'
     }
 }
+ext {
+    artifactory_url      = 'https://soliticsmobilesdk.jfrog.io/artifactory'
+    artifactory_repoKey  = 'android.solitics.mobile.releases'
+    artifactory_username = System.getenv('solitics.consumer.username') ?: findProperty('solitics.consumer.username')
+    artifactory_password = System.getenv('solitics.consumer.password') ?: findProperty('solitics.consumer.password')
+}
 
-allprojects {
+allprojects { project ->
     apply plugin: 'com.jfrog.artifactory'
 
     repositories {
         mavenLocal()
         mavenCentral()
         google()
-
-        maven {
-            url = artifactoryUrl
-            credentials {
-                username artifactoryUsername
-                password artifactoryPassword
-            }
-        }
     }
-    gradle.projectsEvaluated {
-        tasks.withType(JavaCompile).configureEach {
-            options.encoding = 'UTF-8'
-            options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation" << "-Xlint:-options"
-        }
-        tasks.withType(Javadoc).tap {
-            configureEach {
-                options.addStringOption('Xdoclint:none', '-quiet')
-                options.addStringOption('encoding', 'UTF-8')
-                options.addStringOption('charSet', 'UTF-8')
+
+    project.afterEvaluate { module ->
+
+        module.configurations.all {
+
+            resolutionStrategy {
+                // cache dynamic versions for 10 minutes
+                // cacheDynamicVersionsFor 10*60, 'seconds'
+                cacheDynamicVersionsFor 0, 'seconds'
+
+                // don't cache changing modules at all
+                cacheChangingModulesFor 0, 'seconds'
             }
+        }
+
+        module.tasks.withType(JavaCompile) { task ->
+            task.options.encoding = 'UTF-8'
+            task.options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation" << "-Xlint:-options"
+        }
+        module.tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+            options.addStringOption('encoding', 'UTF-8')
+            options.addStringOption('charSet', 'UTF-8')
         }
     }
 }
-apply plugin: 'com.jfrog.artifactory'
 artifactory {
-    setContextUrl(artifactoryUrl) // The base Artifactory URL if not overridden by the publisher/resolver
+    contextUrl = artifactory_url // The base Artifactory URL if not overridden by the publisher/resolver
+    publish {}
+    resolve {
+        repository {
+            repoKey  = artifactory_repoKey
+            username = artifactory_username
+            password = artifactory_password
+            maven = true
+        }
+    }
 }

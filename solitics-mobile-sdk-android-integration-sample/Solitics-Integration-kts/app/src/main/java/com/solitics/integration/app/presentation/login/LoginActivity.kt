@@ -1,6 +1,8 @@
 package com.solitics.integration.app.presentation.login
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -10,7 +12,11 @@ import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.solitics.integration.app.R
-
+import com.solitics.integration.app.domain.utils.TAG
+import com.solitics.integration.app.domain.utils.log
+import com.solitics.integration.app.logger.FileLogger
+import com.solitics.integration.app.messaging.NotificationDrawerHandler
+import com.solitics.sdk.SoliticsSDK
 import com.solitics.sdk.domain.LoginMetadata
 import com.solitics.sdk.domain.exception.LoginFailedException
 
@@ -20,8 +26,14 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_login)
+
+        // handleIntent(intent)
+
+        log(message = "Log Files:\n${FileLogger.readLogFile(this)}")
+        FileLogger.deleteFileContent(this)
+        log(message = "fileLogger cleared")
+        NotificationDrawerHandler.askPermission(this)
 
         val etEmail = findViewById<EditText>(R.id.etEmail)
         val etCustomField = findViewById<EditText>(R.id.etCustomFields)
@@ -37,15 +49,18 @@ class LoginActivity : AppCompatActivity() {
         val loading = findViewById<ProgressBar>(R.id.loading)
 
         // Just for internal testing
-        etEmail.setText(R.string.email) // "demo@solitics.com")
-        etCustomField.setText(R.string.CustomField) // "{}")
-        etBrand.setText(R.string.Brand) // "Fashion")
-        etBranch.setText(R.string.Branch) // "bank")
-        etKeyType.setText(R.string.KeyType) // "crm")
-        etKeyValue.setText(R.string.KeyValue) // "54321098")
-        etTokenPupUp.setText(R.string.TokenPupUp) // "Wf9fsDARzdtCqDFJ9cVKrmuF")
+        etEmail.setText(getString(R.string.email))
+        etKeyType.setText(getString(R.string.KeyType))
+        etKeyValue.setText(getString(R.string.KeyValue))
+        etTokenPupUp.setText(getString(R.string.TokenPupUp))
+        etMemberId.setText(getString(R.string.MemberId))
+
+        etCustomField.setText(getString(R.string.CustomField))
+        etBrand.setText(getString(R.string.Brand))
+        etBranch.setText(getString(R.string.Branch))
+
         etTxAmount.setText("0")
-        etMemberId.setText(R.string.MemberId) // "9910410111064")
+
 
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory(this))[LoginViewModel::class.java]
 
@@ -90,5 +105,26 @@ class LoginActivity : AppCompatActivity() {
         loginViewModel.onCreate()
     }
 
+    override fun onResume() {
+        super.onResume()
+        handleIntent(intent);
+    }
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        Log.d(TAG, "onNewIntent: $intent")
+
+        handleIntent(intent)
+    }
+
+    private fun handleIntent(intent: Intent?) {
+
+        if (intent != null && intent.extras != null) {
+            for (key in intent.extras!!.keySet()) {
+                log("LoginActivity", "key: $key")
+                log("LoginActivity", "value: ${intent.extras!!.get(key)}")
+            }
+        }
+        SoliticsSDK.onNewIntent(intent)
+    }
 }
 

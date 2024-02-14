@@ -2,6 +2,8 @@ package com.solitics.integration.app.presentation.home
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.Editable
 import android.util.Log
 import android.view.View
@@ -11,10 +13,11 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.solitics.integration.app.R
 import com.solitics.integration.app.domain.utils.TAG
+import com.solitics.integration.app.domain.utils.log
 import com.solitics.integration.app.presentation.common.DelayedAfterTextChangedWatcher
 import com.solitics.integration.app.presentation.common.EmptyTextWatcher
-import com.solitics.sdk.SoliticsLogListener
 import com.solitics.sdk.SoliticsSDK
+import com.solitics.sdk.SoliticsLogListener
 import com.solitics.sdk.SoliticsPopupDelegate
 import com.solitics.sdk.domain.PopupContent
 
@@ -31,7 +34,7 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        viewModel = ViewModelProvider(this, HomeViewModelFactory(this))[HomeViewModel::class.java]
+        ViewModelProvider(this, HomeViewModelFactory(this))[HomeViewModel::class.java].also { viewModel = it }
 
         findViewById<Button>(R.id.btnSendEvent).setOnClickListener {
             viewModel.sendEvent()
@@ -123,7 +126,7 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         super.onResume()
         SoliticsSDK.registerSoliticsLogListener(this)
         setDelegateActivate(cbIsDelegateActive.isChecked)
-
+        handleIntent(intent)
     }
 
     override fun onDestroy() {
@@ -131,6 +134,23 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         SoliticsSDK.removeSoliticsLogListener(this)
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        Log.d(TAG, "onNewIntent: $intent")
+
+        handleIntent(intent)
+    }
+
+    private fun handleIntent(intent: Intent?) {
+
+        if (intent != null && intent.extras != null) {
+            for (key in intent.extras!!.keySet()) {
+                log("LoginActivity", "key: $key")
+                log("LoginActivity", "value: ${intent.extras!!.get(key)}")
+            }
+        }
+        SoliticsSDK.onNewIntent(intent)
+    }
     override fun onMessage(message: String) {
         runOnUiThread {
             val oldLog = tvLog.text.toString()
@@ -146,6 +166,8 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
     override fun onPopupOpened() {
         Log.d(TAG, "onPopupOpened: ")
         onDelegateMessage("onPopupOpened" )
+
+        dismissPopup()
     }
     override fun onPopupClicked() {
         Log.d(TAG, "onPopupClicked: ")
@@ -168,7 +190,6 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
         // add your navigation logic here
         startFirstActivity()
     }
-
 
     private fun onDelegateMessage(message: String) {
         runOnUiThread {
@@ -196,5 +217,11 @@ class HomeActivity : AppCompatActivity(), SoliticsLogListener, SoliticsPopupDele
 
     private fun startFirstActivity(){
         startActivity(Intent(this, FirstActivity::class.java))
+    }
+
+    private fun dismissPopup() {
+        Handler(Looper.getMainLooper()).postDelayed({
+            SoliticsSDK.dismissSoliticsPopup()
+        }, 5000L)
     }
 }

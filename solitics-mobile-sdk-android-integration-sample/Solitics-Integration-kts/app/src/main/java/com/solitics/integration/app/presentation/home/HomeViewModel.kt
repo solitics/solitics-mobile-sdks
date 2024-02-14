@@ -9,7 +9,6 @@ import com.solitics.integration.app.domain.utils.isJson
 import com.solitics.integration.app.repo.ICustomEmitEventParamsRepo
 import com.solitics.sdk.SoliticsSDK
 import com.solitics.sdk.domain.exception.EmitEventFailedException
-import com.solitics.sdk.domain.exception.LoginFailedException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
