@@ -5,7 +5,7 @@ As a marketer, an immediate response to a customer action is crucial the moment 
 Solitics, a personalized marketing automation platform, enables you to react in real-time to events fired from your client or server.
 
 - [**Installation**](#installation)
-    - [Gradle](#-Dependency-Management-Systems)
+    - [cocoapods](#-Dependency-Management-Systems)
     - [Manual](#---Manual)
 - [**Usage - Sample**](#Usage---Sample)
 - [**Migration guide**](#Migration-guide)
@@ -41,14 +41,14 @@ Solitics, a personalized marketing automation platform, enables you to react in 
 
 5. Add the artifactory plugin to the podfile.
     At the top of your podfile add the following lines:
-    ```
+    ```ruby
     plugin 'cocoapods-art', :sources => [
         'ios.solitics.mobile.releases'
     ]
     ```
 
 6. add the pod to the podfile
-    ```
+    ```ruby
     target ‘YOUR_PROJECT’ do
         …
         pod 'SoliticsSDK'
@@ -56,11 +56,11 @@ Solitics, a personalized marketing automation platform, enables you to react in 
     ```
 
 7. In the terminal run `pod install`
-### Note for Mac M1 users:
+    ### Note for Mac M1 users:
     Mac M1 architecture is not directly compatible with Cocoapods. If you encounter issues when installing pods, you can solve it by running:
     - sudo arch -x86_64 gem install ffi
     - arch -x86_64 pod install
-    These commands install the ffi package, to load dynamically-linked libraries and let you run the pod install properly, and runs pod install with the proper architecture. 
+    These commands install the ffi package, to load dynamically-linked libraries and let you run the pod install properly, and runs pod install with the proper architecture.
 
 ## Usage - Sample
 ### Report Real-Time Events in Two Simple Steps
@@ -177,6 +177,44 @@ Note: make sure that you call this method on the main application thread
 
 ```Swift
     Solitics.dismissSoliticsPopup()
+```
+
+## Handle push notifications
+* You should first conform to 'UNUserNotificationCenterDelegate' to be notified by the system about this callback.
+
+#### Handle notifications for foreground app state
+
+``` Swift
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) 
+    {
+        let payload = notification.request.content.userInfo
+        SoliticsSDK.Solitics.didClickPushNotification(for: payload)
+        ...
+    }
+```
+
+#### Handle notifications for background or terminated app state
+* You should first add a new 'NotificationService' target (a.k.a Notification Service Extension)
+* After the target is created a new directory will be created with the name provided, a default file can be seen by the name 'NotificationService.swift'. 
+  Add the Solitics method invocation here.
+
+
+``` Swift
+    override func didReceive(_ request: UNNotificationRequest, withContentHandler contentHandler: @escaping (UNNotificationContent) -> Void)
+    {
+        SoliticsSDK.Solitics.didReceivePushNotificationRequest(for: request)
+        ...
+    }
+```
+
+* You should first conform to 'UNUserNotificationCenterDelegate' to be notified by the system about this callback.
+* Called when the user click the notification
+
+``` Swift
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    {
+        SoliticsSDK.Solitics.didReceivePushNotificationResponse(for: response)
+    }
 ```
 
 ## Advanced usages

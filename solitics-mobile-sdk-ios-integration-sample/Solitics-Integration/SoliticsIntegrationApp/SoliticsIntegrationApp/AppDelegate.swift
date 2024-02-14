@@ -6,7 +6,6 @@
 //
 import UIKit
 import SoliticsSDK
-// import Firebase
 ///
 ///
 ///
@@ -14,9 +13,11 @@ import SoliticsSDK
 class AppDelegate : UIResponder
 {
     var window : UIWindow?
+    let services: [ServiceProtocol]
     
     override init()
     {
+        services = [FirebaseService(), OneSignalService(), SoliticsSDKService()]
         super.init()
     }
     
@@ -42,9 +43,9 @@ class AppDelegate : UIResponder
         } else {
             rootVC = SignInVC()
         }
-        Solitics.activeGlobalLogs = false
-        Solitics.activeSocketLogs = false
-        Solitics.activeRestflLogs = false
+        Solitics.activeGlobalLogs = true
+        Solitics.activeSocketLogs = true
+        Solitics.activeRestflLogs = true
         
         Solitics.delegate = self
         Solitics.register(SoliticsLogListener: self)
@@ -63,7 +64,8 @@ extension AppDelegate : UIApplicationDelegate
         navigateToInitialScreen()
         setup()
         window?.makeKeyAndVisible()
-        // FirebaseApp.configure()
+        UNUserNotificationCenter.current().delegate = self
+        services.forEach({ $0.application(application, didFinishLaunchingWithOptions: launchOptions) })
         return true
     }
     
@@ -89,6 +91,12 @@ extension AppDelegate : UIApplicationDelegate
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        print("Trying to open url: \(url)")
+        print("With options: \(options)")
+        return true
+    }
 }
 extension AppDelegate : SoliticsLogListener
 {
@@ -107,7 +115,6 @@ extension AppDelegate : SoliticsPopupDelegate
         print(content.webhookParams)
         return true
     }
-    
     /**
      * Called when the solitics popup message is displayed.
      */
@@ -115,7 +122,6 @@ extension AppDelegate : SoliticsPopupDelegate
     {
         print(#function)
     }
-    
     /**
      * Called when the solitics popup message is closed.
      */
@@ -123,7 +129,6 @@ extension AppDelegate : SoliticsPopupDelegate
     {
         print(#function)
     }
-    
     /**
      * Called when the an item inside the solitics popup message is clicked.
      */
@@ -132,16 +137,43 @@ extension AppDelegate : SoliticsPopupDelegate
         print(#function)
     }
     
-    func soliticsShouldDismissPopup(forNavigationTarget urlString: String) -> Bool
-    {
+    func soliticsShouldDismissPopup(forNavigationTarget urlString: String) -> Bool {
         print(#function)
         /// Custom logic to determin if we shold dismiss the popup or not
         return true
     }
-    
-    func soliticsMessageDidClosePopup(forNavigationTarget urlString: String)
-    {
+    func soliticsMessageDidClosePopup(forNavigationTarget urlString: String) {
         print(#function)
         /// Action to be taken after the popup was dismisses by the solitics system
+    }
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
+    {
+        services.forEach({ $0.application(application, didReceiveRemoteNotification: userInfo, fetchCompletionHandler: completionHandler) })
+    }
+    
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)
+    {
+        services.forEach({ $0.application(application, didRegisterForRemoteNotificationsWithDeviceToken: deviceToken) })
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+    {
+        services.forEach({ $0.application(application, didFailToRegisterForRemoteNotificationsWithError: error) })
+    }
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
+    {
+        services.forEach { $0.userNotificationCenter(center, willPresent: notification, withCompletionHandler: completionHandler)
+        }
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
+    {
+        services.forEach({ $0.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler) })
+    }
+    func userNotificationCenter(_ center: UNUserNotificationCenter, openSettingsFor notification: UNNotification?) {
+        
     }
 }

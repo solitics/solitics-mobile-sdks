@@ -25,7 +25,7 @@
 			<string>com.solitics.test</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>exampletrade</string>
+				<string>avatrade</string>
 			</array>
 		</dict>
 	</array>
@@ -87,5 +87,7 @@
 	<string>Light</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 </dict>
 </plist>

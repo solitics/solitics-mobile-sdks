@@ -109,6 +109,11 @@ extension SignInVC: SignInVCViewDelegate
         let input: SignInUserInput = contentView.getUserInput()
         viewModel.sendSignInRequest(for: input)
     }
+    
+    func didTapRequestPushPermission()
+    {
+        viewModel.requestPushNotifications()
+    }
 }
  
 // MARK: - SignInVCViewModelDelegate
@@ -124,6 +129,12 @@ extension SignInVC: SignInVCViewModelDelegate
     {
         hideProgress()
         AlertPresenter.showErrorAlert(at: self, errorMessgage: error.localizedDescription)
+    }
+    
+    func didReceiveRequestPushNotificationResponse(granted: Bool) {
+        DispatchQueue.main.async {
+            UIApplication.shared.registerForRemoteNotifications()
+        }
     }
 }
 

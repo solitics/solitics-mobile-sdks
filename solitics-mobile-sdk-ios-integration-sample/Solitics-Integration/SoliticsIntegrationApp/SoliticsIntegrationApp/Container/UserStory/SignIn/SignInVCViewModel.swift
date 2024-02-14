@@ -6,6 +6,7 @@
 //
 import Foundation
 import SoliticsSDK
+import UserNotifications
 ///
 ///
 ///
@@ -35,7 +36,7 @@ struct LoginRequest : ILoginMetadata
     public var transactionType  : String?
     public var transactionAmount: Double?
     
-    public var memberId         : Int?
+    public var memberId         : String?
     public var token            : String?
 }
 
@@ -43,6 +44,7 @@ protocol SignInVCViewModelDelegate : AnyObject
 {
     func onSignInSuccess()
     func onSignInError(_ error: Error)
+    func didReceiveRequestPushNotificationResponse(granted: Bool)
 }
 
 final class SignInVCViewModel : NSObject
@@ -57,7 +59,6 @@ final class SignInVCViewModel : NSObject
     
     func sendSignInRequest(for userInput: SignInUserInput)
     {
-        let memberId         : Int?     = Int   (userInput.memberId          ?? String())
         let transactionAmount: Double?  = Double(userInput.transactionAmount ?? String())
         
         let login = LoginRequest(
@@ -68,7 +69,7 @@ final class SignInVCViewModel : NSObject
             keyType          : userInput.keyType,
             keyValue         : userInput.keyValue,
             transactionAmount: transactionAmount,
-            memberId         : memberId,
+            memberId         : userInput.memberId,
             token            : userInput.popupToken
         )
 
@@ -83,6 +84,19 @@ final class SignInVCViewModel : NSObject
             case .failure(let error):
                 strongSelf.delegate?.onSignInError(error)
             }
+        }
+    }
+    
+    // MARK: - Push Notification Registration
+    func requestPushNotifications()
+    {
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { [unowned self] (granted, error) in
+            if let error {
+                print("Notification request failed with \(error.localizedDescription)")
+            } else {
+                print("Notification permissions \(granted ? "granted" : "denied")")
+            }
+            self.delegate?.didReceiveRequestPushNotificationResponse(granted: granted)
         }
     }
 }

@@ -11,6 +11,7 @@ import UIKit
 protocol SignInVCViewDelegate : AnyObject
 {
     func didTapSignInButton()
+    func didTapRequestPushPermission()
 }
 ///
 ///
@@ -31,6 +32,7 @@ final class SignInVCView : UIView
     
     private lazy var fields : [BorderedTopHintTextField] = []
     private let signInButton: BlackBorderActionButton = BlackBorderActionButton()
+    private let requestPushPermissionButton: BlackBorderActionButton = BlackBorderActionButton()
     
     weak var delegate: SignInVCViewDelegate?
     
@@ -85,6 +87,9 @@ final class SignInVCView : UIView
         
         let selector = #selector(SignInVCView.didTapSignInButton)
         signInButton.addTarget(self, action: selector, for: .touchUpInside)
+        
+        let pushPermissionSelector = #selector(SignInVCView.didTapRequestPushPermission)
+        requestPushPermissionButton.addTarget(self, action: pushPermissionSelector, for: .touchUpInside)
     }
     
     private func setupLayout()
@@ -205,6 +210,14 @@ final class SignInVCView : UIView
             signInButton.heightAnchor.constraint(equalToConstant: 40.0)
         ]
         NSLayoutConstraint.activate(signInButtonConstraints)
+        
+        containerView.addArrangedSubview(requestPushPermissionButton)
+        requestPushPermissionButton.update(title: "Request APN")
+        let requestPushPermissionButtonConstraints: [NSLayoutConstraint] = [
+            requestPushPermissionButton.widthAnchor.constraint(equalTo: signInButton.widthAnchor),
+            requestPushPermissionButton.heightAnchor.constraint(equalToConstant: 40.0)
+        ]
+        NSLayoutConstraint.activate(requestPushPermissionButtonConstraints)
     }
     
     // MARK: - Actions
@@ -212,5 +225,11 @@ final class SignInVCView : UIView
     private func didTapSignInButton()
     {
         delegate?.didTapSignInButton()
+    }
+    
+    @objc
+    private func didTapRequestPushPermission()
+    {
+        delegate?.didTapRequestPushPermission()
     }
 }

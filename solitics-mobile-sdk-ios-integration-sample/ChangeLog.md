@@ -1,8 +1,13 @@
-# solitics-sdk-iOS - ChangeLog
+# solitics-sdk-ios - ChangeLog
  
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 3.0.0.34
+    - feature - Breaking change - Change the type of memberId in the event system to support a larger population
+    - feature - Change minimum iOS deployment target to 12.0
+    - feature - Add additional internal analytics events 
+    - feature - Add a push notification handling system
 - 2.2.0.21
     - feature - Change minimum iOS deployment target to 11.0
     - feature - Retry "login" & "emit event" calls automaticly, new retry policy is try every 15 seconds for 3 minutes from the initial call attempt

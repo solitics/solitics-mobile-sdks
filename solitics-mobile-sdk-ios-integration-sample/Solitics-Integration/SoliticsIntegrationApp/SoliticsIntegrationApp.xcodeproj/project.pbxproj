@@ -3,10 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D0316BD2B7CF87B00950065 /* SoliticsSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */; };
+		5D0316BF2B7CF94A00950065 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316BE2B7CF94A00950065 /* SoliticsWrapper */; };
+		5D0316C12B7CF96300950065 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C02B7CF96300950065 /* FirebaseMessaging */; };
+		5D0316C32B7CF96B00950065 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C22B7CF96B00950065 /* OneSignalExtension */; };
+		5D0316C42B7CFC8600950065 /* SoliticsSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */; };
+		5D0316C52B7CFC8600950065 /* NotificationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */; };
+		5D0316C62B7CFC8600950065 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */; };
+		5D0316C72B7CFC8600950065 /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EA2B30E22D008368CC /* OneSignalService.swift */; };
+		5D0316C82B7CFC8600950065 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EB2B30E22D008368CC /* FirebaseService.swift */; };
+		5D0968E92B4ABA97009AC204 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968E82B4ABA97009AC204 /* SoliticsWrapper */; };
+		5D0968EC2B4ABB0F009AC204 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */; };
+		5D0968EE2B4ABB0F009AC204 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */; };
+		5D0968F02B4ABB3B009AC204 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968EF2B4ABB3B009AC204 /* OneSignalExtension */; };
+		5D0968F22B4ABB3B009AC204 /* OneSignalInAppMessages in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968F12B4ABB3B009AC204 /* OneSignalInAppMessages */; };
+		5D0968F42B4ABB63009AC204 /* OneSignalFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968F32B4ABB63009AC204 /* OneSignalFramework */; };
 		5D5626F126A6FC8900805583 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5626F026A6FC8900805583 /* AppDelegate.swift */; };
 		5D5626F326A6FC8900805583 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5626F226A6FC8900805583 /* SceneDelegate.swift */; };
 		5D56270826A6FC8C00805583 /* SoliticsIntegrationAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D56270726A6FC8C00805583 /* SoliticsIntegrationAppTests.swift */; };
@@ -43,6 +58,12 @@
 		5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277C26A70B3300805583 /* LaunchScreen.storyboard */; };
 		5DAD49D9278F5C7F0069F8E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */; };
 		832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */; };
+		91BBB2EF2B30E22D008368CC /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EA2B30E22D008368CC /* OneSignalService.swift */; };
+		91BBB2F02B30E22D008368CC /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EB2B30E22D008368CC /* FirebaseService.swift */; };
+		91BBB2F12B30E22D008368CC /* NotificationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */; };
+		91BBB2F22B30E22D008368CC /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */; };
+		91BBB3062B30E8A7008368CC /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB3052B30E8A7008368CC /* NotificationService.swift */; };
+		91BBB30A2B30E8A7008368CC /* NotificationService.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 91BBB3032B30E8A7008368CC /* NotificationService.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9D69AA043B9AF2D7B9DAB3B7 /* Pods_SoliticsIntegrationAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F0282000984ABC5E3BBC21 /* Pods_SoliticsIntegrationAppTests.framework */; };
 		B6D3B0183F01FD26E9F2096C /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */; };
 /* End PBXBuildFile section */
@@ -62,10 +83,32 @@
 			remoteGlobalIDString = 5D5626EC26A6FC8900805583;
 			remoteInfo = SoliticsIntegrationApp;
 		};
+		91BBB3082B30E8A7008368CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5626E526A6FC8900805583 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91BBB3022B30E8A7008368CC;
+			remoteInfo = NotificationService;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91BBB30E2B30E8A7008368CC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				91BBB30A2B30E8A7008368CC /* NotificationService.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05D7F313C03AA3C29370A57E /* Pods-SoliticsIntegrationAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoliticsSDKService.swift; sourceTree = "<group>"; };
 		5D5626ED26A6FC8900805583 /* SoliticsIntegrationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoliticsIntegrationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D5626F026A6FC8900805583 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D5626F226A6FC8900805583 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -113,6 +156,13 @@
 		6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.debug.xcconfig"; sourceTree = "<group>"; };
+		91BBB2EA2B30E22D008368CC /* OneSignalService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneSignalService.swift; sourceTree = "<group>"; };
+		91BBB2EB2B30E22D008368CC /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationHandlerProtocol.swift; sourceTree = "<group>"; };
+		91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		91BBB3032B30E8A7008368CC /* NotificationService.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = NotificationService.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		91BBB3052B30E8A7008368CC /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		91BBB3072B30E8A7008368CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BE9AB8668683974BAD88CD8 /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C378838C349F0D7982FBCF31 /* Pods-SoliticsIntegrationApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp.release.xcconfig"; sourceTree = "<group>"; };
 		D71D4AA60FCFD3135B272E1C /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +175,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D0968F22B4ABB3B009AC204 /* OneSignalInAppMessages in Frameworks */,
+				5D0968F02B4ABB3B009AC204 /* OneSignalExtension in Frameworks */,
+				5D0968F42B4ABB63009AC204 /* OneSignalFramework in Frameworks */,
+				5D0968EE2B4ABB0F009AC204 /* FirebaseMessaging in Frameworks */,
+				5D0968EC2B4ABB0F009AC204 /* FirebaseCrashlytics in Frameworks */,
+				5D0968E92B4ABA97009AC204 /* SoliticsWrapper in Frameworks */,
 				832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -142,6 +198,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6D3B0183F01FD26E9F2096C /* Pods_SoliticsIntegrationApp_SoliticsIntegrationAppUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		91BBB3002B30E8A7008368CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0316C12B7CF96300950065 /* FirebaseMessaging in Frameworks */,
+				5D0316C32B7CF96B00950065 /* OneSignalExtension in Frameworks */,
+				5D0316BF2B7CF94A00950065 /* SoliticsWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +236,7 @@
 				5D5626EF26A6FC8900805583 /* SoliticsIntegrationApp */,
 				5D56270626A6FC8C00805583 /* SoliticsIntegrationAppTests */,
 				5D56271126A6FC8C00805583 /* SoliticsIntegrationAppUITests */,
+				91BBB3042B30E8A7008368CC /* NotificationService */,
 				5D5626EE26A6FC8900805583 /* Products */,
 				3F3B8546707A7EF2A1668425 /* Pods */,
 				B86A5203F65CDB2D00F60385 /* Frameworks */,
@@ -182,6 +249,7 @@
 				5D5626ED26A6FC8900805583 /* SoliticsIntegrationApp.app */,
 				5D56270326A6FC8C00805583 /* SoliticsIntegrationAppTests.xctest */,
 				5D56270E26A6FC8C00805583 /* SoliticsIntegrationAppUITests.xctest */,
+				91BBB3032B30E8A7008368CC /* NotificationService.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -237,6 +305,7 @@
 		5D56272B26A7063300805583 /* Container */ = {
 			isa = PBXGroup;
 			children = (
+				91BBB2E92B30E22D008368CC /* PackageServices */,
 				5D56276326A7078900805583 /* Application */,
 				5D56276626A707A100805583 /* Extensions */,
 				5D56275926A7072900805583 /* Protocols */,
@@ -422,6 +491,35 @@
 			path = Documents;
 			sourceTree = "<group>";
 		};
+		91BBB2E92B30E22D008368CC /* PackageServices */ = {
+			isa = PBXGroup;
+			children = (
+				91BBB2EC2B30E22D008368CC /* Protocols */,
+				91BBB2EB2B30E22D008368CC /* FirebaseService.swift */,
+				91BBB2EA2B30E22D008368CC /* OneSignalService.swift */,
+				5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */,
+			);
+			path = PackageServices;
+			sourceTree = "<group>";
+		};
+		91BBB2EC2B30E22D008368CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */,
+				91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		91BBB3042B30E8A7008368CC /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				91BBB3052B30E8A7008368CC /* NotificationService.swift */,
+				91BBB3072B30E8A7008368CC /* Info.plist */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 		B86A5203F65CDB2D00F60385 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,13 +541,22 @@
 				5D5626E926A6FC8900805583 /* Sources */,
 				5D5626EA26A6FC8900805583 /* Frameworks */,
 				5D5626EB26A6FC8900805583 /* Resources */,
-				E0C29DB8DBFCF162E2F8774A /* [CP] Embed Pods Frameworks */,
+				91BBB30E2B30E8A7008368CC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				91BBB3092B30E8A7008368CC /* PBXTargetDependency */,
 			);
 			name = SoliticsIntegrationApp;
+			packageProductDependencies = (
+				5D0968E82B4ABA97009AC204 /* SoliticsWrapper */,
+				5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */,
+				5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */,
+				5D0968EF2B4ABB3B009AC204 /* OneSignalExtension */,
+				5D0968F12B4ABB3B009AC204 /* OneSignalInAppMessages */,
+				5D0968F32B4ABB63009AC204 /* OneSignalFramework */,
+			);
 			productName = SoliticsIntegrationApp;
 			productReference = 5D5626ED26A6FC8900805583 /* SoliticsIntegrationApp.app */;
 			productType = "com.apple.product-type.application";
@@ -481,7 +588,6 @@
 				5D56270A26A6FC8C00805583 /* Sources */,
 				5D56270B26A6FC8C00805583 /* Frameworks */,
 				5D56270C26A6FC8C00805583 /* Resources */,
-				3485B9C23819AB6CF0F03EC4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -493,14 +599,37 @@
 			productReference = 5D56270E26A6FC8C00805583 /* SoliticsIntegrationAppUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		91BBB3022B30E8A7008368CC /* NotificationService */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91BBB30B2B30E8A7008368CC /* Build configuration list for PBXNativeTarget "NotificationService" */;
+			buildPhases = (
+				91BBB2FF2B30E8A7008368CC /* Sources */,
+				91BBB3002B30E8A7008368CC /* Frameworks */,
+				91BBB3012B30E8A7008368CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NotificationService;
+			packageProductDependencies = (
+				5D0316BE2B7CF94A00950065 /* SoliticsWrapper */,
+				5D0316C02B7CF96300950065 /* FirebaseMessaging */,
+				5D0316C22B7CF96B00950065 /* OneSignalExtension */,
+			);
+			productName = NotificationService;
+			productReference = 91BBB3032B30E8A7008368CC /* NotificationService.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5D5626E526A6FC8900805583 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
 				TargetAttributes = {
 					5D5626EC26A6FC8900805583 = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -513,6 +642,9 @@
 						CreatedOnToolsVersion = 12.5.1;
 						TestTargetID = 5D5626EC26A6FC8900805583;
 					};
+					91BBB3022B30E8A7008368CC = {
+						CreatedOnToolsVersion = 15.1;
+					};
 				};
 			};
 			buildConfigurationList = 5D5626E826A6FC8900805583 /* Build configuration list for PBXProject "SoliticsIntegrationApp" */;
@@ -524,6 +656,11 @@
 				Base,
 			);
 			mainGroup = 5D5626E426A6FC8900805583;
+			packageReferences = (
+				91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
+				5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */,
+				5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 5D5626EE26A6FC8900805583 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -531,6 +668,7 @@
 				5D5626EC26A6FC8900805583 /* SoliticsIntegrationApp */,
 				5D56270226A6FC8C00805583 /* SoliticsIntegrationAppTests */,
 				5D56270D26A6FC8C00805583 /* SoliticsIntegrationAppUITests */,
+				91BBB3022B30E8A7008368CC /* NotificationService */,
 			);
 		};
 /* End PBXProject section */
@@ -562,26 +700,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3485B9C23819AB6CF0F03EC4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
+		91BBB3012B30E8A7008368CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
 		5834B8AD33C36D1010073DCD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -626,23 +754,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E0C29DB8DBFCF162E2F8774A /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SoliticsIntegrationApp/Pods-SoliticsIntegrationApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		F42AAF3C703CDA5718FB0E8E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -682,13 +793,17 @@
 				5D56273626A7067E00805583 /* MainVCView.swift in Sources */,
 				5D56275C26A7074200805583 /* UniqueIdentifiable.swift in Sources */,
 				5D56276126A7075300805583 /* ProgressShowable.swift in Sources */,
+				91BBB2F12B30E22D008368CC /* NotificationHandlerProtocol.swift in Sources */,
+				5D0316BD2B7CF87B00950065 /* SoliticsSDKService.swift in Sources */,
 				5D56275526A7071C00805583 /* InsetsTextField.swift in Sources */,
 				5D56273126A7066B00805583 /* BaseViewController.swift in Sources */,
 				5D56274826A706CA00805583 /* AppRouter.swift in Sources */,
 				5D56276E26A707F600805583 /* Data+Ext.swift in Sources */,
 				5D56273D26A7069300805583 /* SignInVC.swift in Sources */,
 				5D56273E26A7069300805583 /* SignInVCView.swift in Sources */,
+				91BBB2F02B30E22D008368CC /* FirebaseService.swift in Sources */,
 				5D56276A26A707EB00805583 /* UIViewController+Ext.swift in Sources */,
+				91BBB2F22B30E22D008368CC /* ServiceProtocol.swift in Sources */,
 				5D56273826A7067E00805583 /* MainVCViewModel.swift in Sources */,
 				5D56276F26A707F600805583 /* Dictionary+Ext.swift in Sources */,
 				5D56274B26A706D100805583 /* AppInternalError.swift in Sources */,
@@ -696,6 +811,7 @@
 				5D56274726A706CA00805583 /* AlertPresenter.swift in Sources */,
 				5D56276526A7079C00805583 /* AppConstants.swift in Sources */,
 				5D5626F126A6FC8900805583 /* AppDelegate.swift in Sources */,
+				91BBB2EF2B30E22D008368CC /* OneSignalService.swift in Sources */,
 				5D56273026A7066B00805583 /* SpinnerVC.swift in Sources */,
 				5D5626F326A6FC8900805583 /* SceneDelegate.swift in Sources */,
 				5D56274C26A706D100805583 /* ErrorLoggerService.swift in Sources */,
@@ -719,6 +835,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		91BBB2FF2B30E8A7008368CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D0316C42B7CFC8600950065 /* SoliticsSDKService.swift in Sources */,
+				5D0316C72B7CFC8600950065 /* OneSignalService.swift in Sources */,
+				91BBB3062B30E8A7008368CC /* NotificationService.swift in Sources */,
+				5D0316C52B7CFC8600950065 /* NotificationHandlerProtocol.swift in Sources */,
+				5D0316C82B7CFC8600950065 /* FirebaseService.swift in Sources */,
+				5D0316C62B7CFC8600950065 /* ServiceProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -731,6 +860,11 @@
 			isa = PBXTargetDependency;
 			target = 5D5626EC26A6FC8900805583 /* SoliticsIntegrationApp */;
 			targetProxy = 5D56270F26A6FC8C00805583 /* PBXContainerItemProxy */;
+		};
+		91BBB3092B30E8A7008368CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91BBB3022B30E8A7008368CC /* NotificationService */;
+			targetProxy = 91BBB3082B30E8A7008368CC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -751,6 +885,7 @@
 			baseConfigurationReference = 5D56272226A6FCD400805583 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -781,6 +916,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -797,8 +933,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -809,6 +949,7 @@
 			baseConfigurationReference = 5D56272226A6FCD400805583 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -839,6 +980,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_MODULE_VERIFIER = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -849,8 +991,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu11 gnu++14";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
@@ -860,15 +1006,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 85135E5999DC35759C69582B /* Pods-SoliticsIntegrationApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R393235FGX;
 				INFOPLIST_FILE = SoliticsIntegrationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -878,15 +1026,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C378838C349F0D7982FBCF31 /* Pods-SoliticsIntegrationApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R393235FGX;
 				INFOPLIST_FILE = SoliticsIntegrationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -966,6 +1116,72 @@
 			};
 			name = Release;
 		};
+		91BBB30C2B30E8A7008368CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = R393235FGX;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp1.NotificationService1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		91BBB30D2B30E8A7008368CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = R393235FGX;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = NotificationService/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NotificationService;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.solitics.ios.SoliticsIntegrationApp1.NotificationService1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1005,7 +1221,91 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		91BBB30B2B30E8A7008368CC /* Build configuration list for PBXNativeTarget "NotificationService" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91BBB30C2B30E8A7008368CC /* Debug */,
+				91BBB30D2B30E8A7008368CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = swift.solitics;
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+		5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
+		91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/OneSignal/OneSignal-iOS-SDK.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D0316BE2B7CF94A00950065 /* SoliticsWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */;
+			productName = SoliticsWrapper;
+		};
+		5D0316C02B7CF96300950065 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		5D0316C22B7CF96B00950065 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		5D0968E82B4ABA97009AC204 /* SoliticsWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */;
+			productName = SoliticsWrapper;
+		};
+		5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		5D0968EF2B4ABB3B009AC204 /* OneSignalExtension */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalExtension;
+		};
+		5D0968F12B4ABB3B009AC204 /* OneSignalInAppMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalInAppMessages;
+		};
+		5D0968F32B4ABB63009AC204 /* OneSignalFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
+			productName = OneSignalFramework;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5D5626E526A6FC8900805583 /* Project object */;
 }

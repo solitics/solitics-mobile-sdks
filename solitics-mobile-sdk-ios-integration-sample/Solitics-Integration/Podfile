@@ -7,7 +7,7 @@ install! 'cocoapods' ,
 :warn_for_unused_master_specs_repo  => false;
 
 plugin 'cocoapods-art', :sources => [
-    'ios.solitics.mobile.releases' ,
+#   'ios.solitics.mobile.releases' ,
 #   'ios.solitics.mobile.snapshot'
 ]
 
@@ -19,7 +19,7 @@ project 'SoliticsIntegrationApp/SoliticsIntegrationApp.xcodeproj'
 # Global Settings content
 # ######################################################################################################################
 
-platform :ios, '11.0'
+platform :ios, '12.0'
 
 # ######################################################################################################################
 # SoliticsIntegrationApp content
@@ -31,7 +31,8 @@ target 'SoliticsIntegrationApp' do
   use_frameworks!
   
   # Pods for SoliticsIntegrationApp
-  pod 'SoliticsSDK'
+  # pod 'SoliticsSDK'
+  # pod 'Firebase/Crashlytics'
   
   target 'SoliticsIntegrationAppTests' do
     inherit! :search_paths
@@ -73,21 +74,21 @@ post_install do |installer|
       # config.build_settings['EXPANDED_CODE_SIGN_IDENTITY'] = ""
       # config.build_settings['CODE_SIGNING_REQUIRED'] = "NO"
       # config.build_settings['CODE_SIGNING_ALLOWED'] = "NO"
-      
-      if config.name == 'Debug'
-        cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
-        cflags << '-fembed-bitcode-marker'
-        config.build_settings['OTHER_CFLAGS'] = cflags
-        
-        config.build_settings['BITCODE_GENERATION_MODE'] = 'marker'
-      end
-      if config.name == 'Release'
-        cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
-        cflags << '-fembed-bitcode'
-        config.build_settings['OTHER_CFLAGS'] = cflags
-        
-        config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
-      end
+      #
+      # if config.name == 'Debug'
+      #   cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+      #   cflags << '-fembed-bitcode-marker'
+      #   config.build_settings['OTHER_CFLAGS'] = cflags
+      #
+      #   config.build_settings['BITCODE_GENERATION_MODE'] = 'marker'
+      # end
+      # if config.name == 'Release'
+      #   cflags = config.build_settings['OTHER_CFLAGS'] || ['$(inherited)']
+      #   cflags << '-fembed-bitcode'
+      #   config.build_settings['OTHER_CFLAGS'] = cflags
+      #
+      #   config.build_settings['BITCODE_GENERATION_MODE'] = 'bitcode'
+      # end
     end
   end
 end
