@@ -1315,10 +1315,10 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@solitics/react-native-solitics-sdk@^1.0.9":
-  version "1.0.9"
-  resolved "https://soliticsmobilesdk.jfrog.io/artifactory/api/npm/react.native.solitics.mobile.releases-local/@solitics/react-native-solitics-sdk/-/@solitics/react-native-solitics-sdk-1.0.9.tgz#95ef423d6404482ffebc28c77fed2768b606f7de"
-  integrity sha512-IaN8S8qs3Xs8ObZSpdkkTaDu8oOlTtG8dPQXGajMM+NUKpuSxHNfzl6samum0nPSwOXnSjQlIxHai9uNGRan2Q==
+"@solitics/react-native-solitics-sdk@^2.0.0":
+  version "2.0.0"
+  resolved "https://soliticsmobilesdk.jfrog.io/artifactory/api/npm/react.native.solitics.mobile.releases-local/@solitics/react-native-solitics-sdk/-/@solitics/react-native-solitics-sdk-2.0.0.tgz#f9c89d3bdfabd6a4aafe602cf349a21a95a2fe0b"
+  integrity sha512-9pOCo3QKgW61L0vJ994l0VTACm5gqm67RUJHb8mLdt7Zx/nh0q6kFQc6jLwyqOcAgngGolwdm7wNRR8v178hLA==
   dependencies:
     react-native-config "^1.5.1"
 
