@@ -1,4 +1,4 @@
-# solitics-sdk-android - Getting started
+# solitics-sdk-android
  
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
@@ -69,7 +69,7 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
        }
        ```
    4. * Navigate to the global gradle.properties file.
-       The global gradle.properties file can be found in "your user folder/.gradle/" 
+       The global gradle.properties file can be found in "your user root folder/.gradle/" 
        **Do note** the .gradle folder is hidden by default. 
        * Add two properties to that file:
        ```groovy
@@ -212,7 +212,7 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
 
     ```kotlin
         override fun onCreate() {
-            super.onResume()
+            super.onCreate()
             // Register the popupDelegate
             SoliticsSDK.setSoliticsPopupDelegate(this)
         }
@@ -267,6 +267,48 @@ to *Project View -> External Libraries* and right click on "artifacts:solitics.s
     ```kotlin
         SoliticsSDK.dismissSoliticsPopup()
     ```
+
+## Handle push notifications
+To properly handle push notifications with Solitics you need to call on the following API from within your activity code.
+
+* The system automaticly monitors for incoming Push notifications, however click events monitoring need aditional code.
+Within all your activities that have a luancher intent filter implemnt code like as follows.
+
+#
+```xml
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+```
+
+
+``` kotlin
+    override fun onResume() {
+        super.onResume()
+        ...
+        handleIntent(intent)
+    }
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        ...
+        handleIntent(intent)
+    }
+
+    private fun handleIntent(intent: Intent?) {
+
+        if (intent != null && intent.extras != null) {
+            for (key in intent.extras!!.keySet()) {
+                log("LoginActivity", "key: $key")
+                log("LoginActivity", "value: ${intent.extras!!.get(key)}")
+            }
+        }
+
+        SoliticsSDK.onNewIntent(intent)
+    }
+```
+
+
 
 ## Migration guide
 ### Solitics SDK 2.0.0
