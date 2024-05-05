@@ -5,10 +5,9 @@
 //  Created by Serg Liamtsev on 23.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
+
 import UIKit
-///
-///
-///
+
 final class BlackBorderActionButton: UIButton
 {
     private lazy var borderColorActive  : UIColor = .black

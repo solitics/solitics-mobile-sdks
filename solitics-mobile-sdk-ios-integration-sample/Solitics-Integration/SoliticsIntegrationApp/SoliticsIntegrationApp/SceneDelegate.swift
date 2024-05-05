@@ -13,6 +13,7 @@ import SoliticsSDK
 class SceneDelegate : UIResponder
 {
     var window : UIWindow?
+    var activationCount = 0
     
     private func navigateToInitialScreen()
     {
@@ -42,6 +43,7 @@ extension SceneDelegate : UIWindowSceneDelegate
         window = UIWindow(windowScene: windowScene)
         navigateToInitialScreen()
         window?.makeKeyAndVisible()
+        subscribeToMonitoringEvents()
     }
     
     func sceneDidDisconnect(_ scene: UIScene)
@@ -75,5 +77,51 @@ extension SceneDelegate : UIWindowSceneDelegate
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        
+        if let context = URLContexts.first {
+            print("Trying to open url: \(context.url)")
+            print("With context.options.annotation: \(String(describing: context.options.annotation))")
+            print("With context.options.sourceApplication: \(String(describing: context.options.sourceApplication))")
+        }
+    }
+}
+// MARK: - Network state events handling
+
+@available(iOS 13.0, *)
+extension SceneDelegate
+{
+    private func subscribeToMonitoringEvents()
+    {
+        let notifications: [NSNotification.Name: Selector] = [
+            // App States notifications
+            UIApplication.didEnterBackgroundNotification : #selector(SceneDelegate.handleDidEnterBackground),
+            UIApplication.willEnterForegroundNotification: #selector(SceneDelegate.handleDidEnterForeground),
+        ]
+        
+        let center = NotificationCenter.default
+        for (name, selector) in notifications
+        {
+            center.addObserver(self, selector: selector, name: name, object: nil)
+        }
+    }
+    @objc
+    private func handleDidEnterBackground()
+    {
+        print(#function)
+    }
+    
+    @objc
+    private func handleDidEnterForeground()
+    {
+        NSLog("\(#function)-\(#function)-\(#function)")
+        
+        activationCount += 1
+        
+        if activationCount % 3 == 0 {
+            // This block will be executed every third activation
+            Solitics.onLogout()
+        }
     }
 }

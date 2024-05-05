@@ -11,11 +11,6 @@
 		5D0316BF2B7CF94A00950065 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316BE2B7CF94A00950065 /* SoliticsWrapper */; };
 		5D0316C12B7CF96300950065 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C02B7CF96300950065 /* FirebaseMessaging */; };
 		5D0316C32B7CF96B00950065 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C22B7CF96B00950065 /* OneSignalExtension */; };
-		5D0316C42B7CFC8600950065 /* SoliticsSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */; };
-		5D0316C52B7CFC8600950065 /* NotificationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */; };
-		5D0316C62B7CFC8600950065 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */; };
-		5D0316C72B7CFC8600950065 /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EA2B30E22D008368CC /* OneSignalService.swift */; };
-		5D0316C82B7CFC8600950065 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EB2B30E22D008368CC /* FirebaseService.swift */; };
 		5D0968E92B4ABA97009AC204 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968E82B4ABA97009AC204 /* SoliticsWrapper */; };
 		5D0968EC2B4ABB0F009AC204 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */; };
 		5D0968EE2B4ABB0F009AC204 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */; };
@@ -56,6 +51,12 @@
 		5D56277526A70AEA00805583 /* sample_web_view_content.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277426A70AEA00805583 /* sample_web_view_content.html */; };
 		5D56277826A70AF600805583 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277626A70AF600805583 /* Assets.xcassets */; };
 		5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D56277C26A70B3300805583 /* LaunchScreen.storyboard */; };
+		5DA03D8C2BE7768C00249F4C /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5DA03D8B2BE7768C00249F4C /* PrivacyInfo.xcprivacy */; };
+		5DA03D8D2BE779A100249F4C /* NotificationHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2ED2B30E22D008368CC /* NotificationHandlerProtocol.swift */; };
+		5DA03D8E2BE779A100249F4C /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EE2B30E22D008368CC /* ServiceProtocol.swift */; };
+		5DA03D8F2BE779A100249F4C /* SoliticsSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */; };
+		5DA03D902BE779A100249F4C /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EA2B30E22D008368CC /* OneSignalService.swift */; };
+		5DA03D912BE779A100249F4C /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EB2B30E22D008368CC /* FirebaseService.swift */; };
 		5DAD49D9278F5C7F0069F8E4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */; };
 		832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F595746D9D9DA16B1A56485C /* Pods_SoliticsIntegrationApp.framework */; };
 		91BBB2EF2B30E22D008368CC /* OneSignalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91BBB2EA2B30E22D008368CC /* OneSignalService.swift */; };
@@ -152,6 +153,8 @@
 		5D56277426A70AEA00805583 /* sample_web_view_content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = sample_web_view_content.html; sourceTree = "<group>"; };
 		5D56277626A70AF600805583 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5D56277B26A70B3300805583 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DA03D8A2BE7764D00249F4C /* SoliticsIntegrationApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SoliticsIntegrationApp.entitlements; sourceTree = "<group>"; };
+		5DA03D8B2BE7768C00249F4C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5DAD49D8278F5C7F0069F8E4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6162300493F230D433BF2990 /* Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests/Pods-SoliticsIntegrationApp-SoliticsIntegrationAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		67484165D5B28BD49B636A61 /* Pods-SoliticsIntegrationAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoliticsIntegrationAppTests.release.xcconfig"; path = "Target Support Files/Pods-SoliticsIntegrationAppTests/Pods-SoliticsIntegrationAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -257,6 +260,8 @@
 		5D5626EF26A6FC8900805583 /* SoliticsIntegrationApp */ = {
 			isa = PBXGroup;
 			children = (
+				5DA03D8B2BE7768C00249F4C /* PrivacyInfo.xcprivacy */,
+				5DA03D8A2BE7764D00249F4C /* SoliticsIntegrationApp.entitlements */,
 				5D5626F026A6FC8900805583 /* AppDelegate.swift */,
 				5D5626F226A6FC8900805583 /* SceneDelegate.swift */,
 				5D56272B26A7063300805583 /* Container */,
@@ -678,6 +683,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DA03D8C2BE7768C00249F4C /* PrivacyInfo.xcprivacy in Resources */,
 				5D56272926A6FCF100805583 /* SoliticsDevelopmentApp.xctestplan in Resources */,
 				5D56277D26A70B3700805583 /* LaunchScreen.storyboard in Resources */,
 				5DAD49D9278F5C7F0069F8E4 /* GoogleService-Info.plist in Resources */,
@@ -839,12 +845,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D0316C42B7CFC8600950065 /* SoliticsSDKService.swift in Sources */,
-				5D0316C72B7CFC8600950065 /* OneSignalService.swift in Sources */,
+				5DA03D8D2BE779A100249F4C /* NotificationHandlerProtocol.swift in Sources */,
+				5DA03D8E2BE779A100249F4C /* ServiceProtocol.swift in Sources */,
+				5DA03D8F2BE779A100249F4C /* SoliticsSDKService.swift in Sources */,
+				5DA03D902BE779A100249F4C /* OneSignalService.swift in Sources */,
+				5DA03D912BE779A100249F4C /* FirebaseService.swift in Sources */,
 				91BBB3062B30E8A7008368CC /* NotificationService.swift in Sources */,
-				5D0316C52B7CFC8600950065 /* NotificationHandlerProtocol.swift in Sources */,
-				5D0316C82B7CFC8600950065 /* FirebaseService.swift in Sources */,
-				5D0316C62B7CFC8600950065 /* ServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1009,8 +1015,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SoliticsIntegrationApp/SoliticsIntegrationApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R393235FGX;
+				DEVELOPMENT_TEAM = LWXCT592NE;
 				INFOPLIST_FILE = SoliticsIntegrationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1029,8 +1036,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SoliticsIntegrationApp/SoliticsIntegrationApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R393235FGX;
+				DEVELOPMENT_TEAM = LWXCT592NE;
 				INFOPLIST_FILE = SoliticsIntegrationApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1238,7 +1246,7 @@
 			repositoryURL = swift.solitics;
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
+				minimumVersion = 3.0.2;
 			};
 		};
 		5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {

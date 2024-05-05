@@ -1,14 +1,13 @@
 //
 //  AppRouter.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamtsev on 19.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
+
 import UIKit
-///
-///
-///
+
 final class AppRouter: NSObject
 {
     static func pushMainScreen(at vc: UIViewController)
@@ -32,6 +31,20 @@ final class AppRouter: NSObject
             }
             
             navVC.popToViewController(vc, animated: true)
+        }
+    }
+    static func reconnect(from navVC: UINavigationController)
+    {
+        performOnMain {
+            
+            guard let vc = navVC.viewControllers.first(where: { $0.isMember(of: SignInVC.self)}) as? SignInVC else {
+                
+                let signInVC: SignInVC = SignInVC()
+                navVC.setViewControllers([signInVC], animated: false)
+                return
+            }
+            
+            vc.didTapSignInButton()
         }
     }
 }

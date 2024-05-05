@@ -1,6 +1,6 @@
 //
 //  AlertPresenter.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamtsev on 18.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
@@ -57,5 +57,5 @@ final class AlertPresenter: NSObject
         } else {
             vc.present(toPresent, animated: true, completion: nil)
         }
-    }
+    }    
 }

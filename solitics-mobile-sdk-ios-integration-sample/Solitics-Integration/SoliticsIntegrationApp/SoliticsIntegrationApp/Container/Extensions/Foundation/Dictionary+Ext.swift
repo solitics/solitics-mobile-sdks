@@ -1,6 +1,6 @@
 //
 //  Dictionary+Ext.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamthev on 01.04.2020.
 //  Copyright © 2020 NLT. All rights reserved.

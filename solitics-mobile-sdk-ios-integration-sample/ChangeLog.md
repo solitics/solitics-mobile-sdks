@@ -3,6 +3,9 @@
 Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 3.0.2.44
+    - bug fix - changes to logout proccess
+    - bug fix - changes to web-socket handling
 - 3.0.0.34
     - feature - Breaking change - Change the type of memberId in the event system to support a larger population
     - feature - Change minimum iOS deployment target to 12.0

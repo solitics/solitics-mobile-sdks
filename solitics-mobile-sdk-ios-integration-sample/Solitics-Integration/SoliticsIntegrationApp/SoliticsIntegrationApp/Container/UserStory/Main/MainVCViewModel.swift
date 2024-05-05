@@ -54,7 +54,7 @@ final class MainVCViewModel: NSObject , UniqueIdentifiable
     func sendEventRequest(inputData: OnEmitEventUserInput)
     {
         Solitics.onEmitEvent(
-            txType        : inputData.txType,
+            txType	    : inputData.txType,
             txAmount    : inputData.txAmount,
             customFields: inputData.customFields) { [weak self] result in
             

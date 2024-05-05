@@ -1,6 +1,6 @@
 //
 //  Data+Ext.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamtsev on 10/30/19.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.

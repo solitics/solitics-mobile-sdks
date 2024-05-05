@@ -1,6 +1,6 @@
 //
 //  NSObject+Ext.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamthev on 17.04.2020.
 //  Copyright © 2020 NLT. All rights reserved.

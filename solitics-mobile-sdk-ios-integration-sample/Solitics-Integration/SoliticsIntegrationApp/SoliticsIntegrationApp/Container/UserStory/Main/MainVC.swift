@@ -5,6 +5,7 @@
 //  Created by Serg Liamthev on 04.11.2020.
 //
 import UIKit
+import SoliticsSDK
 ///
 ///
 ///
@@ -199,6 +200,18 @@ extension MainVC: MainVCViewDelegate
         }
         viewModel.signOut()
         AppRouter.popToSignInScreen(from: navVC)
+    }
+    func didTapReconnectButton()
+    {
+        guard let navVC = self.navigationController else {
+            return
+        }
+        viewModel.signOut()
+        
+        DispatchQueue.main.asyncAfter(wallDeadline: .now() + 2) {
+         
+            AppRouter.reconnect(from: navVC)
+        }
     }
 }
 

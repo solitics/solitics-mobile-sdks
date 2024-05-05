@@ -1,6 +1,6 @@
 //
 //  ServiceProtocol.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Alex Pinhasov on 14/12/2023.
 //

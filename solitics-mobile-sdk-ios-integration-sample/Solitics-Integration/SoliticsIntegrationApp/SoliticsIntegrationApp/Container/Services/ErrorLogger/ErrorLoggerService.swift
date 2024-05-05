@@ -5,11 +5,10 @@
 //  Created by Serg Liamtsev on 14.02.2020.
 //  Copyright © 2020 Serg Liamtsev. All rights reserved.
 //
+
 import Foundation
 import os
-///
-///
-///
+
 final class ErrorLoggerService: NSObject
 {
     // MARK: - Error logging
@@ -64,9 +63,9 @@ final class ErrorLoggerService: NSObject
         // assertionFailure(errorMessage)
         #else
         // let error = AppInternalError.error(errorMessage: errorMessage)
-        if #available(iOS 10.0, *) {
-            os_log("%@", log: .error, type: .error, errorMessage)
-        }
+        // if #available(iOS 10.0, *) {
+        //     os_log("%@", log: .error, type: .error, errorMessage)
+        // }
         #endif
     }    
 }

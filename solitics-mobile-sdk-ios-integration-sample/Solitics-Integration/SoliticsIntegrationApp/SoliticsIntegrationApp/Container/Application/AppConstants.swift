@@ -1,6 +1,6 @@
 //
 //  AppConstants.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamtsev on 19.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.

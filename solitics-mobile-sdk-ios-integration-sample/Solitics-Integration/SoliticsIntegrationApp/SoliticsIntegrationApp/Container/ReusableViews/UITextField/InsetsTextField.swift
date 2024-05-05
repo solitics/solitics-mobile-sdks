@@ -5,10 +5,9 @@
 //  Created by Serg Liamtsev on 20.12.2019.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.
 //
+
 import UIKit
-///
-///
-///
+
 final class InsetsTextField: UITextField
 {
     private lazy var insetX : CGFloat = 10.0

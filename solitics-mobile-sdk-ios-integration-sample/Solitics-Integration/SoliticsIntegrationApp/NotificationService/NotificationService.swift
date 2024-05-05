@@ -35,7 +35,11 @@ class NotificationService: UNNotificationServiceExtension {
 
         SoliticsSDK.Solitics.didReceivePushNotificationRequest(for: request)
         
-        let packageServices: [ServiceProtocol] = [FirebaseService(), OneSignalService(),SoliticsSDKService()]
+        let packageServices: [ServiceProtocol] = [
+            // FirebaseService(),
+            // OneSignalService(),
+            SoliticsSDKService()
+        ]
         self.contentHandler = contentHandler
         bestAttemptContent = (request.content.mutableCopy() as? UNMutableNotificationContent)
         let userInfo = request.content.userInfo;

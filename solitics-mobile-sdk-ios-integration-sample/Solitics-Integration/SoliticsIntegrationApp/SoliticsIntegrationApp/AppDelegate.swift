@@ -17,7 +17,11 @@ class AppDelegate : UIResponder
     
     override init()
     {
-        services = [FirebaseService(), OneSignalService(), SoliticsSDKService()]
+        services = [
+            // FirebaseService(),
+            // OneSignalService(),
+            SoliticsSDKService()
+        ]
         super.init()
     }
     
@@ -45,7 +49,7 @@ class AppDelegate : UIResponder
         }
         Solitics.activeGlobalLogs = true
         Solitics.activeSocketLogs = true
-        Solitics.activeRestflLogs = true
+        Solitics.activeRestflLogs = false
         
         Solitics.delegate = self
         Solitics.register(SoliticsLogListener: self)
@@ -102,7 +106,7 @@ extension AppDelegate : SoliticsLogListener
 {
     func onLogMessage(_ message: String)
     {
-        print("\(#function)::\(message)")
+        NSLog("\(#function)::\(message)")
     }
 }
 extension AppDelegate : SoliticsPopupDelegate
@@ -120,30 +124,36 @@ extension AppDelegate : SoliticsPopupDelegate
      */
     func soliticsMessageDidDisplayPopup()
     {
-        print(#function)
+        NSLog(#function)
+        
+        // DispatchQueue.main.asyncAfter(wallDeadline: .now() + 30) {
+        //
+        //     // Solitics.dismissSoliticsPopup()
+        //     // Solitics.onLogout()
+        // }
     }
     /**
      * Called when the solitics popup message is closed.
      */
     func soliticsMessageDidDismissPopup()
     {
-        print(#function)
+        NSLog(#function)
     }
     /**
      * Called when the an item inside the solitics popup message is clicked.
      */
     func soliticsMessageDidTrigerAction()
     {
-        print(#function)
+        NSLog(#function)
     }
     
     func soliticsShouldDismissPopup(forNavigationTarget urlString: String) -> Bool {
-        print(#function)
+        NSLog(#function)
         /// Custom logic to determin if we shold dismiss the popup or not
         return true
     }
     func soliticsMessageDidClosePopup(forNavigationTarget urlString: String) {
-        print(#function)
+        NSLog(#function)
         /// Action to be taken after the popup was dismisses by the solitics system
     }
 }

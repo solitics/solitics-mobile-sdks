@@ -12,6 +12,7 @@ protocol MainVCViewDelegate: AnyObject
 {
     func didTapSendEventButton()
     func didTapLogOutButton()
+    func didTapReconnectButton()
 }
 
 final class MainVCView: UIView
@@ -26,6 +27,7 @@ final class MainVCView: UIView
     
     private let sendEventButton: BlackBorderActionButton = BlackBorderActionButton()
     private let ___logOutButton: BlackBorderActionButton = BlackBorderActionButton()
+    private let reconnectButton: BlackBorderActionButton = BlackBorderActionButton()
     
     weak var delegate: MainVCViewDelegate?
     
@@ -70,6 +72,7 @@ final class MainVCView: UIView
         }
         sendEventButton.addTarget(self, action: #selector(MainVCView.didTapSendEventButton), for: .touchUpInside)
         ___logOutButton.addTarget(self, action: #selector(MainVCView.didTapLogOutButton   ), for: .touchUpInside)
+        reconnectButton.addTarget(self, action: #selector(MainVCView.didTapReconnectButton), for: .touchUpInside)
     }
     
     private func setupLayout()
@@ -147,6 +150,13 @@ final class MainVCView: UIView
         ]
         NSLayoutConstraint.activate(logOutButtonConstraints)
         
+        containerView.addArrangedSubview(reconnectButton)
+        reconnectButton.translatesAutoresizingMaskIntoConstraints = false
+        reconnectButton.update(title: "Re-connect")
+        let reconnectButtonConstraints: [NSLayoutConstraint] = [
+            reconnectButton.heightAnchor.constraint(equalToConstant: 60.0)
+        ]
+        NSLayoutConstraint.activate(reconnectButtonConstraints)
     }
     
     // MARK; - Actions
@@ -160,5 +170,11 @@ final class MainVCView: UIView
     private func didTapLogOutButton()
     {
         delegate?.didTapLogOutButton()
+    }
+    
+    @objc
+    private func didTapReconnectButton()
+    {
+        delegate?.didTapReconnectButton()
     }
 }

@@ -14,6 +14,7 @@ protocol ProgressShowable
     func showProgress()
     func hideProgress()
 }
+
 extension ProgressShowable where Self: BaseViewController
 {
     func showProgress()
@@ -37,5 +38,5 @@ extension ProgressShowable where Self: BaseViewController
             self?.hudElement.view.removeFromSuperview()
             self?.hudElement.removeFromParent()
         }
-    }
+    }    
 }

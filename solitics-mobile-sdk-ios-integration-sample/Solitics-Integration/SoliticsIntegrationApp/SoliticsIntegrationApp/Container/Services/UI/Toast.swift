@@ -22,11 +22,10 @@
 //  CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 //  TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 //  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
 import ObjectiveC
 import UIKit
-///
-///
-///
+
 /**
  Toast is a Swift extension that adds toast notifications to the `UIView` object class.
  It is intended to be simple, lightweight, and easy to use. Most toast notifications 
@@ -44,13 +43,13 @@ public extension UIView
      */
     private struct ToastKeys
     {
-        static var timer        = "com.toast-swift.timer"
-        static var duration     = "com.toast-swift.duration"
-        static var point        = "com.toast-swift.point"
-        static var completion   = "com.toast-swift.completion"
-        static var activeToasts = "com.toast-swift.activeToasts"
-        static var activityView = "com.toast-swift.activityView"
-        static var queue        = "com.toast-swift.queue"
+        static var timer        = Int(arc4random_uniform(100)) // "com.toast-swift.timer"
+        static var duration     = Int(arc4random_uniform(100)) // "com.toast-swift.duration"
+        static var point        = Int(arc4random_uniform(100)) // "com.toast-swift.point"
+        static var completion   = Int(arc4random_uniform(100)) // "com.toast-swift.completion"
+        static var activeToasts = Int(arc4random_uniform(100)) // "com.toast-swift.activeToasts"
+        static var activityView = Int(arc4random_uniform(100)) // "com.toast-swift.activityView"
+        static var queue        = Int(arc4random_uniform(100)) // "com.toast-swift.queue"
     }
     
     /**

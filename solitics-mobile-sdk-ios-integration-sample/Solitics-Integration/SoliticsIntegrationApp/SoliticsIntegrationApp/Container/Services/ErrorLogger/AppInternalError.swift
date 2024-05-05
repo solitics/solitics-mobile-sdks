@@ -5,10 +5,9 @@
 //  Created by Serg Liamtsev on 14.02.2020.
 //  Copyright © 2020 Serg Liamtsev. All rights reserved.
 //
+
 import Foundation
-///
-///
-///
+
 enum AppInternalError: Error, LocalizedError
 {
     case error(errorMessage: String)

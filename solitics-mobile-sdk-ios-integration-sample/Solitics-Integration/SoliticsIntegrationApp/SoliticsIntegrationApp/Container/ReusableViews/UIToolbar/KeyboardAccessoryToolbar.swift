@@ -4,10 +4,9 @@
 //
 //  Created by Serg Liamthev on 04.11.2020.
 //
+
 import UIKit
-///
-///
-///
+
 final class KeyboardAccessoryToolbar : UIToolbar
 {
     convenience init()

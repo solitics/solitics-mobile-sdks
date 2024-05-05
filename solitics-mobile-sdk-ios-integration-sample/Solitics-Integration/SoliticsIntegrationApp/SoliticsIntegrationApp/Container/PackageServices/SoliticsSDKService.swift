@@ -1,6 +1,6 @@
 //
 //  SoliticsSDKService
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Alex Pinhasov on 12/12/2023.
 //
@@ -11,14 +11,14 @@ class SoliticsSDKService : NSObject {
     
 }
 
-extension SoliticsSDKService: ServiceProtocol
+extension SoliticsSDKService: ServiceProtocol 
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]?)
     {
         
     }
     
-    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void)
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) 
     {
         NSLog("InternalTesting: application:didReceiveRemoteNotification:fetchCompletionHandler:")
 
@@ -32,7 +32,7 @@ extension SoliticsSDKService: ServiceProtocol
         print(deviceToken)
     }
 
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error)
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) 
     {
         print(error)
     }
@@ -53,7 +53,7 @@ extension SoliticsSDKService: ServiceProtocol
         completionHandler()
     }
     
-    func canHandleNotification(userInfo: [AnyHashable : Any]) -> Bool
+    func canHandleNotification(userInfo: [AnyHashable : Any]) -> Bool 
     {
         return false
     }

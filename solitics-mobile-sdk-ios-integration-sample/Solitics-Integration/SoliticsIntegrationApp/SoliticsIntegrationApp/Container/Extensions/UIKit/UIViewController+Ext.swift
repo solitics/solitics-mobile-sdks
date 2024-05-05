@@ -1,6 +1,6 @@
 //
 //  UIViewController+Extension.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Serg Liamtsev on 3/4/19.
 //  Copyright © 2019 Serg Liamtsev. All rights reserved.

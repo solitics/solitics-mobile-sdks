@@ -1,6 +1,6 @@
 //
 //  NotificationHandlerProtocol.swift
-//  SoliticsDevelopmentApp
+//  SoliticsIntegrationApp
 //
 //  Created by Alex Pinhasov on 12/12/2023.
 //
@@ -16,7 +16,7 @@ protocol NotificationHandlerProtocol {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void)
 }
-extension NotificationHandlerProtocol
+extension NotificationHandlerProtocol 
 {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?)
     {
