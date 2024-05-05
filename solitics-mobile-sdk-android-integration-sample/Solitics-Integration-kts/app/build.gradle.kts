@@ -56,7 +56,7 @@ android {
 
 dependencies {
 
-    implementation("com.solitics:solitics.sdk:3.0.0.33")
+    implementation("com.solitics:solitics.sdk:3.0.3.45")
 
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.annotation:annotation:1.7.1")
