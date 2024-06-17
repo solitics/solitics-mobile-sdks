@@ -37,7 +37,7 @@ const App = () => {
       () => { console.log("popup closed callback") },
       () => { console.log("popup clicked callback") },
       (url: string) => { return true },
-      (url) => { 
+      (url: any) => { 
         console.log("popup closed for navigation callback")
         console.log("popup closed for navigation callback: "+ url)
       }
