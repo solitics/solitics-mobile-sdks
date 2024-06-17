@@ -95,3 +95,6 @@ iOSInjectionProject/
 solitics-sdk-react/android/build
 solitics-sdk-react/example/android/build
 
+solitics-mobile-sdk-react-native-integration-sample/.yarn
+solitics-mobile-sdk-react-native-integration-sample/.yarn/*
+
