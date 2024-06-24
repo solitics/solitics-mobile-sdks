@@ -1,17 +1,18 @@
 {
   "name": "SoliticsBridgeHost",
-  "version": "2.0.3",
+  "version": "2.0.5",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "pods": "npx pod-install"
   },
   "dependencies": {
     "@react-navigation/native-stack": "^6.8.0",
-    "@solitics/react-native-solitics-sdk": "^2.0.3",
+    "@solitics/react-native-solitics-sdk": "^2.0.5",
     "react": "^18.1.0",
     "react-native": "^0.70.0",
     "react-native-fast-image": "^8.6.3"

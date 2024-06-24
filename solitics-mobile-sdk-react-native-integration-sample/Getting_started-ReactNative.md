@@ -141,7 +141,7 @@ To properly install this package there are several steps that are needed:
 
 ```typescript
 // first, import the SDK
-import SoliticsSdk from "react-native-solitics-sdk";
+import SoliticsSdk from "@solitics/react-native-solitics-sdk";
 
 // calling the initSDK method is crucial for it to work as intended. this method would only go through the initialization process once and will ignore any calls if the SDK is initialized.
 SoliticsSDK.initSDK()

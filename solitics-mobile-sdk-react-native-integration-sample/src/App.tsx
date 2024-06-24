@@ -32,12 +32,12 @@ const App = () => {
 
   React.useEffect(() => {
     const delegate = new SoliticsSDKPopupDelegate(
-      (data: Object) => { return true },
+      (data: Object) => { console.log("popup should open callback. " + data) ; return true },
       () => { console.log("popup opened callback") },
       () => { console.log("popup closed callback") },
       () => { console.log("popup clicked callback") },
-      (url: string) => { return true },
-      (url: any) => { 
+      (url: string) => { console.log("popup should dismiss callback " + url) ; return true },
+      (url: string) => { 
         console.log("popup closed for navigation callback")
         console.log("popup closed for navigation callback: "+ url)
       }
@@ -71,9 +71,7 @@ const App = () => {
     memberId: String
   ) => {
     try {
-      console.log('[' + Date.now() + '] ' + 'I am logged before');
-
-      SoliticsSDK.onLogin({
+      const result = await SoliticsSDK.onLogin({
         email,
         customFields,
         keyType,
@@ -84,27 +82,7 @@ const App = () => {
         txAmount,
         memberId
       })
-        .then((result) => {
-          console.log('[' + Date.now() + '] ' + 'SoliticsSDK onLogin');
-        })
-        .catch((e) => {
-          console.log('[' + Date.now() + '] ' + 'SoliticsSDK onLogin Error=>', e);
-        });
-
-      console.log('[' + Date.now() + '] ' + 'I am logged after');
-
-      // const result = await SoliticsSDK.onLogin({
-      //   email,
-      //   customFields,
-      //   keyType,
-      //   keyValue,
-      //   brand,
-      //   branch,
-      //   popupToken,
-      //   txAmount,
-      //   memberId
-      // })
-      // console.log(result)
+      console.log(result)
       onScreenChanged(Screen.Home)
     } catch (e) {
       console.error(e)

@@ -27,7 +27,7 @@ const HomeScreen = ({onSendEventButtonClicked, onLogoutButtonClicked, logsToPres
 
     return (
         <View>
-            <Text style={styles.title}>Home Screen</Text>
+            <Text style={styles.title}>Home screen</Text>
             <ScrollView contentInsetAdjustmentBehavior="automatic"
                 style={styles.logsContainer}
                 ref={scrollViewRef}
