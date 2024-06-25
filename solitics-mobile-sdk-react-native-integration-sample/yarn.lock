@@ -1780,13 +1780,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@solitics/react-native-solitics-sdk@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "@solitics/react-native-solitics-sdk@npm:2.0.5::__archiveUrl=https%3A%2F%2Fsoliticsmobilesdk.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Freact.native.solitics.mobile.releases-local%2F%40solitics%2Freact-native-solitics-sdk%2F-%2F%40solitics%2Freact-native-solitics-sdk-2.0.5.tgz"
+"@solitics/react-native-solitics-sdk@npm:^2.0.6":
+  version: 2.0.6
+  resolution: "@solitics/react-native-solitics-sdk@npm:2.0.6::__archiveUrl=https%3A%2F%2Fsoliticsmobilesdk.jfrog.io%2Fartifactory%2Fapi%2Fnpm%2Freact.native.solitics.mobile.releases-local%2F%40solitics%2Freact-native-solitics-sdk%2F-%2F%40solitics%2Freact-native-solitics-sdk-2.0.6.tgz"
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 7bdb0eed282322f16250198d5b3b6b755f5472d64d256b091ca95f91ee733e6aa11a8e2a1e3051f3957145d075983a81852b611dfd2245564aa2d0ba0fcf8bd8
+  checksum: 20d77e68d5db8d3094265a65c36a109e03a002e40c5843681de87244daeb82c082a88480ef2e7937d8b9b2d7f315fda1757f47d6e97d1303cd63cbb658449258
   languageName: node
   linkType: hard
 
@@ -2037,7 +2037,7 @@ __metadata:
     "@babel/runtime": ^7.12.5
     "@react-native-community/eslint-config": ^2.0.0
     "@react-navigation/native-stack": ^6.8.0
-    "@solitics/react-native-solitics-sdk": ^2.0.5
+    "@solitics/react-native-solitics-sdk": ^2.0.6
     babel-jest: ^26.6.3
     eslint: ^7.32.0
     jest: ^26.6.3
