@@ -8,6 +8,9 @@ Solitics, a personalized marketing automation platform, enables you to react in 
 
 To properly install this package there are several steps that are needed:
 1. General - install the package via NPM
+
+    **The credential related part is no longer needed as the security policy has changed.**
+
     * Go to the .npmrc file and paste in the next snippet at the end of the file. Please note that this file is hidden by default.
     ```sh
     @solitics:registry=https://soliticsmobilesdk.jfrog.io/artifactory/api/npm/react.native.solitics.mobile.releases/
@@ -96,8 +99,9 @@ To properly install this package there are several steps that are needed:
     ext {
         artifactory_url      = 'https://soliticsmobilesdk.jfrog.io/artifactory'
         artifactory_repoKey  = 'android.solitics.mobile.releases'
-        artifactory_username = System.getenv('solitics.consumer.username') ?: findProperty('solitics.consumer.username')
-        artifactory_password = System.getenv('solitics.consumer.password') ?: findProperty('solitics.consumer.password')
+        // No longer needed as the security policy has changed
+        // artifactory_username = System.getenv('solitics.consumer.username') ?: findProperty('solitics.consumer.username')
+        // artifactory_password = System.getenv('solitics.consumer.password') ?: findProperty('solitics.consumer.password')
     }
     allprojects {
         ...
@@ -115,14 +119,17 @@ To properly install this package there are several steps that are needed:
         resolve {
             repository {
                 repoKey  = artifactory_repoKey
-                username = artifactory_username
-                password = artifactory_password
+                // username = artifactory_username // No longer needed as the security policy has changed
+                // password = artifactory_password // No longer needed as the security policy has changed
                 maven = true
             }
         }
     }
     ```
-12. * Navigate to the global gradle.properties file.
+12. * 
+    **The credential related part is no longer needed as the security policy has changed.**
+    
+    Navigate to the global gradle.properties file.
        The global gradle.properties file can be found in "your user root folder/.gradle/" 
     **Do note** the .gradle folder is hidden by default. 
     * Add two properties to that file:

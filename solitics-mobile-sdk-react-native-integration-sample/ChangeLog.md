@@ -3,6 +3,8 @@
 React native bridge for Solitics SDK is a library that allow it's users to perform Real-Time Events Reporting
 
 ## ChangeLog
+- 2.0.7
+    - Integrate native changes, ios: 3.0.5.47, android: 3.0.4.46
 - 2.0.6
     - Integrate native changes, ios: 3.0.4.46, android: 3.0.4.46
 - 2.0.5
