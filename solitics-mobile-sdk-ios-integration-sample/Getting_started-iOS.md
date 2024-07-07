@@ -24,6 +24,9 @@ Solitics, a personalized marketing automation platform, enables you to react in 
 	* Press enter
 
 3. Add your artifactory credential to the .netrc file.
+
+    **This step is no longer needed as the security policy has changed.**
+
 	 * Open the `.netrc` file. The `.netrc` file is a hidden file located under the user folder.
      * Create the file if you don't already have one. 
 	 * Add the following credentials to the file:
@@ -33,6 +36,11 @@ Solitics, a personalized marketing automation platform, enables you to react in 
      password YOUR_API_Key
      ``` 
     * Save and close the file.
+
+    Alternativly you can add the following to your `.netrc` file, this is useful in case you work with several repos on the same jfrog that have diffrent password.
+    ```
+    export COCOAPODS_ART_CREDENTIALS=YOUR_USERNAME:YOUR_API_Key
+    ```
 
 4. Add artifactory specs repo
     * Open terminal 

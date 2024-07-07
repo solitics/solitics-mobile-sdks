@@ -3,15 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		5D0316BD2B7CF87B00950065 /* SoliticsSDKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0316BC2B7CF87B00950065 /* SoliticsSDKService.swift */; };
-		5D0316BF2B7CF94A00950065 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316BE2B7CF94A00950065 /* SoliticsWrapper */; };
 		5D0316C12B7CF96300950065 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C02B7CF96300950065 /* FirebaseMessaging */; };
 		5D0316C32B7CF96B00950065 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0316C22B7CF96B00950065 /* OneSignalExtension */; };
-		5D0968E92B4ABA97009AC204 /* SoliticsWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968E82B4ABA97009AC204 /* SoliticsWrapper */; };
 		5D0968EC2B4ABB0F009AC204 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */; };
 		5D0968EE2B4ABB0F009AC204 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */; };
 		5D0968F02B4ABB3B009AC204 /* OneSignalExtension in Frameworks */ = {isa = PBXBuildFile; productRef = 5D0968EF2B4ABB3B009AC204 /* OneSignalExtension */; };
@@ -183,7 +181,6 @@
 				5D0968F42B4ABB63009AC204 /* OneSignalFramework in Frameworks */,
 				5D0968EE2B4ABB0F009AC204 /* FirebaseMessaging in Frameworks */,
 				5D0968EC2B4ABB0F009AC204 /* FirebaseCrashlytics in Frameworks */,
-				5D0968E92B4ABA97009AC204 /* SoliticsWrapper in Frameworks */,
 				832454D1EC21519AD16D65E6 /* Pods_SoliticsIntegrationApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,7 +207,6 @@
 			files = (
 				5D0316C12B7CF96300950065 /* FirebaseMessaging in Frameworks */,
 				5D0316C32B7CF96B00950065 /* OneSignalExtension in Frameworks */,
-				5D0316BF2B7CF94A00950065 /* SoliticsWrapper in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,7 +551,6 @@
 			);
 			name = SoliticsIntegrationApp;
 			packageProductDependencies = (
-				5D0968E82B4ABA97009AC204 /* SoliticsWrapper */,
 				5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */,
 				5D0968ED2B4ABB0F009AC204 /* FirebaseMessaging */,
 				5D0968EF2B4ABB3B009AC204 /* OneSignalExtension */,
@@ -618,7 +613,6 @@
 			);
 			name = NotificationService;
 			packageProductDependencies = (
-				5D0316BE2B7CF94A00950065 /* SoliticsWrapper */,
 				5D0316C02B7CF96300950065 /* FirebaseMessaging */,
 				5D0316C22B7CF96B00950065 /* OneSignalExtension */,
 			);
@@ -663,7 +657,6 @@
 			mainGroup = 5D5626E426A6FC8900805583;
 			packageReferences = (
 				91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */,
-				5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */,
 				5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 5D5626EE26A6FC8900805583 /* Products */;
@@ -1241,14 +1234,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = swift.solitics;
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.2;
-			};
-		};
 		5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1268,11 +1253,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5D0316BE2B7CF94A00950065 /* SoliticsWrapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */;
-			productName = SoliticsWrapper;
-		};
 		5D0316C02B7CF96300950065 /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5D0968EA2B4ABB0F009AC204 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1282,11 +1262,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 91BBB2F82B30E7B7008368CC /* XCRemoteSwiftPackageReference "OneSignal-iOS-SDK" */;
 			productName = OneSignalExtension;
-		};
-		5D0968E82B4ABA97009AC204 /* SoliticsWrapper */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5D0968E72B4ABA97009AC204 /* XCRemoteSwiftPackageReference "solitics" */;
-			productName = SoliticsWrapper;
 		};
 		5D0968EB2B4ABB0F009AC204 /* FirebaseCrashlytics */ = {
 			isa = XCSwiftPackageProductDependency;
