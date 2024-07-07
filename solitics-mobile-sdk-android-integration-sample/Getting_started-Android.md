@@ -33,8 +33,9 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
     ext {
         artifactory_url      = 'https://soliticsmobilesdk.jfrog.io/artifactory'
         artifactory_repoKey  = 'android.solitics.mobile.releases'
-        artifactory_username = System.getenv('solitics.consumer.username') ?: findProperty('solitics.consumer.username')
-        artifactory_password = System.getenv('solitics.consumer.password') ?: findProperty('solitics.consumer.password')
+        // No longer needed as the security policy has changed
+        // artifactory_username = System.getenv('solitics.consumer.username') ?: findProperty('solitics.consumer.username')
+        // artifactory_password = System.getenv('solitics.consumer.password') ?: findProperty('solitics.consumer.password')
     }
     allprojects {
         ...
@@ -52,8 +53,8 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
         resolve {
             repository {
                 repoKey  = artifactory_repoKey
-                username = artifactory_username
-                password = artifactory_password
+                // username = artifactory_username // No longer needed as the security policy has changed
+                // password = artifactory_password // No longer needed as the security policy has changed
                 maven = true
             }
         }
@@ -65,10 +66,13 @@ Solitics SDK is a library that allow it's users to perform Real-Time Events Repo
        dependencies {
            ...
            // Remote dependencies
-           implementation 'com.solitics:solitics.sdk:2.1.0.+'
+           implementation 'com.solitics:solitics.sdk:3.0.4.+'
        }
        ```
-   4. * Navigate to the global gradle.properties file.
+   4. * 
+       **This step is no longer needed as the security policy has changed.**
+       
+       Navigate to the global gradle.properties file.
        The global gradle.properties file can be found in "your user root folder/.gradle/" 
        **Do note** the .gradle folder is hidden by default. 
        * Add two properties to that file:
